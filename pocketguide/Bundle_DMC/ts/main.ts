@@ -4,10 +4,15 @@
  *
  * http://stackoverflow.com/questions/9446921/clues-on-sliding-between-pages-effect     lapozas
  */
+/// <reference path="component/TeaserVideoPlayer.ts"/>
+
 module Main {
     export class Main {
         constructor() {
-            console.log('SSSSSS111');
+            new component.TeaserVideoPlayer({
+               'videoId' : '6815537',
+                'youtubeId' : 'FKHWcd2wA30'
+            });
         }
     }
 }
