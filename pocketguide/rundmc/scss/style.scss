@@ -1,4 +1,5 @@
 @import "component/reset";
+@import "component/font";
 
 * {
   -webkit-box-sizing: border-box;
@@ -16,9 +17,10 @@ body {
   min-height: 100%;
   position: relative;
   margin: 0;
-  font-family: "HelveticaNeueLTPro", Helvetica, Arial, sans-serif;
-  color: #000;
-  background: #fff;
+  //font-family: "HelveticaNeueLTPro", Helvetica, Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #000;
 }
 
 section {
@@ -48,3 +50,80 @@ img.grayscale:hover {
   filter: none;
   -webkit-filter: grayscale(0%);
 }
+
+section {
+  font-size: .85rem;
+
+  header {
+    position: relative;
+    text-align: center;
+
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .content-inner {
+    h3 {
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #000;
+      background-color: #fff;
+      padding: 0.3rem 0rem;
+      text-align: center;
+      position: relative;
+      top: -28px;
+    }
+  }
+
+  p {
+    font-size: .7rem;
+    line-height: 1.7;
+  }
+
+  .card {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+    background-repeat: no-repeat;
+    background-position: center 60%;
+    background-size: cover;
+    text-decoration: none;
+    height: 8rem;
+
+    img {
+      display: block;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
+
+    .card-text-container {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: -.25em;
+      height: 5.5em;
+      background: -webkit-linear-gradient(bottom, rgba(0,0,0,.8), transparent);
+      background: -webkit-linear-gradient(to top, rgba(0,0,0,.8), transparent);
+      background: linear-gradient(to top, rgba(0,0,0,.8), transparent);
+
+      .card-text {
+        position: absolute;
+        bottom: .75em;
+        left: 1em;
+        right: 1em;
+        font-size: 1rem;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+
+
+}
+
