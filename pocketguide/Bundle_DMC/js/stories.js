@@ -4,7 +4,7 @@ var Stories;
     var Stories = (function () {
         function Stories() {
             $(document).ready(function () {
-                $('#audio-player').mediaelementplayer({
+                $('.myPlayer').mediaelementplayer({
                     alwaysShowControls: true,
                     features: ['playpause', 'volume'],
                     audioVolume: 'horizontal'

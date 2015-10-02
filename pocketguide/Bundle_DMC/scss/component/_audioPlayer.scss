@@ -15,35 +15,15 @@ div.audio-player {
   position: relative;
   //width: 400px;
   //height: 120px;
-width: 100%;
-  background: #4c4e5a;
-  background: -webkit-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: -moz-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: -o-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: -ms-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
+  width: 100%;
 
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 
-.audio-player h1 {
-  position: absolute;
-  top: 37px;
-  left: 165px;
-
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  color: #ececec;
-  text-shadow: 1px 1px 1px rgba(0,0,0, .5);
-}
-
-.audio-player .cover {
-  position: absolute;
-  top: 0;
-  left: 0;
+.mejs-container {
+  height: auto!important;
 }
 
 .mejs-controls .mejs-button button {
@@ -55,14 +35,19 @@ width: 100%;
 
 .mejs-controls .mejs-play button,
 .mejs-controls .mejs-pause button {
-  width: 21px;
-  height: 21px;
-  top: 35px;
-  left: 135px;
-  background: transparent url(../img/play-pause.png) 0 0;
+  width: 1rem;
+  height: 1rem;
+  top: 1.5rem;
+  left: 50%;
+  margin-left: -1rem;
+  background: transparent url(../img/video_play.png) 0 0;
+  background-size: 1rem 1rem;
 }
 
-.mejs-controls .mejs-pause button { background-position:0 -21px; }
+.mejs-controls .mejs-pause button {
+  background: transparent url(../img/video_stop.png) 0 0;
+  background-size: 1rem 1rem;
+}
 
 .mejs-controls .mejs-mute button,
 .mejs-controls .mejs-unmute button {

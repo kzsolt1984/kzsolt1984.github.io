@@ -4,7 +4,7 @@ module Stories {
     export class Stories {
         constructor() {
             $(document).ready(function() {
-                $('#audio-player').mediaelementplayer({
+                $('.myPlayer').mediaelementplayer({
                     alwaysShowControls: true,
                     features: ['playpause','volume'],
                     audioVolume: 'horizontal'

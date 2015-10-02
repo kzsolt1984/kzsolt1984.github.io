@@ -2404,6 +2404,7 @@ section#stories .box {
   background-color: #7d7d7d;
   padding: .5rem;
   border-radius: 4px 4px 4px 4px;
+  margin-bottom: 0.6rem;
 }
 section#stories .box img {
   width: 30%;
@@ -2412,6 +2413,8 @@ section#stories .box img {
 section#stories .box .controller {
   float: left;
   margin-left: 0.7rem;
+  width: 65%;
+  position: relative;
 }
 section#stories .box .controller .title {
   overflow: hidden;
@@ -2420,6 +2423,23 @@ section#stories .box .controller .title {
   color: #fff;
   font-size: 1.0rem;
   font-weight: 400;
+}
+section#stories .box .controller .video-left,
+section#stories .box .controller .video-right {
+  position: absolute;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  top: 2.45rem;
+  left: 0;
+  background: transparent url(../img/video_left.png) 0 0;
+  background-size: 1rem 1rem;
+}
+section#stories .box .controller .video-right {
+  left: auto;
+  right: 0;
+  background: transparent url(../img/video_right.png) 0 0;
+  background-size: 1rem 1rem;
 }
 
 .audio-player,
@@ -2438,32 +2458,13 @@ section#stories .box .controller .title {
 div.audio-player {
   position: relative;
   width: 100%;
-  background: #4c4e5a;
-  background: -webkit-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: -moz-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: -o-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: -ms-linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
-  background: linear-gradient(top, #4c4e5a 0%, #2c2d33 100%);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
 
-.audio-player h1 {
-  position: absolute;
-  top: 37px;
-  left: 165px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  color: #ececec;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-}
-
-.audio-player .cover {
-  position: absolute;
-  top: 0;
-  left: 0;
+.mejs-container {
+  height: auto !important;
 }
 
 .mejs-controls .mejs-button button {
@@ -2475,15 +2476,18 @@ div.audio-player {
 
 .mejs-controls .mejs-play button,
 .mejs-controls .mejs-pause button {
-  width: 21px;
-  height: 21px;
-  top: 35px;
-  left: 135px;
-  background: transparent url(../img/play-pause.png) 0 0;
+  width: 1rem;
+  height: 1rem;
+  top: 1.5rem;
+  left: 50%;
+  margin-left: -1rem;
+  background: transparent url(../img/video_play.png) 0 0;
+  background-size: 1rem 1rem;
 }
 
 .mejs-controls .mejs-pause button {
-  background-position: 0 -21px;
+  background: transparent url(../img/video_stop.png) 0 0;
+  background-size: 1rem 1rem;
 }
 
 .mejs-controls .mejs-mute button,
