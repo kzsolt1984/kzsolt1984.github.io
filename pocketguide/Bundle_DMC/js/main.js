@@ -58,7 +58,19 @@ var Main;
                 'videoId': '6815537',
                 'youtubeId': 'FKHWcd2wA30'
             });
+            $('.card').on('click', function () {
+                //this.changeUrl('Page1', 'start.html');
+            });
         }
+        Main.prototype.changeUrl = function (page, url) {
+            if (typeof (history.pushState) != "undefined") {
+                var obj = { Page: page, Url: url };
+                history.pushState(obj, obj.Page, obj.Url);
+            }
+            else {
+                alert("Browser does not support HTML5.");
+            }
+        };
         return Main;
     })();
     Main_1.Main = Main;

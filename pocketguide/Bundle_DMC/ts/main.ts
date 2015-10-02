@@ -13,6 +13,19 @@ module Main {
                'videoId' : '6815537',
                 'youtubeId' : 'FKHWcd2wA30'
             });
+
+            $('.card').on('click', ()=> {
+                //this.changeUrl('Page1', 'start.html');
+            });
+        }
+
+        private changeUrl(page, url) {
+            if (typeof (history.pushState) != "undefined") {
+                var obj = { Page: page, Url: url };
+                history.pushState(obj, obj.Page, obj.Url);
+            } else {
+                alert("Browser does not support HTML5.");
+            }
         }
     }
 }

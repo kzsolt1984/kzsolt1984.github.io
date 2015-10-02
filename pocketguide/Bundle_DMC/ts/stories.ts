@@ -1,15 +1,17 @@
-/// <reference path="../lib/mediaelement.d.ts"/>
+/// <reference path="component/AudioPlyrComponent.ts"/>
 
 module Stories {
     export class Stories {
         constructor() {
-            $(document).ready(function() {
-                $('.myPlayer').mediaelementplayer({
-                    alwaysShowControls: true,
-                    features: ['playpause','volume'],
-                    audioVolume: 'horizontal'
-                });
+            $.each($('.box'), function(key, value) {
+                new component.AudioPlyrComponent(
+                    {
+                        box : value
+                    }
+                );
             });
+
+
         }
     }
 }
