@@ -15,9 +15,9 @@ module component {
             this._createVideo();
         }
 
-        private _siteRedirect() {alert('fasz: ')
+        private _siteRedirect() {alert('fasza: ')
             //window.location.href = 'start.html?pocketguide_video='+ this._videoId +'&youtube=1';
-            window.location.href = '/stories.html';
+            window.location.href = 'start.html?youtube=1';
         }
 
         private _createVideo() {
