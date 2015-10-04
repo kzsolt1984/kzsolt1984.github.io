@@ -11,9 +11,9 @@ var component;
             this._createVideo();
         }
         TeaserVideoPlayer.prototype._siteRedirect = function () {
-            alert('fasza: ');
-            //window.location.href = 'start.html?pocketguide_video='+ this._videoId +'&youtube=1';
-            window.location.href = 'start.html?youtube=1';
+            alert('faszas: ');
+            window.location.href = 'start.html?pocketguide_video=' + this._videoId + '&youtube=1';
+            //window.location.href = 'start.html?youtube=1';
         };
         TeaserVideoPlayer.prototype._createVideo = function () {
             var _this = this;
