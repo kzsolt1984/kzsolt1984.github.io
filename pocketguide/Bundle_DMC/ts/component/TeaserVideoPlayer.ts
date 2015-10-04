@@ -15,9 +15,8 @@ module component {
             this._createVideo();
         }
 
-        private _siteRedirect() {alert('zseer: ')
-            //window.location.href = 'start.html?pocketguide_video='+ this._videoId +'&youtube=1';
-            window.location.href = 'start.html?youtube=1';
+        private _siteRedirect() {
+            window.location.href = 'start.html?pocketguide_video='+ this._videoId +'&youtube=1';
         }
 
         private _createVideo() {
@@ -34,7 +33,7 @@ module component {
                         .on('click', ()=> {
                             window.history.go(-1);
                         });
-alert('youtube')
+
                     $('#iphone_video').html('<iframe id="frame1" scrolling="no" src="http://www.youtube.com/embed/'+ this._youtubeId +'?controls=0&showinfo=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
                 }
                 else {
