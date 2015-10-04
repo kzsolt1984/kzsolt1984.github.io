@@ -11,12 +11,11 @@ var component;
             this._createVideo();
         }
         TeaserVideoPlayer.prototype._siteRedirect = function () {
-            alert('redirect lesz');
+            alert('r: ' + 'start.html?pocketguide_video=' + this._videoId + '&youtube=1');
             window.location.href = 'start.html?pocketguide_video=' + this._videoId + '&youtube=1';
         };
         TeaserVideoPlayer.prototype._createVideo = function () {
             var _this = this;
-            alert('1');
             if ((navigator.userAgent.match(/Android/i)) || (navigator.userAgent.match(/android/i))) {
                 $('#play_box')
                     .on('click', function () {
@@ -24,18 +23,15 @@ var component;
                 });
             }
             else if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i))) {
-                alert('iphone');
                 if (window.location.href.indexOf('youtube=1') !== -1) {
-                    alert('youtube');
                     //$('#play_box').html('<a href="javascript:window.history.go(-1)">&nbsp;</a>');
                     $('#play_box')
                         .on('click', function () {
                         window.history.go(-1);
                     });
-                    $('#iphone_video').html('<iframe id="frame1" scrolling="no" src="http://www.youtube.com/embed/' + this._youtubeId + '?controls=0&showinfo=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+                    alert('youtube');
                 }
                 else {
-                    alert('redirect');
                     $('#play_box')
                         .on('click', function () {
                         _this._siteRedirect();
