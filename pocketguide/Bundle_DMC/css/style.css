@@ -2393,7 +2393,7 @@ section#stories .box {
   margin-bottom: 0.6rem;
 }
 section#stories .box img {
-  width: 35%;
+  width: 36%;
   float: left;
 }
 section#stories .box img.music_img {
@@ -2413,8 +2413,8 @@ section#stories .box.active img.music_img {
 }
 section#stories .box .controller {
   float: left;
-  margin-left: 0.7rem;
-  width: 60%;
+  margin-left: 1rem;
+  width: 58%;
   position: relative;
 }
 section#stories .box .controller .title {
@@ -2422,7 +2422,7 @@ section#stories .box .controller .title {
   display: block;
   font-family: "HelveticaNeueLTPro", Helvetica, Arial;
   color: #fff;
-  font-size: 4.5vw;
+  font-size: 5.2vw;
   font-weight: 400;
 }
 section#stories .box .controller .video-left,
@@ -2430,18 +2430,18 @@ section#stories .box .controller .video-right {
   position: relative;
   float: left;
   display: block;
-  width: 1rem;
-  height: 1rem;
-  top: 1.8rem;
+  width: 1.26rem;
+  height: 1.26rem;
+  top: 2rem;
   left: 0;
   background: transparent url(../img/video_left.png) 0 0;
-  background-size: 1rem 1rem;
+  background-size: 1.25rem 1.25rem;
 }
 section#stories .box .controller .video-right {
   left: auto;
   right: 0;
   background: transparent url(../img/video_right.png) 0 0;
-  background-size: 1rem 1rem;
+  background-size: 1.25rem 1.25rem;
   float: right;
 }
 
@@ -2488,7 +2488,7 @@ div.audio-player {
   height: 1rem;
   top: 0.9rem;
   left: 50%;
-  margin-left: -1rem;
+  margin-left: -0.5rem;
   background: transparent url(../img/video_play.png) 0 0;
   background-size: 1rem 1rem;
 }
