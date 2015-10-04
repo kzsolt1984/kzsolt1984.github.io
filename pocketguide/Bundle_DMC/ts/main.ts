@@ -7,15 +7,13 @@
 /// <reference path="component/TeaserVideoPlayer.ts"/>
 /// <reference path="component/AudioPlyrComponent.ts"/>
 
-interface JQuery {
-    jQTouch(options?: any): void;
-}
-
 module Main {
     export class Main {
         private setAudioPlayer: boolean = false;
 
         constructor() {
+
+
             new component.TeaserVideoPlayer({
                'videoId' : '6815537',
                 'youtubeId' : 'FKHWcd2wA30'
