@@ -30,7 +30,6 @@ var component;
                 success: function (mediaElement, domObject) {
                     _this._mediaElement = mediaElement;
                     mediaElement.addEventListener('play', function (e) {
-                        alert(1);
                         _this._$box.addClass('active');
                     }, false);
                     mediaElement.addEventListener('pause', function (e) {

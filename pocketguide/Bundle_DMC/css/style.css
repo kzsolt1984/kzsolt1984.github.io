@@ -2393,7 +2393,7 @@ section#stories .box {
   margin-bottom: 0.6rem;
 }
 section#stories .box img {
-  width: 30%;
+  width: 35%;
   float: left;
 }
 section#stories .box img.music_img {
@@ -2414,7 +2414,7 @@ section#stories .box.active img.music_img {
 section#stories .box .controller {
   float: left;
   margin-left: 0.7rem;
-  width: 65%;
+  width: 60%;
   position: relative;
 }
 section#stories .box .controller .title {
@@ -2422,25 +2422,27 @@ section#stories .box .controller .title {
   display: block;
   font-family: "HelveticaNeueLTPro", Helvetica, Arial;
   color: #fff;
-  font-size: 1.0rem;
+  font-size: 3vh;
   font-weight: 400;
 }
 section#stories .box .controller .video-left,
 section#stories .box .controller .video-right {
   position: absolute;
   display: block;
-  width: 1rem;
-  height: 1rem;
-  top: 2.45rem;
+  /*width: 1rem;
+  height: 1rem;*/
+  width: 3vh;
+  height: 3vh;
+  top: 8vh;
   left: 0;
   background: transparent url(../img/video_left.png) 0 0;
-  background-size: 1rem 1rem;
+  background-size: 2.9vh 2.9vh;
 }
 section#stories .box .controller .video-right {
   left: auto;
   right: 0;
   background: transparent url(../img/video_right.png) 0 0;
-  background-size: 1rem 1rem;
+  background-size: 2.9vh 2.9vh;
 }
 
 .audio-player,
@@ -2482,25 +2484,25 @@ div.audio-player {
 
 .mejs-controls .mejs-play button,
 .mejs-controls .mejs-pause button {
-  width: 1rem;
-  height: 1rem;
-  top: 1.5rem;
+  width: 3vh;
+  height: 3vh;
+  top: 5.1vh;
   left: 50%;
-  margin-left: -1rem;
+  margin-left: -1.5vh;
   background: transparent url(../img/video_play.png) 0 0;
-  background-size: 1rem 1rem;
+  background-size: 3vh 3vh;
 }
 
 .mejs-controls .mejs-pause button {
   background: transparent url(../img/video_stop.png) 0 0;
-  background-size: 1rem 1rem;
+  background-size: 3vh 3vh;
 }
 
 /* time scrubber bar */
 .mejs-controls .mejs-time-rail span {
   position: absolute;
   display: block;
-  height: 0.2rem;
+  height: 0.4vh;
   left: 0;
   cursor: pointer;
   -webkit-border-radius: 0px 0px 2px 2px;
@@ -2519,7 +2521,7 @@ div.audio-player {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  margin-top: 35%;
+  margin-top: 44%;
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-loaded {
@@ -2545,11 +2547,11 @@ div.audio-player {
 .mejs-controls .mejs-time-rail .mejs-time-handle {
   position: absolute;
   display: block;
-  width: 0.9rem;
-  height: 0.9rem;
-  top: -0.38rem;
+  width: 3vh;
+  height: 3vh;
+  top: -1.5vh;
   background: url("../img/video_volume.png") no-repeat;
-  background-size: 0.9rem 0.9rem;
+  background-size: 3vh 3vh;
 }
 
 /*# sourceMappingURL=style.css.map */

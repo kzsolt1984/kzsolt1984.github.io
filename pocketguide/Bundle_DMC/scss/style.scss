@@ -178,7 +178,7 @@ section {
       margin-bottom: 0.6rem;
 
       img {
-        width: 30%;
+        width: 35%;
         float: left;
       }
 
@@ -200,7 +200,7 @@ section {
       .controller {
         float: left;
         margin-left: 0.7rem;
-        width: 65%;
+        width: 60%;
         position: relative;
 
         .title {
@@ -208,7 +208,7 @@ section {
           display: block;
           font-family: "HelveticaNeueLTPro", Helvetica, Arial;
           color: #fff;
-          font-size: 1.0rem;
+          font-size: 3vh;
           font-weight: 400;
         }
 
@@ -216,19 +216,22 @@ section {
         .video-right {
           position: absolute;
           display: block;
-          width: 1rem;
-          height: 1rem;
-          top: 2.45rem;
+          /*width: 1rem;
+          height: 1rem;*/
+          width: 3vh;
+          height: 3vh;
+          //top: 2.45rem;
+          top: 8vh;
           left: 0;
           background: transparent url(../img/video_left.png) 0 0;
-          background-size: 1rem 1rem;
+          background-size: 2.9vh 2.9vh;
         }
 
         .video-right {
           left: auto;
           right: 0;
           background: transparent url(../img/video_right.png) 0 0;
-          background-size: 1rem 1rem;
+          background-size: 2.9vh 2.9vh;
         }
       }
     }

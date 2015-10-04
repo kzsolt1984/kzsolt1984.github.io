@@ -34,7 +34,7 @@ module component {
                    this._mediaElement = mediaElement;
 
                     mediaElement.addEventListener('play', (e)=> {
-alert(1);
+
                         this._$box.addClass('active');
 
                     }, false);
