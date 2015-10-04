@@ -34,6 +34,7 @@ module component {
                    this._mediaElement = mediaElement;
                 }
             });
+
         }
 
         /**

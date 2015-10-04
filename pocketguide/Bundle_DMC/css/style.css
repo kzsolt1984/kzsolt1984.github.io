@@ -2500,7 +2500,6 @@ div.audio-player {
   position: absolute;
   display: block;
   height: 0.2rem;
-  top: 3.9rem;
   left: 0;
   cursor: pointer;
   -webkit-border-radius: 0px 0px 2px 2px;
@@ -2519,6 +2518,7 @@ div.audio-player {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  margin-top: 35%;
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-loaded {
