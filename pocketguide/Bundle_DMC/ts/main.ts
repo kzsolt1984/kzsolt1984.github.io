@@ -17,16 +17,25 @@ module Main {
             $('.card').on('click', ()=> {
                 //this.changeUrl('Page1', 'start.html');
             });
+alert(window.location.hash)
+            $(window).on('hashchange', function() {
+                var hash = window.location.hash.replace(/^#/,'');
+                alert(hash);
+            });
         }
 
-        private changeUrl(page, url) {
+        private changeUrl(page, url) {alert('32323')
             if (typeof (history.pushState) != "undefined") {
                 var obj = { Page: page, Url: url };
                 history.pushState(obj, obj.Page, obj.Url);
             } else {
                 alert("Browser does not support HTML5.");
             }
+
+            return false;
         }
+
+        private hashChange() {}
     }
 }
 

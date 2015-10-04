@@ -61,8 +61,14 @@ var Main;
             $('.card').on('click', function () {
                 //this.changeUrl('Page1', 'start.html');
             });
+            alert(window.location.hash);
+            $(window).on('hashchange', function () {
+                var hash = window.location.hash.replace(/^#/, '');
+                alert(hash);
+            });
         }
         Main.prototype.changeUrl = function (page, url) {
+            alert('32323');
             if (typeof (history.pushState) != "undefined") {
                 var obj = { Page: page, Url: url };
                 history.pushState(obj, obj.Page, obj.Url);
@@ -70,7 +76,9 @@ var Main;
             else {
                 alert("Browser does not support HTML5.");
             }
+            return false;
         };
+        Main.prototype.hashChange = function () { };
         return Main;
     })();
     Main_1.Main = Main;
