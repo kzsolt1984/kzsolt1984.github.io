@@ -15,11 +15,12 @@ module component {
             this._createVideo();
         }
 
-        private _siteRedirect() {
+        private _siteRedirect() {alert('redirect lesz')
             window.location.href='start.html?pocketguide_video='+ this._videoId +'&youtube=1';
         }
 
         private _createVideo() {
+            alert('1');
             if( (navigator.userAgent.match(/Android/i)) || (navigator.userAgent.match(/android/i)) ) {
                 $('#play_box')
                     .on('click', ()=> {
@@ -27,7 +28,9 @@ module component {
                     });
             }
             else if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i)) ) {
+                alert('iphone')
                 if (window.location.href.indexOf('youtube=1') !== -1 ) {
+                    alert('youtube')
                     //$('#play_box').html('<a href="javascript:window.history.go(-1)">&nbsp;</a>');
                     $('#play_box')
                         .on('click', ()=> {
@@ -37,8 +40,9 @@ module component {
                     $('#iphone_video').html('<iframe id="frame1" scrolling="no" src="http://www.youtube.com/embed/'+ this._youtubeId +'?controls=0&showinfo=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
                 }
                 else {
+                    alert('redirect');
                     $('#play_box')
-                        .html('<span>&nbsp;</span>')
+                        //.html('<span>&nbsp;</span>')
                             .on('click', ()=> {
                             this._siteRedirect();
                         });
