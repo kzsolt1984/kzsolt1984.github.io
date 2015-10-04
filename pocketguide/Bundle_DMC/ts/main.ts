@@ -15,13 +15,13 @@ module Main {
             });
 
             $('.card').on('click', ()=> {
-                //this.changeUrl('Page1', 'start.html');
+                this.changeUrl('Page1', 'start.html');
             });
 
-            $(window).on('hashchange', function() {
+            /*$(window).on('hashchange', function() {
                 var hash = window.location.hash.replace(/^#/,'');
                 alert(hash);
-            });
+            });*/
         }
 
         private changeUrl(page, url) {alert('32323')
@@ -35,7 +35,6 @@ alert(window.location)
             return false;
         }
 
-        private hashChange() {}
     }
 }
 

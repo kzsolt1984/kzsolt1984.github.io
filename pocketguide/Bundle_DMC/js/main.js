@@ -54,17 +54,18 @@ var Main;
 (function (Main_1) {
     var Main = (function () {
         function Main() {
+            var _this = this;
             new component.TeaserVideoPlayer({
                 'videoId': '6815537',
                 'youtubeId': 'FKHWcd2wA30'
             });
             $('.card').on('click', function () {
-                //this.changeUrl('Page1', 'start.html');
+                _this.changeUrl('Page1', 'start.html');
             });
-            $(window).on('hashchange', function () {
-                var hash = window.location.hash.replace(/^#/, '');
+            /*$(window).on('hashchange', function() {
+                var hash = window.location.hash.replace(/^#/,'');
                 alert(hash);
-            });
+            });*/
         }
         Main.prototype.changeUrl = function (page, url) {
             alert('32323');
@@ -78,7 +79,6 @@ var Main;
             alert(window.location);
             return false;
         };
-        Main.prototype.hashChange = function () { };
         return Main;
     })();
     Main_1.Main = Main;
