@@ -41,7 +41,7 @@ module component {
                 else {
                     $('#play_box')
                         //.html('<span>&nbsp;</span>')
-                            .on('click', ()=> {
+                            .on('click', ()=> { 
                             this._siteRedirect();
                         });
                 }
