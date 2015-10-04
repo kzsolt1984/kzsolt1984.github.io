@@ -208,13 +208,14 @@ section {
           display: block;
           font-family: "HelveticaNeueLTPro", Helvetica, Arial;
           color: #fff;
-          font-size: 3vh;
+          font-size: 4.5vw;
           font-weight: 400;
         }
 
         .video-left,
         .video-right {
-          position: absolute;
+          position: relative;
+          float: left;
           display: block;
           width: 1rem;
           height: 1rem;
@@ -229,6 +230,7 @@ section {
           right: 0;
           background: transparent url(../img/video_right.png) 0 0;
           background-size: 1rem 1rem;
+          float: right;
         }
       }
     }

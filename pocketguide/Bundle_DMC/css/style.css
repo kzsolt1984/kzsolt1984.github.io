@@ -2422,12 +2422,13 @@ section#stories .box .controller .title {
   display: block;
   font-family: "HelveticaNeueLTPro", Helvetica, Arial;
   color: #fff;
-  font-size: 3vh;
+  font-size: 4.5vw;
   font-weight: 400;
 }
 section#stories .box .controller .video-left,
 section#stories .box .controller .video-right {
-  position: absolute;
+  position: relative;
+  float: left;
   display: block;
   width: 1rem;
   height: 1rem;
@@ -2441,6 +2442,7 @@ section#stories .box .controller .video-right {
   right: 0;
   background: transparent url(../img/video_right.png) 0 0;
   background-size: 1rem 1rem;
+  float: right;
 }
 
 .audio-player,
@@ -2482,13 +2484,13 @@ div.audio-player {
 
 .mejs-controls .mejs-play button,
 .mejs-controls .mejs-pause button {
-  width: 3vh;
-  height: 3.1vh;
-  top: 5.1vh;
+  width: 1rem;
+  height: 1rem;
+  top: 1.5rem;
   left: 50%;
-  margin-left: -1.5vh;
+  margin-left: -1rem;
   background: transparent url(../img/video_play.png) 0 0;
-  background-size: 3vh 3vh;
+  background-size: 1rem 1rem;
 }
 
 .mejs-controls .mejs-pause button {
@@ -2519,7 +2521,7 @@ div.audio-player {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  margin-top: 44%;
+  margin-top: 45%;
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-loaded {
