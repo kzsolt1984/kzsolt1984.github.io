@@ -46,7 +46,7 @@ alert(window.location)
         new Main.Main();
     });
 
-    window.onload = function () {
+    /*window.onload = function () {
         if (typeof history.pushState === "function") {
             history.pushState("jibberish", null, null);
             window.onpopstate = function () {
@@ -71,6 +71,6 @@ alert(window.location)
                 }
             };
         }
-    }
+    }*/
 }(document, window, navigator));
 
