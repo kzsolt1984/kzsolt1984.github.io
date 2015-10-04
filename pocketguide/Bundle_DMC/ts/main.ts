@@ -15,7 +15,7 @@ module Main {
             });
 
             $('.card').on('click', ()=> {
-                this.changeUrl('Page1', 'start.html');
+                this.changeUrl('Page1', 'stories.html');
             });
 
             /*$(window).on('hashchange', function() {

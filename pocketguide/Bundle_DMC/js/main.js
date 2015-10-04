@@ -60,7 +60,7 @@ var Main;
                 'youtubeId': 'FKHWcd2wA30'
             });
             $('.card').on('click', function () {
-                _this.changeUrl('Page1', 'start.html');
+                _this.changeUrl('Page1', 'stories.html');
             });
             /*$(window).on('hashchange', function() {
                 var hash = window.location.hash.replace(/^#/,'');
