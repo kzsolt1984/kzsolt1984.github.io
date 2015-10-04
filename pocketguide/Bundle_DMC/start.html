@@ -13,61 +13,192 @@
 
     <link  rel="stylesheet" href="css/style.css" />
     <link  rel="stylesheet" href="lib/jqtouch.min.css" />
+
     <script type="text/javascript" src="lib/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="lib/jqt.min.js"></script>
+    <script type="text/javascript" src="lib/mediaelement.min.js"></script>
+
     <script type="text/javascript" src="js/main.js"></script>
     <script>
         var jQT = new $.jQTouch();
     </script>
 </head>
 <body>
-<div id="jqt">
-<section class="js-tab-content is-visible" id="index">
-    <header>
-        <img src="img/index_header.jpg" />
+    <div id="jqt">
+        <section class="js-tab-content is-visible" id="index">
+            <header>
+                <img src="img/index_header.jpg" />
 
-        <div id="play_box"></div>
+                <div id="play_box"></div>
 
-        <img class="logo" src="img/logo.png" />
+                <img class="logo" src="img/logo.png" />
 
-        <div id="android_youtube" ></div>
+                <div id="android_youtube" ></div>
 
-        <div id="iphone_youtube1">
-        </div>
+                <div id="iphone_youtube1">
+                </div>
 
-        <div id="iphone_youtube2" class="hframe_youtube">
-        </div>
-    </header>
+                <div id="iphone_youtube2" class="hframe_youtube">
+                </div>
+            </header>
 
-    <div class="content-inner">
-        <h3>walk d's way</h3>
+            <div class="content-inner">
+                <h3>walk d's way</h3>
 
-        <div id="iphone_video"></div>
+                <div id="iphone_video"></div>
 
-        <p>Hard beats and bold rhymes, big drums and strong raps… Yes, that’s the legendary, the one and only and unique Run-D.M.C., the Kings of Rock in Rap!</p>
-        <p>Run-D.M.C. was the first rap group to go platinum and played on MTV and they taught us that we can rap about whatever it is that we do, about good things and bad things as well.</p>
-    </div>
+                <p>Hard beats and bold rhymes, big drums and strong raps… Yes, that’s the legendary, the one and only and unique Run-D.M.C., the Kings of Rock in Rap!</p>
+                <p>Run-D.M.C. was the first rap group to go platinum and played on MTV and they taught us that we can rap about whatever it is that we do, about good things and bad things as well.</p>
+            </div>
 
-    <div class="sub_menu">
-        <a href="#index" class="card poi" style="background-image:url(img/index_1.jpg);">
-            <span class="card-text-container"><span class="card-text ios-resize">A Peak Into D.M.C.’s Harlem</span></span>
-        </a>
-        <a href="#pok" class="card poi" style="background-image:url(img/index_2.jpg);">
-            <span class="card-text-container"><span class="card-text ios-resize">The Full Experience</span></span>
-        </a>
-        <a href="#page2" class="card poi storyCard" style="background-image:url(img/index_3.jpg);">
-            <span class="card-text-container"><span class="card-text ios-resize">D.M.C.’s Stories</span></span>
-        </a>
-        <a href="#" class="card poi" style="background-image:url(img/index_4.jpg);">
-            <span class="card-text-container"><span class="card-text ios-resize">D.M.C.’s Music</span></span>
-        </a>
-        <a href="#" class="card poi" style="background-image:url(img/index_5.jpg);">
-            <span class="card-text-container"><span class="card-text ios-resize">D.M.C. Comics</span></span>
-        </a>
-    </div>
-</section>
+            <div class="sub_menu">
+                <a href="#short-tour" class="card poi" style="background-image:url(img/index_1.jpg);">
+                    <span class="card-text-container"><span class="card-text ios-resize">A Peak Into D.M.C.’s Harlem</span></span>
+                </a>
+                <a href="#long-tour" class="card poi" style="background-image:url(img/index_2.jpg);">
+                    <span class="card-text-container"><span class="card-text ios-resize">The Full Experience</span></span>
+                </a>
+                <a href="#stories" class="card poi" style="background-image:url(img/index_3.jpg);">
+                    <span class="card-text-container"><span class="card-text ios-resize">D.M.C.’s Stories</span></span>
+                </a>
+                <a href="https://itunes.apple.com/us/artist/run-dmc/id15973" class="card poi noHash" style="background-image:url(img/index_4.jpg);">
+                    <span class="card-text-container"><span class="card-text ios-resize">D.M.C.’s Music</span></span>
+                </a>
+                <a href="http://www.dmc-comics.com/" class="card poi noHash" style="background-image:url(img/index_5.jpg);">
+                    <span class="card-text-container"><span class="card-text ios-resize">D.M.C. Comics</span></span>
+                </a>
+            </div>
+        </section>
 
-<section class="js-tab-content is-visible" id="page2">SDADASDADAD</section>
+        <section class="js-tab-content is-visible sub-page" id="short-tour">
+            <header>
+                <img src="img/short_tour.jpg" />
+            </header>
+
+            <div class="content-inner">
+                <h3>A Peak Into D.M.C.’s Harlem</h3>
+
+                <p>
+                    Check out the main spots in this shortcut and see how the Run-D.M.C. story began. Find Rice High School where Darryl started to write his first rhymes in the library. Pass by the place where Celebrity Club stood, a legendary spot for hip hop in the 80’s and visit the great Apollo Theater where Run-D.M.C. had its first live show in 1986. If you have limited time, take this 45 minutes walk and let D show you around.
+                </p>
+                <a href="#" class="btn">Start Tour</a>
+            </div>
+        </section>
+
+        <section class="js-tab-content is-visible sub-page" id="long-tour">
+            <header>
+                <img src="img/long_tour.jpg" />
+            </header>
+
+            <div class="content-inner">
+                <h3>The Full Experience</h3>
+
+                <p>
+                    Come and explore the legendary places in Harlem for D.M.C. and the hip hop culture. The tour starts at Harlem Hospital and we’ll take you through all the iconic spots from Harlem World to Celebrity Club. Visit the Church of Intercession in Harlem which is rivalling the cathedrals of Europe and play basketball in Rucker Park, once the center of the hip-hop culture. Get an insight to the Run D.M.C. experience and learn background stories from one of its founding members, Darryl McDaniels.
+                </p>
+                <a href="#" class="btn">Start Tour</a>
+            </div>
+        </section>
+
+        <section class="js-tab-content is-visible sub-page" id="stories">
+            <header>
+                <img src="img/stories.jpg" />
+            </header>
+
+            <div class="content-inner">
+                <h3>D.M.C.’s Stories</h3>
+
+                <div class="box">
+                    <img src="tmp/story.jpg" class="music_img" />
+
+                    <div class="controller">
+                        <span class="title">I was adopted</span>
+
+                        <span class="video-left"></span>
+                        <span class="video-right"></span>
+
+                        <div class="clear"></div>
+
+                        <div class="audio-player">
+                            <audio class="myPlayer" src="tmp/demo.mp3" type="audio/mp3" width="640" height="360" style="width: 100%; height: 100%;" controls="controls"></audio>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="box">
+                    <img src="tmp/story.jpg" class="music_img" />
+
+                    <div class="controller">
+                        <span class="title">I was adopted</span>
+
+                        <span class="video-left"></span>
+                        <span class="video-right"></span>
+
+                        <div class="clear"></div>
+
+                        <div class="audio-player">
+                            <audio class="myPlayer" src="tmp/demo.mp3" type="audio/mp3" width="640" height="360" style="width: 100%; height: 100%;" controls="controls"></audio>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="box">
+                    <img src="tmp/story.jpg" class="music_img" />
+
+                    <div class="controller">
+                        <span class="title">I was adopted</span>
+
+                        <span class="video-left"></span>
+                        <span class="video-right"></span>
+
+                        <div class="clear"></div>
+
+                        <div class="audio-player">
+                            <audio class="myPlayer" src="tmp/demo.mp3" type="audio/mp3" width="640" height="360" style="width: 100%; height: 100%;" controls="controls"></audio>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="box">
+                    <img src="tmp/story.jpg" class="music_img" />
+
+                    <div class="controller">
+                        <span class="title">I was adopted</span>
+
+                        <span class="video-left"></span>
+                        <span class="video-right"></span>
+
+                        <div class="clear"></div>
+
+                        <div class="audio-player">
+                            <audio class="myPlayer" src="tmp/demo.mp3" type="audio/mp3" width="640" height="360" style="width: 100%; height: 100%;" controls="controls"></audio>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="box">
+                    <img src="tmp/story.jpg" class="music_img" />
+
+                    <div class="controller">
+                        <span class="title">I was adopted</span>
+
+                        <span class="video-left"></span>
+                        <span class="video-right"></span>
+
+                        <div class="clear"></div>
+
+                        <div class="audio-player">
+                            <audio class="myPlayer" src="tmp/demo.mp3" type="audio/mp3" width="640" height="360" style="width: 100%; height: 100%;" controls="controls"></audio>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </section>
     </div>
 </body>
 </html>

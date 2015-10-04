@@ -70,12 +70,13 @@ section {
     padding: .4rem .8rem .8rem;
 
     p {
-      font-size: .7rem;
+      font-size: .8rem;
       line-height: 1.7;
+      font-family: "HelveticaNeueLTProLT", Helvetica, Arial;
     }
 
     h3 {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       font-weight: bold;
       color: red;
       padding: 0.3rem 0 0.6rem;
@@ -84,13 +85,14 @@ section {
     }
 
     .btn {
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: #fff;
       background-color: red;
       padding: 0.3rem 0rem;
       text-align: center;
       display: block;
       margin-top: 1rem;
+      font-family: "HelveticaNeueLTProRoman", Helvetica, Arial;
     }
   }
 
@@ -166,7 +168,7 @@ section {
     }
   }
 
-  &#stories {
+  &.sub-page {
     h3 {
       text-align: left;
     }
@@ -236,7 +238,11 @@ section {
     }
   }
 }
-html, body, #page1, #page2, #page3, #site {height:100%;width:100%}
+
+#jqt>* {
+  background: none!important;
+}
+
 @import "component/audioPlayer";
 
 

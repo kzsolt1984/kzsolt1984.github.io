@@ -44,30 +44,122 @@ var component;
     component.TeaserVideoPlayer = TeaserVideoPlayer;
 })(component || (component = {}));
 /**
+ * Created by Zsolt on 2015.10.02..
+ */
+/// <reference path="../../lib/mediaelement.d.ts"/>
+var component;
+(function (component) {
+    var AudioPlyrComponent = (function () {
+        function AudioPlyrComponent(options) {
+            var _this = this;
+            this._$box = $(options.box);
+            this._createPlayer(this._$box.find('.myPlayer'));
+            this._$box.find('.video-left').on('click', function () {
+                _this.setCurrentTime(false);
+            });
+            this._$box.find('.video-right').on('click', function () {
+                _this.setCurrentTime(true);
+            });
+            $(window).on('hashchange', function () {
+                _this.stopPlay();
+            });
+        }
+        /**
+         * Create audio player
+         * @param $aId   JQuery   audio tag
+         * @private
+         */
+        AudioPlyrComponent.prototype._createPlayer = function ($aId) {
+            var _this = this;
+            $aId.mediaelementplayer({
+                alwaysShowControls: true,
+                features: ['playpause', 'progress'],
+                audioVolume: 'horizontal',
+                success: function (mediaElement, domObject) {
+                    _this._mediaElement = mediaElement;
+                    mediaElement.addEventListener('play', function (e) {
+                        _this._$box.addClass('active');
+                    }, false);
+                    mediaElement.addEventListener('pause', function (e) {
+                        _this._$box.removeClass('active');
+                    }, false);
+                }
+            });
+        };
+        /**
+         * Set current time
+         * @param increase   boolean   increase current time?
+         */
+        AudioPlyrComponent.prototype.setCurrentTime = function (increase) {
+            if (!this._mediaElement) {
+                return;
+            }
+            if (increase) {
+                this._mediaElement.currentTime += 15;
+            }
+            else {
+                this._mediaElement.currentTime -= 15;
+            }
+        };
+        AudioPlyrComponent.prototype.stopPlay = function () {
+            if (!this._mediaElement) {
+                return;
+            }
+            this._mediaElement.stop();
+        };
+        return AudioPlyrComponent;
+    })();
+    component.AudioPlyrComponent = AudioPlyrComponent;
+})(component || (component = {}));
+/**
  * Created by Zsolt on 2015.09.30..
  *
  *
  * http://stackoverflow.com/questions/9446921/clues-on-sliding-between-pages-effect     lapozas
  */
 /// <reference path="component/TeaserVideoPlayer.ts"/>
-/// <reference path="../lib/jquery.d.ts"/>
+/// <reference path="component/AudioPlyrComponent.ts"/>
 var Main;
 (function (Main_1) {
     var Main = (function () {
         function Main() {
+            var _this = this;
+            this.setAudioPlayer = false;
             new component.TeaserVideoPlayer({
                 'videoId': '6815537',
                 'youtubeId': 'FKHWcd2wA30'
             });
-            $('.card').on('click', function () {
-                //this.changeUrl('Page1', 'stories.html');
-                window.location.hash = "page2";
+            $('.card').on('click', function (e) {
+                var $e = $(e.currentTarget);
+                if ($e.hasClass('noHash')) {
+                    window.location.href = $e.attr('href');
+                }
+                else {
+                    var newPageId = $e.attr('href').replace(/^#/, '');
+                    window.location.hash = newPageId;
+                    if (newPageId && !_this.setAudioPlayer) {
+                        _this._setAudioPlayer();
+                    }
+                }
             });
+            if (window.location.hash.indexOf('stories') !== -1) {
+                this._setAudioPlayer();
+            }
             /*$(window).on('hashchange', function() {
                 var hash = window.location.hash.replace(/^#/,'');
                 alert(hash);
+                return false;
             });*/
         }
+        Main.prototype._setAudioPlayer = function () {
+            console.log('LEFUTOOOK');
+            $.each($('.box'), function (key, value) {
+                new component.AudioPlyrComponent({
+                    box: value
+                });
+            });
+            this.setAudioPlayer = true;
+        };
         return Main;
     })();
     Main_1.Main = Main;

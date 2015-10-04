@@ -18,6 +18,10 @@ module component {
             this._$box.find('.video-right').on('click', ()=>{
                 this.setCurrentTime(true);
             });
+
+            $(window).on('hashchange', ()=> {
+                this.stopPlay();
+            });
         }
 
         /**
@@ -64,6 +68,14 @@ module component {
             else {
                 this._mediaElement.currentTime -= 15;
             }
+        }
+
+        private stopPlay(): void {
+            if(!this._mediaElement) {
+                return;
+            }
+
+            this._mediaElement.stop();
         }
     }
 }

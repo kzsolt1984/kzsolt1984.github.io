@@ -5,7 +5,7 @@
  * http://stackoverflow.com/questions/9446921/clues-on-sliding-between-pages-effect     lapozas
  */
 /// <reference path="component/TeaserVideoPlayer.ts"/>
-/// <reference path="../lib/jquery.d.ts"/>
+/// <reference path="component/AudioPlyrComponent.ts"/>
 
 interface JQuery {
     jQTouch(options?: any): void;
@@ -13,21 +13,53 @@ interface JQuery {
 
 module Main {
     export class Main {
+        private setAudioPlayer: boolean = false;
+
         constructor() {
             new component.TeaserVideoPlayer({
                'videoId' : '6815537',
                 'youtubeId' : 'FKHWcd2wA30'
             });
 
-            $('.card').on('click', ()=> {
-                //this.changeUrl('Page1', 'stories.html');
-                window.location.hash = "page2";
+            $('.card').on('click', (e)=> {
+                var $e = $(e.currentTarget);
+                if($e.hasClass('noHash')) {
+                    window.location.href = $e.attr('href');
+                }
+                else {
+                    var newPageId = $e.attr('href').replace(/^#/,'');
+
+                    window.location.hash = newPageId;
+
+                    if(newPageId && !this.setAudioPlayer) {
+                        this._setAudioPlayer();
+                    }
+                }
+
             });
+
+            if(window.location.hash.indexOf('stories') !== -1) {
+                this._setAudioPlayer();
+            }
+
 
             /*$(window).on('hashchange', function() {
                 var hash = window.location.hash.replace(/^#/,'');
                 alert(hash);
+                return false;
             });*/
+        }
+
+        private _setAudioPlayer() {console.log('LEFUTOOOK')
+            $.each($('.box'), function(key, value) {
+                new component.AudioPlyrComponent(
+                    {
+                        box : value
+                    }
+                );
+            });
+
+            this.setAudioPlayer = true;
         }
 
         /*private changeUrl(page, url) {alert('32323')

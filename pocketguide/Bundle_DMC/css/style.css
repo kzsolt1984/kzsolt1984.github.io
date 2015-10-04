@@ -67,6 +67,18 @@ table {
   font-style: normal;
   font-weight: 400;
 }
+@font-face {
+  font-family: 'HelveticaNeueLTProLT';
+  src: url("../font/HelveticaNeueLTPro-Lt.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTProRoman';
+  src: url("../font/HelveticaNeueLTPro-Roman.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
 /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2303,11 +2315,12 @@ section .content-inner {
   padding: .4rem .8rem .8rem;
 }
 section .content-inner p {
-  font-size: .7rem;
+  font-size: .8rem;
   line-height: 1.7;
+  font-family: "HelveticaNeueLTProLT", Helvetica, Arial;
 }
 section .content-inner h3 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: red;
   padding: 0.3rem 0 0.6rem;
@@ -2315,13 +2328,14 @@ section .content-inner h3 {
   font-family: "HelveticaNeueLTPro", Helvetica, Arial;
 }
 section .content-inner .btn {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #fff;
   background-color: red;
   padding: 0.3rem 0rem;
   text-align: center;
   display: block;
   margin-top: 1rem;
+  font-family: "HelveticaNeueLTProRoman", Helvetica, Arial;
 }
 section .sub_menu .card {
   display: block;
@@ -2382,20 +2396,20 @@ section#index h3 {
 section#index #iphone_video iframe {
   width: 100%;
 }
-section#stories h3 {
+section.sub-page h3 {
   text-align: left;
 }
-section#stories .box {
+section.sub-page .box {
   background-color: #7d7d7d;
   padding: .5rem;
   border-radius: 4px 4px 4px 4px;
   margin-bottom: 0.6rem;
 }
-section#stories .box img {
+section.sub-page .box img {
   width: 36%;
   float: left;
 }
-section#stories .box img.music_img {
+section.sub-page .box img.music_img {
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
   /* Firefox 3.5+ */
   filter: gray;
@@ -2403,20 +2417,20 @@ section#stories .box img.music_img {
   -webkit-filter: grayscale(100%);
   /* Chrome 19+ & Safari 6+ */
 }
-section#stories .box.active {
+section.sub-page .box.active {
   background-color: #c2c2c2;
 }
-section#stories .box.active img.music_img {
+section.sub-page .box.active img.music_img {
   filter: none;
   -webkit-filter: grayscale(0%);
 }
-section#stories .box .controller {
+section.sub-page .box .controller {
   float: left;
   margin-left: 1rem;
   width: 58%;
   position: relative;
 }
-section#stories .box .controller .title {
+section.sub-page .box .controller .title {
   overflow: hidden;
   display: block;
   font-family: "HelveticaNeueLTPro", Helvetica, Arial;
@@ -2424,8 +2438,8 @@ section#stories .box .controller .title {
   font-size: 5.2vw;
   font-weight: 400;
 }
-section#stories .box .controller .video-left,
-section#stories .box .controller .video-right {
+section.sub-page .box .controller .video-left,
+section.sub-page .box .controller .video-right {
   position: relative;
   float: left;
   display: block;
@@ -2436,7 +2450,7 @@ section#stories .box .controller .video-right {
   background: transparent url(../img/video_left.png) 0 0;
   background-size: 1.25rem 1.25rem;
 }
-section#stories .box .controller .video-right {
+section.sub-page .box .controller .video-right {
   left: auto;
   right: 0;
   background: transparent url(../img/video_right.png) 0 0;
@@ -2444,9 +2458,8 @@ section#stories .box .controller .video-right {
   float: right;
 }
 
-html, body, #page1, #page2, #page3, #site {
-  height: 100%;
-  width: 100%;
+#jqt > * {
+  background: none !important;
 }
 
 .audio-player,

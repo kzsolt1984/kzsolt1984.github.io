@@ -15,6 +15,9 @@ var component;
             this._$box.find('.video-right').on('click', function () {
                 _this.setCurrentTime(true);
             });
+            $(window).on('hashchange', function () {
+                _this.stopPlay();
+            });
         }
         /**
          * Create audio player
@@ -52,6 +55,12 @@ var component;
             else {
                 this._mediaElement.currentTime -= 15;
             }
+        };
+        AudioPlyrComponent.prototype.stopPlay = function () {
+            if (!this._mediaElement) {
+                return;
+            }
+            this._mediaElement.stop();
         };
         return AudioPlyrComponent;
     })();
