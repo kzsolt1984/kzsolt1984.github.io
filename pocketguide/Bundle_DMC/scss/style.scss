@@ -31,7 +31,7 @@ a {
 
 section {
   font-size: .85rem;
-  display: none;
+  //display: none;
 
   &.is-visible {
     display: block;
@@ -236,7 +236,7 @@ section {
     }
   }
 }
-
+html, body, #page1, #page2, #page3, #site {height:100%;width:100%}
 @import "component/audioPlayer";
 
 

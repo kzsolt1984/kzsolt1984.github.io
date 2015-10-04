@@ -2270,7 +2270,6 @@ a {
 
 section {
   font-size: .85rem;
-  display: none;
 }
 section.is-visible {
   display: block;
@@ -2443,6 +2442,11 @@ section#stories .box .controller .video-right {
   background: transparent url(../img/video_right.png) 0 0;
   background-size: 1.25rem 1.25rem;
   float: right;
+}
+
+html, body, #page1, #page2, #page3, #site {
+  height: 100%;
+  width: 100%;
 }
 
 .audio-player,

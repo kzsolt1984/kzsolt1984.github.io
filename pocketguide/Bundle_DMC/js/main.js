@@ -50,6 +50,7 @@ var component;
  * http://stackoverflow.com/questions/9446921/clues-on-sliding-between-pages-effect     lapozas
  */
 /// <reference path="component/TeaserVideoPlayer.ts"/>
+/// <reference path="../lib/jquery.d.ts"/>
 var Main;
 (function (Main_1) {
     var Main = (function () {
@@ -60,24 +61,13 @@ var Main;
             });
             $('.card').on('click', function () {
                 //this.changeUrl('Page1', 'stories.html');
+                window.location.hash = "page2";
             });
-            $(window).on('hashchange', function () {
-                var hash = window.location.hash.replace(/^#/, '');
+            /*$(window).on('hashchange', function() {
+                var hash = window.location.hash.replace(/^#/,'');
                 alert(hash);
-            });
+            });*/
         }
-        Main.prototype.changeUrl = function (page, url) {
-            alert('32323');
-            if (typeof (history.pushState) != "undefined") {
-                var obj = { Page: page, Url: url };
-                history.pushState(obj, obj.Page, obj.Url);
-            }
-            else {
-                alert("Browser does not support HTML5.");
-            }
-            alert(window.location);
-            return false;
-        };
         return Main;
     })();
     Main_1.Main = Main;
