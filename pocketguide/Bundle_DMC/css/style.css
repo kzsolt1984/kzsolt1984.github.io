@@ -2544,11 +2544,11 @@ div.audio-player {
 .mejs-controls .mejs-time-rail .mejs-time-handle {
   position: absolute;
   display: block;
-  width: 0.75rem;
-  height: 0.75rem;
-  top: -5px;
+  width: 0.9rem;
+  height: 0.9rem;
+  top: -0.38rem;
   background: url("../img/video_volume.png") no-repeat;
-  background-size: 0.75rem 0.75rem;
+  background-size: 0.9rem 0.9rem;
 }
 
 /*# sourceMappingURL=style.css.map */
