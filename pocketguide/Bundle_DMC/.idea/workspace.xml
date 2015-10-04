@@ -25,10 +25,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="start.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="start.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/start.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3153153" vertical-offset="250" max-vertical-offset="3604">
+            <state vertical-scroll-proportion="-6.730769" vertical-offset="250" max-vertical-offset="3604">
               <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#1;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -49,8 +49,8 @@
       <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scss/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.423077" vertical-offset="1029" max-vertical-offset="4335">
-              <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
+            <state vertical-scroll-proportion="-10.0" vertical-offset="3531" max-vertical-offset="4335">
+              <caret line="223" column="18" selection-start-line="223" selection-start-column="18" selection-end-line="223" selection-end-column="18" />
               <folding>
                 <element signature="e#3609#3860#2" expanded="true" />
               </folding>
@@ -66,6 +66,16 @@
               <folding>
                 <element signature="n#!!doc;n#component#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_audioPlayer.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scss/component/_audioPlayer.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7112676" vertical-offset="939" max-vertical-offset="1938">
+              <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -123,19 +133,19 @@
         <option value="$PROJECT_DIR$/../../mobile/test/Tour_6815537/ttt/johndyer-mediaelement-ffd0657/demo/mediaelementplayer-audio.html" />
         <option value="$PROJECT_DIR$/lib/mediaelement.js" />
         <option value="$PROJECT_DIR$/ts/stories.ts" />
-        <option value="$PROJECT_DIR$/scss/component/_audioPlayer.scss" />
         <option value="$PROJECT_DIR$/lib/jquery.cycle.d.ts" />
         <option value="$PROJECT_DIR$/../../mobile/test/package/demos/main/index.html" />
         <option value="$PROJECT_DIR$/short_tour.html" />
         <option value="$PROJECT_DIR$/stories.html" />
         <option value="$PROJECT_DIR$/scss/component/_font.scss" />
-        <option value="$PROJECT_DIR$/scss/style.scss" />
         <option value="$PROJECT_DIR$/ts/component/AudioPlyrComponent.ts" />
         <option value="$PROJECT_DIR$/../Bundle_test/start.html" />
         <option value="$PROJECT_DIR$/ts/component/TeaserVideoPlayer.ts" />
         <option value="$PROJECT_DIR$/lib/jquery.event.swipe.js" />
         <option value="$PROJECT_DIR$/ts/main.ts" />
         <option value="$PROJECT_DIR$/start.html" />
+        <option value="$PROJECT_DIR$/scss/style.scss" />
+        <option value="$PROJECT_DIR$/scss/component/_audioPlayer.scss" />
       </list>
     </option>
   </component>
@@ -705,14 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scss/component/_audioPlayer.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1538463" vertical-offset="596" max-vertical-offset="1938">
-          <caret line="46" column="19" selection-start-line="46" selection-start-column="19" selection-end-line="46" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../mobile/test/package/demos/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="255">
@@ -764,16 +766,6 @@
         <state vertical-scroll-proportion="-7.8461537" vertical-offset="0" max-vertical-offset="425">
           <caret line="12" column="1" selection-start-line="7" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scss/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.423077" vertical-offset="1029" max-vertical-offset="4335">
-          <caret line="78" column="20" selection-start-line="78" selection-start-column="20" selection-end-line="78" selection-end-column="20" />
-          <folding>
-            <element signature="e#3609#3860#2" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -848,7 +840,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/start.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3153153" vertical-offset="250" max-vertical-offset="3604">
+        <state vertical-scroll-proportion="-6.730769" vertical-offset="250" max-vertical-offset="3604">
           <caret line="25" column="62" selection-start-line="25" selection-start-column="62" selection-end-line="25" selection-end-column="62" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#1;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -862,6 +854,24 @@
             <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#3;n#div#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#4;n#div#0;n#section#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0" vertical-offset="3531" max-vertical-offset="4335">
+          <caret line="223" column="18" selection-start-line="223" selection-start-column="18" selection-end-line="223" selection-end-column="18" />
+          <folding>
+            <element signature="e#3609#3860#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scss/component/_audioPlayer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7112676" vertical-offset="939" max-vertical-offset="1938">
+          <caret line="79" column="16" selection-start-line="79" selection-start-column="16" selection-end-line="79" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
