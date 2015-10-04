@@ -23,7 +23,6 @@ var component;
             }
             else if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i))) {
                 if (window.location.href.indexOf('youtube=1') !== -1) {
-                    //$('#play_box').html('<a href="javascript:window.history.go(-1)">&nbsp;</a>');
                     $('#play_box')
                         .on('click', function () {
                         window.history.go(-1);
