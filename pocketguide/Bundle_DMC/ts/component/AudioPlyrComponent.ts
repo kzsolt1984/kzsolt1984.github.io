@@ -32,6 +32,18 @@ module component {
                 audioVolume: 'horizontal',
                 success: (mediaElement, domObject)=> {
                    this._mediaElement = mediaElement;
+
+                    mediaElement.addEventListener('play', (e)=> {
+
+                        this._$box.addClass('active');
+
+                    }, false);
+
+                    mediaElement.addEventListener('pause', (e)=> {
+
+                        this._$box.removeClass('active');
+
+                    }, false);
                 }
             });
 
