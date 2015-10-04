@@ -61,7 +61,6 @@ var Main;
             $('.card').on('click', function () {
                 //this.changeUrl('Page1', 'start.html');
             });
-            alert(window.location.hash);
             $(window).on('hashchange', function () {
                 var hash = window.location.hash.replace(/^#/, '');
                 alert(hash);
@@ -76,6 +75,7 @@ var Main;
             else {
                 alert("Browser does not support HTML5.");
             }
+            alert(window.location);
             return false;
         };
         Main.prototype.hashChange = function () { };

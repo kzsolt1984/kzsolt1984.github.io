@@ -17,7 +17,7 @@ module Main {
             $('.card').on('click', ()=> {
                 //this.changeUrl('Page1', 'start.html');
             });
-alert(window.location.hash)
+
             $(window).on('hashchange', function() {
                 var hash = window.location.hash.replace(/^#/,'');
                 alert(hash);
@@ -31,7 +31,7 @@ alert(window.location.hash)
             } else {
                 alert("Browser does not support HTML5.");
             }
-
+alert(window.location)
             return false;
         }
 
