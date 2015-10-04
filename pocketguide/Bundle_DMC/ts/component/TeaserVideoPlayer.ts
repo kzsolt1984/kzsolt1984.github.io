@@ -16,7 +16,8 @@ module component {
         }
 
         private _siteRedirect() {alert('r: ' + 'start.html?pocketguide_video='+ this._videoId +'&youtube=1')
-            window.location.href = 'start.html?pocketguide_video='+ this._videoId +'&youtube=1';
+            //window.location.href = 'start.html?pocketguide_video='+ this._videoId +'&youtube=1';
+            window.location.href = 'stories.html';
         }
 
         private _createVideo() {
