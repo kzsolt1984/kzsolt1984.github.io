@@ -16,7 +16,7 @@ module component {
         }
 
         private _siteRedirect() {
-            window.location.href = 'start.html?pocketguide_video='+ this._videoId +'&youtube=1';
+            window.location.href = 'start.html?pocketguide_video='+ this._videoId +'_en&youtube=1';
 
             //window.location.href="start.html?pocketguide_video=6815537_en&youtube=1";
         }
@@ -41,7 +41,7 @@ module component {
                 else {
                     $('#play_box')
                         //.html('<span>&nbsp;</span>')
-                            .on('click', ()=> {alert('1111');
+                            .on('click', ()=> {
                             this._siteRedirect();
                         });
                 }
