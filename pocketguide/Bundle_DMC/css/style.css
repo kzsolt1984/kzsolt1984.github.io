@@ -2392,6 +2392,10 @@ section#index h3 {
   text-align: center;
   position: relative;
   top: -1.2rem;
+  font-family: Arial, "HelveticaNeueLTPro", Helvetica;
+  vertical-align: middle;
+  display: table-cell;
+  width: 100vw;
 }
 section#index #iphone_video iframe {
   width: 100%;
