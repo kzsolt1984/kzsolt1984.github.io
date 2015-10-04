@@ -54,18 +54,17 @@ var Main;
 (function (Main_1) {
     var Main = (function () {
         function Main() {
-            var _this = this;
             new component.TeaserVideoPlayer({
                 'videoId': '6815537',
                 'youtubeId': 'FKHWcd2wA30'
             });
             $('.card').on('click', function () {
-                _this.changeUrl('Page1', 'stories.html');
+                //this.changeUrl('Page1', 'stories.html');
             });
-            /*$(window).on('hashchange', function() {
-                var hash = window.location.hash.replace(/^#/,'');
+            $(window).on('hashchange', function () {
+                var hash = window.location.hash.replace(/^#/, '');
                 alert(hash);
-            });*/
+            });
         }
         Main.prototype.changeUrl = function (page, url) {
             alert('32323');
@@ -83,9 +82,31 @@ var Main;
     })();
     Main_1.Main = Main;
 })(Main || (Main = {}));
-(function (doc, win, navigator) {
+(function (doc, window, navigator) {
     'use strict';
     doc.addEventListener('DOMContentLoaded', function () {
         new Main.Main();
     });
+    window.onload = function () {
+        if (typeof history.pushState === "function") {
+            history.pushState("jibberish", null, null);
+            window.onpopstate = function () {
+                history.pushState('newjibberish', null, null);
+                // Handle the back (or forward) buttons here
+                // Will NOT handle refresh, use onbeforeunload for this.
+            };
+        }
+        else {
+            var ignoreHashChange = true;
+            window.onhashchange = function () {
+                if (!ignoreHashChange) {
+                    ignoreHashChange = true;
+                    window.location.hash = Math.random();
+                }
+                else {
+                    ignoreHashChange = false;
+                }
+            };
+        }
+    };
 }(document, window, navigator));
