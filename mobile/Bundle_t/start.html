@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <title>RUN D.M.C</title>
+
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+</head>
+<body>
+
+
+<div>
+    <a href="#page1">Page1</a>
+    <a href="#page2">Page2</a>
+    <a href="#page3">Page3</a>
+    <a href="#page4">Page4</a>
+    <a href="#page5">Page5</a>
+    <a href="#" id="back">Back</a>
+</div>
+
+<section>
+
+</section>
+
+
+<script>
+    var e = $('section');
+
+    function log(text) {
+        e.prepend('<p>' + text + '</p>')
+
+    }
+
+    $(window).on( 'hashchange', function(e) {
+        log('hash change: ' + window.location.hash);
+    });
+
+    $('#back').on('click', function(){
+        window.history.back();
+       return false;
+    });
+
+    log("Load hash: "+ window.location.hash);
+
+</script>
+</body>
+</html>
