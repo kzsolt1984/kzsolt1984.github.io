@@ -121,37 +121,12 @@ var Main;
 (function (Main_1) {
     var Main = (function () {
         function Main() {
-            var _this = this;
             this.setAudioPlayer = false;
             new component.TeaserVideoPlayer({
                 'videoId': '6815537',
-                'youtubeId': 'FKHWcd2wA30'
+                'youtubeId': 'IrB5kcWPGoI'
             });
-            $('.card').on('click', function (e) {
-                var $e = $(e.currentTarget);
-                if ($e.hasClass('noHash')) {
-                    window.location.href = $e.attr('href');
-                }
-                else {
-                    var newPageId = $e.attr('href').replace(/^#/, '');
-                    window.location.hash = newPageId;
-                    if (newPageId && !_this.setAudioPlayer) {
-                        _this._setAudioPlayer();
-                    }
-                }
-            });
-            if (window.location.hash.indexOf('stories') !== -1) {
-                this._setAudioPlayer();
-            }
         }
-        Main.prototype._setAudioPlayer = function () {
-            $.each($('.box'), function (key, value) {
-                new component.AudioPlyrComponent({
-                    box: value
-                });
-            });
-            this.setAudioPlayer = true;
-        };
         return Main;
     })();
     Main_1.Main = Main;

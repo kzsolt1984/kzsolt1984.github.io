@@ -10,8 +10,6 @@ module Stories {
                     }
                 );
             });
-
-
         }
     }
 }
