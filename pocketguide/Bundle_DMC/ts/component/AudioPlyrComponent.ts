@@ -48,6 +48,12 @@ module component {
                         this._$box.removeClass('active');
 
                     }, false);
+
+                    domObject.addEventListener('touchmove', (e)=> {
+
+                        alert('111')
+
+                    }, false);
                 }
             });
 

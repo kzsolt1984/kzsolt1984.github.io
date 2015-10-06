@@ -1,0 +1,121 @@
+@import "component/reset";
+@import "component/font";
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+  font-family: "HelveticaNeueLTPro", Helvetica, Arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  font-size: .85rem;
+  header {
+    position: relative;
+    text-align: center;
+
+    img {
+      display: block;
+      width: 38.75%;
+      float: left;
+
+      &.logo {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+    }
+
+    .media {
+      position: relative;
+      float: right;
+      width: 59%;
+
+      img {
+        width: 100%;
+      }
+
+      #play_box {
+        position: absolute;
+        width: 33.3%;
+        top: 50%;
+        margin-top: -17%;
+        left: 50%;
+        margin-left: -17%;
+      }
+    }
+  }
+
+  #iphone_video {
+    margin-top: 5px;
+
+    iframe {
+      width: 100%;
+    }
+  }
+
+  .content-inner {
+    padding: .4rem 1.1rem .8rem;
+
+    p {
+      font-size: .9rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      font-weight: 100;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-family: "HelveticaNeueLTProCn", Helvetica, Arial;
+    }
+
+    .btn {
+      font-size: 1.4rem;
+      color: #fff;
+      background-color: red;
+      padding: 1rem 0;
+      text-align: center;
+      display: block;
+      border-radius: 3px 3px;
+      font-weight: 100;
+      font-family: "HelveticaNeueLTProRoman", Helvetica, Arial;
+    }
+
+    .about {
+      color: #333;
+      font-size: 1rem;
+      font-weight: bold;
+      text-decoration: underline;
+      font-family: "HelveticaNeueLTPro", Helvetica, Arial;
+      margin-bottom: 30px;
+      display: inline-block;
+    }
+
+    .bold,
+    p span {
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,198 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clear {
+  clear: both;
+  float: none;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTPro';
+  src: url("../font/HelveticaNeueLTPro-Lt.otf") format("opentype");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTPro';
+  src: url("../font/HelveticaNeueLTPro-Md.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTPro';
+  src: url("../font/HelveticaNeueLTPro-Bd.otf") format("opentype");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTProCn';
+  src: url("../font/HelveticaNeueLTPro-Cn.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTProRoman';
+  src: url("../font/HelveticaNeueLTPro-Roman.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+  font-family: "HelveticaNeueLTPro", Helvetica, Arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+section {
+  font-size: .85rem;
+}
+section header {
+  position: relative;
+  text-align: center;
+}
+section header img {
+  display: block;
+  width: 38.75%;
+  float: left;
+}
+section header img.logo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+section header .media {
+  position: relative;
+  float: right;
+  width: 59%;
+}
+section header .media img {
+  width: 100%;
+}
+section header .media #play_box {
+  position: absolute;
+  width: 33.3%;
+  top: 50%;
+  margin-top: -17%;
+  left: 50%;
+  margin-left: -17%;
+}
+section #iphone_video {
+  margin-top: 5px;
+}
+section #iphone_video iframe {
+  width: 100%;
+}
+section .content-inner {
+  padding: .4rem 1.1rem .8rem;
+}
+section .content-inner p {
+  font-size: .9rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  font-weight: 100;
+}
+section .content-inner h3 {
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: "HelveticaNeueLTProCn", Helvetica, Arial;
+}
+section .content-inner .btn {
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: red;
+  padding: 1rem 0;
+  text-align: center;
+  display: block;
+  border-radius: 3px 3px;
+  font-weight: 100;
+  font-family: "HelveticaNeueLTProRoman", Helvetica, Arial;
+}
+section .content-inner .about {
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: underline;
+  font-family: "HelveticaNeueLTPro", Helvetica, Arial;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+section .content-inner .bold,
+section .content-inner p span {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=style.css.map */
