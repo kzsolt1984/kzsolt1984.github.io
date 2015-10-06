@@ -177,7 +177,7 @@ section .content-inner .btn {
   padding: 1rem 0;
   text-align: center;
   display: block;
-  border-radius: 3px 3px;
+  border-radius: 5px 5px 5px 5px;
   font-weight: 100;
   font-family: "HelveticaNeueLTProRoman", Helvetica, Arial;
 }
@@ -187,7 +187,7 @@ section .content-inner .about {
   font-weight: bold;
   text-decoration: underline;
   font-family: "HelveticaNeueLTPro", Helvetica, Arial;
-  margin-bottom: 30px;
+  margin-bottom: 2rem;
   display: inline-block;
 }
 section .content-inner .bold,
