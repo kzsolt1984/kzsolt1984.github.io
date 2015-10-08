@@ -93,8 +93,8 @@
       <file leaf-file-name="TeaserVideoPlayer.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ts/component/TeaserVideoPlayer.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.76632303" vertical-offset="149" max-vertical-offset="901">
+              <caret line="37" column="116" selection-start-line="37" selection-start-column="116" selection-end-line="37" selection-end-column="116" />
               <folding>
                 <element signature="n#!!doc;n#component#0" expanded="false" />
               </folding>
@@ -131,7 +131,6 @@
         <option value="$PROJECT_DIR$/ts/stories.ts" />
         <option value="$PROJECT_DIR$/short_tour.html" />
         <option value="$PROJECT_DIR$/long_tour.html" />
-        <option value="$PROJECT_DIR$/ts/component/TeaserVideoPlayer.ts" />
         <option value="$PROJECT_DIR$/start.html" />
         <option value="$PROJECT_DIR$/../../mobile/t/start.html" />
         <option value="$PROJECT_DIR$/../../mobile/Bundle_t/start.html" />
@@ -139,6 +138,7 @@
         <option value="$PROJECT_DIR$/ts/component/AudioPlyrComponent.ts" />
         <option value="$PROJECT_DIR$/scss/style.scss" />
         <option value="$PROJECT_DIR$/ts/main.ts" />
+        <option value="$PROJECT_DIR$/ts/component/TeaserVideoPlayer.ts" />
       </list>
     </option>
   </component>
@@ -803,8 +803,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/component/TeaserVideoPlayer.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.76632303" vertical-offset="149" max-vertical-offset="901">
+          <caret line="37" column="116" selection-start-line="37" selection-start-column="116" selection-end-line="37" selection-end-column="116" />
           <folding>
             <element signature="n#!!doc;n#component#0" expanded="false" />
           </folding>

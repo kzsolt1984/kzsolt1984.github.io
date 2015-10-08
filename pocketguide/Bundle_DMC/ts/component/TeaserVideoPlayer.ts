@@ -17,6 +17,7 @@ module component {
 
         private _siteRedirect() {
             window.location.href = 'start.html?pocketguide_video='+ this._videoId +'_en&youtube=1';
+            alert(window.location.href)
         }
 
         private _createVideo() {
@@ -34,6 +35,7 @@ module component {
                         });
 
                     $('#iphone_video').html('<iframe id="frame1" scrolling="no" src="http://www.youtube.com/embed/'+ this._youtubeId +'?controls=0&showinfo=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+                    alert('http://www.youtube.com/embed/'+ this._youtubeId +'?controls=0&showinfo=0&rel=0&autoplay=1')
                 }
                 else {
                     $('#play_box')
