@@ -38,9 +38,6 @@ var component;
                     mediaElement.addEventListener('pause', function (e) {
                         _this._$box.removeClass('active');
                     }, false);
-                    domObject.addEventListener('touchmove', function (e) {
-                        alert('111');
-                    }, false);
                 }
             });
         };

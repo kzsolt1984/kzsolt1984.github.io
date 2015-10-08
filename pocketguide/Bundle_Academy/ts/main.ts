@@ -10,7 +10,7 @@ module Main {
     export class Main {
         constructor() {
             new component.TeaserVideoPlayer({
-               'videoId'    : '6815537',
+               'videoId'    : '7110439',
                 'youtubeId' : 'IrB5kcWPGoI'
             });
         }

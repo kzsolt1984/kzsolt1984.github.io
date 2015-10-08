@@ -13,8 +13,8 @@ module Main {
 
         constructor() {
             new component.TeaserVideoPlayer({
-               'videoId'    : '6815537',
-                'youtubeId' : 'IrB5kcWPGoI'
+               'videoId'    : 'NewYorkDMC',
+                'youtubeId' : 'iFuuondxVX4'
             });
         }
     }
