@@ -13,9 +13,9 @@ module Main {
 
         constructor() {
             new component.TeaserVideoPlayer({
-               //'videoId'    : 'NewYorkDMC',
+               //'videoId'    : '6815537',
                 //'youtubeId' : 'iFuuondxVX4'
-                'videoId'    : '6815537',
+                'videoId'    : 'NewYorkDMC',
                 'youtubeId' : 'iFuuondxVX4'
             });
         }

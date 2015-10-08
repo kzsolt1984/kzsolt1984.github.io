@@ -48,8 +48,8 @@
       <file leaf-file-name="main.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ts/main.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4857143" vertical-offset="17" max-vertical-offset="680">
-              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+            <state vertical-scroll-proportion="0.4" vertical-offset="17" max-vertical-offset="680">
+              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -137,8 +137,8 @@
         <option value="$PROJECT_DIR$/ts/component/AudioPlyrComponent.ts" />
         <option value="$PROJECT_DIR$/scss/style.scss" />
         <option value="$PROJECT_DIR$/js/main.js" />
-        <option value="$PROJECT_DIR$/ts/main.ts" />
         <option value="$PROJECT_DIR$/ts/component/TeaserVideoPlayer.ts" />
+        <option value="$PROJECT_DIR$/ts/main.ts" />
       </list>
     </option>
   </component>
@@ -793,8 +793,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ts/main.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4857143" vertical-offset="17" max-vertical-offset="680">
-          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.4" vertical-offset="17" max-vertical-offset="680">
+          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
           <folding />
         </state>
       </provider>
