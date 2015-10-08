@@ -12,7 +12,6 @@ var component;
         }
         TeaserVideoPlayer.prototype._siteRedirect = function () {
             window.location.href = 'start.html?pocketguide_video=' + this._videoId + '_en&youtube=1';
-            alert(window.location.href);
         };
         TeaserVideoPlayer.prototype._createVideo = function () {
             var _this = this;
@@ -29,7 +28,6 @@ var component;
                         window.history.go(-1);
                     });
                     $('#iphone_video').html('<iframe id="frame1" scrolling="no" src="http://www.youtube.com/embed/' + this._youtubeId + '?controls=0&showinfo=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
-                    alert('http://www.youtube.com/embed/' + this._youtubeId + '?controls=0&showinfo=0&rel=0&autoplay=1');
                 }
                 else {
                     $('#play_box')
@@ -131,7 +129,7 @@ var Main;
                 //'videoId'    : 'NewYorkDMC',
                 //'youtubeId' : 'iFuuondxVX4'
                 'videoId': '6815537',
-                'youtubeId': 'IrB5kcWPGoI'
+                'youtubeId': 'iFuuondxVX4'
             });
         }
         return Main;
