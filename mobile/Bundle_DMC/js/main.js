@@ -126,6 +126,8 @@ var Main;
         function Main() {
             this.setAudioPlayer = false;
             new component.TeaserVideoPlayer({
+                //'videoId'    : '6815537',
+                //'youtubeId' : 'iFuuondxVX4'
                 'videoId': 'NewYorkDMC',
                 'youtubeId': 'iFuuondxVX4'
             });
