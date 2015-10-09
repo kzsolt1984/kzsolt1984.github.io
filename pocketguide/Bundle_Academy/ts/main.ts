@@ -13,6 +13,12 @@ module Main {
                'videoId'    : '7110439',
                 'youtubeId' : 'Jo-x0LWk2zk'
             });
+
+            setTimeout(function(){
+                alert($('#iphone_video').height() +':'+$('#iphone_video').width());
+                alert($('iframe').height() +':'+$('iframe').width());
+            }, 3000)
+
         }
     }
 }
