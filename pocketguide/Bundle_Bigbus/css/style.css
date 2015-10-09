@@ -1,0 +1,289 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clear {
+  clear: both;
+  float: none;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTPro';
+  src: url("../font/HelveticaNeueLTPro-Lt.otf") format("opentype");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTPro';
+  src: url("../font/HelveticaNeueLTPro-Md.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTPro';
+  src: url("../font/HelveticaNeueLTPro-Bd.otf") format("opentype");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTProCn';
+  src: url("../font/HelveticaNeueLTPro-Cn.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTProRoman';
+  src: url("../font/HelveticaNeueLTPro-Roman.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  margin: 0;
+  font-family: "HelveticaNeueLTPro", Helvetica, Arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+#ad_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+#ad_container .elements {
+  width: 200%;
+}
+#ad_container .ad {
+  float: left;
+  height: 100%;
+  width: 50%;
+}
+#ad_container .ad .info div {
+  padding: 15px 20px;
+  background: rgba(255, 255, 255, 0.7);
+  width: 23%;
+  margin-top: 2.7%;
+  margin-left: 4.7%;
+  box-sizing: border-box;
+}
+#ad_container .ad .info div h2 {
+  font-size: 33px;
+  color: #003974;
+  line-height: 1.3;
+}
+#ad_container .ad .info div .prize {
+  font-size: 26px;
+  margin-top: 35px;
+  margin-bottom: 30px;
+}
+#ad_container .ad .info div .prize span {
+  font-weight: normal;
+  color: #003974;
+}
+#ad_container .ad .info div .text {
+  font-size: 29px;
+  line-height: 1.3;
+}
+#ad_container .ad.ad_1 {
+  background: url(../img/big_img_1.jpg) no-repeat;
+}
+#ad_container .ad.ad_2 {
+  background-color: yellow;
+}
+#ad_container.min {
+  height: 26%;
+}
+#ad_container.min .ad {
+  display: table;
+  overflow: hidden;
+}
+#ad_container.min .ad .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+#ad_container.min .ad .info div {
+  width: 82%;
+  margin-left: 2.3%;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: table;
+}
+#ad_container.min .ad .info div h2 {
+  line-height: normal;
+  width: 34%;
+  height: 100%;
+  padding: 15px 15px 15px 0;
+  border-right: 1px solid #000;
+  box-sizing: initial;
+  display: table-cell;
+  vertical-align: middle;
+}
+#ad_container.min .ad .info div .prize {
+  margin: 0 0 0 20px;
+  width: 18%;
+  padding-left: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  font-weight: 100;
+}
+#ad_container.min .ad .info div .prize i:first-child {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+#ad_container.min .ad .info div .prize span {
+  margin-bottom: 0;
+}
+#ad_container.min .ad .info div .text {
+  line-height: normal;
+  font-weight: 100;
+  display: table-cell;
+  vertical-align: middle;
+}
+#ad_container.min .ad.ad_1 {
+  background: url(../img/small_img_1.jpg) no-repeat;
+}
+#ad_container.min .ad.ad_2 {
+  background-color: yellow;
+}
+
+#tours_container {
+  width: 100%;
+  height: 65.6%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 6%;
+  z-index: 1;
+}
+#tours_container .elements {
+  width: 287%;
+}
+#tours_container .elements .tour {
+  float: left;
+  height: 100%;
+  width: 14.2%;
+  margin-right: 5px;
+  overflow: hidden;
+  display: table;
+  background: url(../img/test.jpg) no-repeat 0 0;
+  background-size: auto  100%;
+}
+#tours_container .elements .tour img {
+  height: 100%;
+  display: none;
+}
+#tours_container .elements .tour .info {
+  display: table-cell;
+  vertical-align: middle;
+  /*position: absolute;
+  right: 24%;
+  left: 24%;
+  top: 24%;
+  bottom: 24%; */
+}
+#tours_container .elements .tour .info div {
+  padding: 5px;
+  background: rgba(255, 255, 255, 0.7);
+  margin-right: 24%;
+  margin-left: 24%;
+}
+#tours_container.min {
+  height: 0;
+}
+
+.elements {
+  position: absolute;
+  left: 0;
+  height: 100%;
+}
+
+footer {
+  width: 100%;
+  height: 6%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  background-color: #000;
+  color: #fff;
+}
+footer a {
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */
