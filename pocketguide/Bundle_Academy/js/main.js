@@ -46,7 +46,6 @@ var component;
  * Created by Zsolt on 2015.09.30..
  *
  *
- * http://stackoverflow.com/questions/9446921/clues-on-sliding-between-pages-effect     lapozas
  */
 /// <reference path="component/TeaserVideoPlayer.ts"/>
 var Main;
@@ -60,9 +59,6 @@ var Main;
             setTimeout(function () {
                 $('iframe').css('height', ($('iframe').width() * 0.5625));
             }, 2000);
-            $('iframe').on('resize', function () {
-                alert($('iframe').height());
-            });
         }
         return Main;
     })();
