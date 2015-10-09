@@ -45,15 +45,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="about.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/about.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5621622" vertical-offset="0" max-vertical-offset="3077">
+            <state vertical-scroll-proportion="-33.346153" vertical-offset="0" max-vertical-offset="3077">
               <caret line="51" column="90" selection-start-line="51" selection-start-column="90" selection-end-line="51" selection-end-column="90" />
               <folding>
                 <marker date="1444381962219" expanded="true" signature="1452:1462" placeholder="..." />
                 <marker date="1444381962219" expanded="true" signature="2066:2076" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TeaserVideoPlayer.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ts/component/TeaserVideoPlayer.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.55593807" vertical-offset="0" max-vertical-offset="918">
+              <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -99,6 +109,7 @@
         <option value="$PROJECT_DIR$/css/about-style.css" />
         <option value="$PROJECT_DIR$/start.html" />
         <option value="$PROJECT_DIR$/about.html" />
+        <option value="$PROJECT_DIR$/ts/component/TeaserVideoPlayer.ts" />
       </list>
     </option>
   </component>
@@ -600,14 +611,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/component/TeaserVideoPlayer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2155797" vertical-offset="0" max-vertical-offset="901">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scss/style.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-18.73077" vertical-offset="1213" max-vertical-offset="2142">
@@ -653,12 +656,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/about.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5621622" vertical-offset="0" max-vertical-offset="3077">
+        <state vertical-scroll-proportion="-33.346153" vertical-offset="0" max-vertical-offset="3077">
           <caret line="51" column="90" selection-start-line="51" selection-start-column="90" selection-end-line="51" selection-end-column="90" />
           <folding>
             <marker date="1444381962219" expanded="true" signature="1452:1462" placeholder="..." />
             <marker date="1444381962219" expanded="true" signature="2066:2076" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ts/component/TeaserVideoPlayer.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55593807" vertical-offset="0" max-vertical-offset="918">
+          <caret line="19" column="47" selection-start-line="19" selection-start-column="47" selection-end-line="19" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
