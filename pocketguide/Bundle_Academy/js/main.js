@@ -59,7 +59,10 @@ var Main;
             });
             setTimeout(function () {
                 $('iframe').css('height', ($('iframe').width() * 0.5625));
-            }, 500);
+            }, 2000);
+            $('iframe').on('resize', function () {
+                alert($('iframe').height());
+            });
         }
         return Main;
     })();
