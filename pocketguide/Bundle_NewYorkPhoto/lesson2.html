@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+	<title>Overview</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" href="lesson2-style.css" type="text/css" media="screen" />
+
+	
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-touch-fullscreen" content="yes" /> 
+	<meta name="viewport" content="width = device-width; user-scalable = no;">
+	<meta name="format-detection" content="telephone=no">
+	<script src="source/jquery.js"></script>	
+	
+	
+	
+
+
+</head>
+<body onresize = "setAllTextSize();">
+
+
+
+<div id="top">
+
+<!--
+<div class="hframe">
+<img class = "placeholder" src="pics/img_placeholder.png"/>
+<iframe id="frame1" scrolling="no";  src="http://www.youtube.com/embed/DsFKLIzBBAA?controls=1&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+
+</div>	
+<img class = "place" src="pics/top.png"/>
+-->
+<div id="top_image">
+	<img src="pics/lesson2_top.jpg" />
+</div>
+
+
+
+<div id="text_lower">
+
+<div id="text_title">
+	Lesson Two
+</div>
+    
+<div id="text1">	
+</div>	
+
+<div id="text2">
+	<b>Aperture, Shutter Speed and Portraits</b> – take your knowledge of photography one more step forward. <br /><br /> 
+
+    This is the second, more advanced class of <b>David Wells, the instructor of Digital Photo Academy</b> - a step by 
+step, easy to understand guidance, with videos and sample photographs. <br /><br />
+
+    Walk around the <b>Flatiron District</b> and gain knowledge you can use wherever you are. <br /><br />
+
+    When you completed Lesson 2, <b>feel free to download our pdf</b> with more detailed further explanation of Aperture,
+Shutter Speed and Portrait, so you can always reach back if you need some help on the way. <br /><br />
+
+</div>	
+
+
+<div id="text3">
+	
+</div>	
+
+<div id="about_the_instructor">
+	<a href="quick_tips.html">Quick Tips</a>
+</div>
+	
+<div style="width: 100%;"><img style="width: 100%;" src="pics/lesson2_start.jpg" /></div>
+<div class="button"><a href=""><img src="pics/lesson2_start.jpg" /></a></div>
+
+
+
+</div>	
+</div>
+
+
+
+
+
+
+<script>
+function resizetext(element,size,displaywidth)
+{
+
+var w=window.innerWidth;
+		var a = size*w/displaywidth;
+		myelement = document.getElementById(element);
+
+
+	if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i)) )  
+	{
+         
+		myelement.style.fontSize= 1.7*a+"px";
+		
+		 
+	}		
+	else
+	{
+		myelement.style.fontSize= 1.0*a+"px";
+		
+	}
+myelement.style.lineHeight="1.125";
+	
+}
+
+
+
+function setAllTextSize()
+{
+resizetext('text_title',36,480);
+resizetext('text1',22,480);
+resizetext('text2',22,480);
+resizetext('text3',22,480);
+resizetext('about_the_instructor',22,480);
+		
+}
+setAllTextSize();
+
+
+
+</script>
+
+
+</body>
+</html>

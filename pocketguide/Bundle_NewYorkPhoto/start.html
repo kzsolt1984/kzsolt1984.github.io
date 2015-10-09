@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+	<title>Overview</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" href="start-style.css" type="text/css" media="screen" />
+
+	
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-touch-fullscreen" content="yes" /> 
+	<meta name="viewport" content="width = device-width; user-scalable = no;">
+	<meta name="format-detection" content="telephone=no">
+	<script src="source/jquery.js"></script>	
+	
+	
+	<script >	
+		
+		function siteredirect() {
+			window.location.href="start.html?youtube=1";
+		}
+		
+	</script>
+	
+	
+
+
+</head>
+<body onresize = "setAllTextSize();">
+
+
+<div id="android_youtube" >
+</div>
+
+<div id="iphone_youtube1">
+</div>
+
+<div id="iphone_youtube2" class="hframe_youtube">
+</div>
+
+<script type="text/javascript" language="javascript">
+
+
+
+if( (navigator.userAgent.match(/Android/i)) || (navigator.userAgent.match(/android/i)) )  
+	{
+		$('#android_youtube').append('<a href="https://www.youtube.com/watch?v=o75eSo_iFL0"><img style="width:100%" src="pics/video.jpg"/></a>');
+	
+	}
+		
+if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i)) )  
+{	
+	
+	if (window.location.href.substring(window.location.href.length - 9) == 'youtube=1' ) {
+		$('#iphone_youtube2').append('<img class = "placeholder_youtube" src="pics/video_placeholder.png"/><iframe id="frame1_youtube" scrolling="no";  src="http://www.youtube.com/embed/o75eSo_iFL0?controls=0&showinfo=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+			
+	}
+	else {
+		$('#iphone_youtube1').append('<img style="width:100%" src="pics/video.jpg"/>');
+		$('#iphone_youtube1').bind('click', siteredirect);		
+	}
+}
+
+
+
+	
+</script>
+
+
+
+<div id="top">
+
+<!--
+<div class="hframe">
+<img class = "placeholder" src="pics/img_placeholder.png"/>
+<iframe id="frame1" scrolling="no";  src="http://www.youtube.com/embed/DsFKLIzBBAA?controls=1&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+
+</div>	
+<img class = "place" src="pics/top.png"/>
+-->
+
+
+
+
+<div id="text_lower">
+
+<div id="text_title">
+	Your guide to photograpy
+</div>
+    
+<div id="text1">
+	
+	Your very first easy to follow, personal photo class. Let us help you improve the quality of your photos.
+	
+</div>	
+<div id="text2">
+	Composition, Aperture, Shutter Speed - all of these concepts are essential parts of powerful photo shooting. In the 
+following two walking tours, the instructor of Digital Photo Academy, David Wells, will teach you all these 
+essential steps toward improved photography. <br />
+A groundbreaking, easy to understand method of learning the essentials. 
+</div>	
+
+
+<div id="text3">
+	
+</div>	
+
+<div id="about_the_instructor">
+	<a href="about.html">About the instructor</a>
+</div>
+	
+<!--<div class="button"><a href="pg:startTour:6061896"><img src="pics/btn-start.jpg" /></a></div>-->
+
+
+
+</div>	
+</div>
+
+<a href="lesson1.html">
+	<img class="lesson1" src="pics/lesson1.jpg" />
+</a>
+
+<a href="lesson2.html">
+	<img class="lesson2" src="pics/lesson2.jpg" />
+</a>
+
+
+
+
+<script>
+function resizetext(element,size,displaywidth)
+{
+
+var w=window.innerWidth;
+		var a = size*w/displaywidth;
+		myelement = document.getElementById(element);
+
+
+	if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i)) )  
+	{
+         
+		myelement.style.fontSize= 1.7*a+"px";
+		
+		 
+	}		
+	else
+	{
+		myelement.style.fontSize= 1.0*a+"px";
+		
+	}
+myelement.style.lineHeight="1.125";
+	
+}
+
+
+
+function setAllTextSize()
+{
+resizetext('text_title',36,480);
+resizetext('text1',22,480);
+resizetext('text2',22,480);
+resizetext('text3',22,480);
+resizetext('about_the_instructor',22,480);
+		
+}
+setAllTextSize();
+
+
+
+</script>
+
+
+</body>
+</html>

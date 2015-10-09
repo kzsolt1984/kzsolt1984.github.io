@@ -1,0 +1,154 @@
+@font-face
+{
+/*font-family: helveticaCE;
+/*src: url("font/HelveticaNeueLTPro-Lt.otf");
+src: url("font/HelveticaCE.otf");*/
+}
+
+
+@font-face
+{
+font-family: HelveticaNeueLTP;
+ src: url('font/HelveticaNeueLTPro-Th.otf') format('opentype');
+}
+
+
+html {
+}
+body {
+	line-height:1.125em;
+	font-family: Helvetica;
+	font-weight: 300;
+	font-size:15px;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background-color: white;
+	color:#333333;
+}
+a {
+	text-decoration: none;
+}
+/*----------------------------------------------------------------------------*/
+a{
+color:#333333;
+}
+
+
+/*----------- Youtube frame ------------*/
+.hframe_youtube{
+position:relative;
+width:100%;
+}
+.placeholder_youtube
+{
+display:block;
+width:100%;
+height:auto;
+}
+#frame1_youtube
+{
+position:absolute;
+top:0px;
+left:0px;
+width:100%;
+height:100%;
+
+}
+/*----------- Youtube frame end ------------*/
+.button img{
+	width: 100%;
+}
+.button {
+	width: 100%;
+	bottom: -2px;
+	position: fixed;
+	border: none;
+}
+.firstpic {
+	width:100%;
+}
+#title {
+	padding-bottom: 3px;
+}
+div#top {
+	position: relative;
+	width: 100%;
+}
+#top img {
+	width: 100%;
+}
+
+div#text_title {
+	font-family: HelveticaNeueLTP;
+	font-weight:bold;
+	margin-top:7%;
+	margin-left:7%;
+    margin-right:7%;
+	margin-bottom:5%;
+}
+
+div#text {
+	
+	font-weight:bold;
+	font-style: italic;
+	margin-top:7%;
+	margin-left:7%;
+    margin-right:7%;
+	margin-bottom:5%;
+}
+
+div#text1 {
+	
+	font-weight:bold;
+	margin-top:4%;
+	margin-left:7%;
+    margin-right:7%;
+	
+    
+}
+
+
+
+div#text2 {
+	font-weight:light;
+	margin-top:7%;
+	margin-left:7%;
+    margin-right:7%;
+	margin-bottom:7%;
+}
+
+
+
+div#text3{
+	font-style:italic;
+	font-weight:bold;
+	margin-top:7%;
+	margin-left:7%;
+    margin-right:7%;
+	margin-bottom:7%;
+}
+
+
+#about_the_instructor{
+	font-weight:bold;
+	text-decoration: underline;
+	margin-top:7%;
+	margin-left:7%;
+    margin-right:7%;
+	margin-bottom:7%;	
+}
+
+.lesson1 {
+	width: 49%;
+	float: left;
+	
+}
+
+
+.lesson2 {
+	width: 49%;
+	float: right;
+	
+}
+

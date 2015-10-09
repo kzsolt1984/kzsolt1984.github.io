@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head>
+	<title>Overview</title>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" /> 
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" href="quick_tips-style.css" type="text/css" media="screen" />
+
+	
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-touch-fullscreen" content="yes" /> 
+	<meta name="viewport" content="width = device-width; user-scalable = no;">
+	<meta name="format-detection" content="telephone=no">
+	<script src="source/jquery.js"></script>	
+	
+	
+	<script >	
+		
+		function siteredirect() {
+			window.location.href="quick_tips.html?youtube=1";
+		}
+		
+	</script>
+	
+	
+
+
+</head>
+<body onresize = "setAllTextSize();">
+
+<div style="width: 86%; background-color: #cccccc; padding: 3% 7% 3% 7%; margin: 0px;">
+	<div id="top_title">
+		Quick Tips
+	</div>
+    <div id="top_text" >
+    	Here is a number of handy tips for you to improve your photography.
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div id="top">
+
+<!--
+<div class="hframe">
+<img class = "placeholder" src="pics/img_placeholder.png"/>
+<iframe id="frame1" scrolling="no";  src="http://www.youtube.com/embed/DsFKLIzBBAA?controls=1&showinfo=0&rel=0" frameborder="0" allowfullscreen></iframe>
+
+</div>	
+<img class = "place" src="pics/top.png"/>
+-->
+
+
+
+
+<div id="text_lower">
+
+<div id="text_title">	
+</div>
+    
+<div id="text1">	
+	Tip no. 1 - Use filters	
+</div>	
+
+<div id="text2">
+	Our instructor David works magic with Tiffen filters, without breaking the bank. Check it out!
+</div>	
+
+<div id="text3">
+</div>	
+
+
+<div id="about_the_instructor">
+
+</div>
+	
+<!--<div class="button"><a href="pg:startTour:6061896"><img src="pics/btn-start.jpg" /></a></div>-->
+
+
+
+</div>	
+</div>
+
+
+<div id="android_youtube" >
+</div>
+
+<div id="iphone_youtube1">
+</div>
+
+<div id="iphone_youtube2" class="hframe_youtube">
+</div>
+
+<div id="text1_grey">	
+	Tip no. 2 - coming soon...
+</div>	
+
+<br />
+
+
+
+<script type="text/javascript" language="javascript">
+
+
+
+if( (navigator.userAgent.match(/Android/i)) || (navigator.userAgent.match(/android/i)) )  
+	{
+		$('#android_youtube').append('<a href="https://www.youtube.com/watch?v=uq6I9E1kbEM"><img style="width:100%" src="pics/quick_tip1_video.jpg"/></a>');
+	
+	}
+		
+if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i)) )  
+{	
+	
+	if (window.location.href.substring(window.location.href.length - 9) == 'youtube=1' ) {
+		$('#iphone_youtube2').append('<img class = "placeholder_youtube" src="pics/quick_tip1_video.png"/><iframe id="frame1_youtube" scrolling="no";  src="http://www.youtube.com/embed/uq6I9E1kbEM?controls=0&showinfo=0&rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>');
+			
+	}
+	else {
+		$('#iphone_youtube1').append('<img style="width:100%" src="pics/quick_tip1_video.jpg"/>');
+		$('#iphone_youtube1').bind('click', siteredirect);		
+	}
+}
+
+
+	
+</script>
+
+<script>
+function resizetext(element,size,displaywidth)
+{
+
+var w=window.innerWidth;
+		var a = size*w/displaywidth;
+		myelement = document.getElementById(element);
+
+
+	if( (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i)) )  
+	{
+         
+		myelement.style.fontSize= 1.7*a+"px";
+		
+		 
+	}		
+	else
+	{
+		myelement.style.fontSize= 1.0*a+"px";
+		
+	}
+myelement.style.lineHeight="1.125";
+	
+}
+
+
+
+function setAllTextSize()
+{
+resizetext('top_title',34,480);
+resizetext('top_text',22,480);
+resizetext('text_title',36,480);
+resizetext('text1',22,480);
+resizetext('text2',22,480);
+resizetext('text3',22,480);
+resizetext('about_the_instructor',22,480);
+resizetext('text1_grey',22,480);
+		
+		
+		
+}
+setAllTextSize();
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>
