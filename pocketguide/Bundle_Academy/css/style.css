@@ -154,6 +154,7 @@ section #iphone_video {
 }
 section #iphone_video iframe {
   width: 100%;
+  min-height: 56.25vw;
 }
 section .content-inner {
   padding: .4rem 1.1rem .8rem;
