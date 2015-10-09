@@ -55,7 +55,7 @@ var Main;
         function Main() {
             new component.TeaserVideoPlayer({
                 'videoId': '7110439',
-                'youtubeId': 'Jo-x0LWk2zk'
+                'youtubeId': '_I8_gxGfTOA'
             });
         }
         return Main;
