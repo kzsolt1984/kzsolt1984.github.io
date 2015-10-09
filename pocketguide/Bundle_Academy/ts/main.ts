@@ -13,8 +13,6 @@ module Main {
                'videoId'    : '7110439',
                 'youtubeId' : 'Jo-x0LWk2zk'
             });
-
-            alert($('iframe').height() +':'+$('iframe').width())
         }
     }
 }
