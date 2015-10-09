@@ -15,8 +15,8 @@ module Main {
             });
 
             setTimeout(function(){
-                $('iframe').css('height', ($('iframe').width() * 0.56));
-            }, 3000)
+                $('iframe').css('height', ($('iframe').width() * 0.5625));
+            }, 500)
 
         }
     }

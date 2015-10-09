@@ -58,8 +58,8 @@ var Main;
                 'youtubeId': 'Jo-x0LWk2zk'
             });
             setTimeout(function () {
-                $('iframe').css('height', ($('iframe').width() * 0.56));
-            }, 3000);
+                $('iframe').css('height', ($('iframe').width() * 0.5625));
+            }, 500);
         }
         return Main;
     })();
