@@ -11,7 +11,7 @@ module Main {
         constructor() {
             new component.TeaserVideoPlayer({
                'videoId'    : '7110439',
-                'youtubeId' : '_I8_gxGfTOA'
+                'youtubeId' : 'Jo-x0LWk2zk'
             });
         }
     }
