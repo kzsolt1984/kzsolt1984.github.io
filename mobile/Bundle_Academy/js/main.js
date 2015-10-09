@@ -11,8 +11,7 @@ var component;
             this._createVideo();
         }
         TeaserVideoPlayer.prototype._siteRedirect = function () {
-            //window.location.href = 'start.html?pocketguide_video='+ this._videoId +'_en&youtube=1';
-            window.location.href = 'start.html?youtube=1';
+            window.location.href = 'start.html?pocketguide_video=' + this._videoId + '_en&youtube=1';
         };
         TeaserVideoPlayer.prototype._createVideo = function () {
             var _this = this;
