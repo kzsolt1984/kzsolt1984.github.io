@@ -11,25 +11,26 @@ var Main;
     var Main = (function () {
         function Main() {
             var _this = this;
-            this._openToursStatus = 0;
+            this._openSubMenuStatus = 0;
             this._swipeLeftValue = 0;
             this._swipeOptions = {
                 triggerOnTouchEnd: true,
                 swipeStatus: function (a, b, c, d) { _this._swipeStatus(a, b, c, d); },
                 allowPageScroll: "vertical",
-                threshold: 75
+                threshold: 75,
+                excludedElements: "button, input, select, textarea, .noSwipe"
             };
+            this._activeSubmenu = null;
             this._toursContainer = $('#tours_container');
             this._toursSwipeContent = this._toursContainer.find('.elements');
             this._toursSwipeContentWidth = this._toursSwipeContent.width();
             this._adContainer = $('#ad_container');
-            $("#start_btn").click(function () {
-                if (_this._openToursStatus === 0) {
-                    _this._openSubMenu(_this._toursContainer);
-                }
-                else if (_this._openToursStatus === 2) {
-                    _this._closeSubMenu(_this._toursContainer);
-                }
+            this._langContainer = $('#lang_container');
+            $("#start_btn").on('click', function () {
+                _this._openSubMenu(_this._toursContainer);
+            });
+            $("#language_chooser").on('click', function () {
+                _this._openSubMenu(_this._langContainer);
             });
             $('.ad_elements').bxSlider({
                 auto: true,
@@ -43,6 +44,18 @@ var Main;
         }
         Main.prototype._openSubMenu = function ($element) {
             var _this = this;
+            var id = $element.attr('id');
+            if (this._openSubMenuStatus === 1) {
+                return;
+            }
+            if (this._activeSubmenu && id === this._activeSubmenu) {
+                this._closeSubMenu($element);
+                return;
+            }
+            else if (this._activeSubmenu && id !== this._activeSubmenu) {
+                this._closeSubMenu($('#' + this._activeSubmenu));
+            }
+            this._activeSubmenu = id;
             $element.animate({
                 height: '65.6%',
                 opacity: 1
@@ -50,19 +63,20 @@ var Main;
                 duration: 1000,
                 height: "easeOutBounce",
                 step: function (now, fx) {
-                    if (now > 50 && _this._openToursStatus !== 1) {
-                        _this._openToursStatus = 1;
+                    if (now > 50 && _this._openSubMenuStatus !== 1) {
+                        _this._openSubMenuStatus = 1;
                         _this._adContainer.addClass('min');
                     }
                 },
                 complete: function () {
-                    _this._openToursStatus = 2;
+                    _this._openSubMenuStatus = 2;
                 }
             });
             return false;
         };
         Main.prototype._closeSubMenu = function ($element) {
             var _this = this;
+            this._activeSubmenu = null;
             $element.animate({
                 height: '0',
                 opacity: 0
@@ -70,13 +84,13 @@ var Main;
                 duration: 1000,
                 height: "easeOutBounce",
                 step: function (now, fx) {
-                    if (now < 20 && _this._openToursStatus !== 1) {
-                        _this._openToursStatus = 1;
+                    if (now < 20 && _this._openSubMenuStatus !== 1) {
+                        _this._openSubMenuStatus = 1;
                         _this._adContainer.removeClass('min');
                     }
                 },
                 complete: function () {
-                    _this._openToursStatus = 0;
+                    _this._openSubMenuStatus = 0;
                 }
             });
         };
@@ -95,7 +109,6 @@ var Main;
             else if (phase == "end") {
                 this._swipeLeftValue = parseInt(this._toursSwipeContent.css('left'));
             }
-            console.log(phase);
         };
         return Main;
     })();

@@ -47,8 +47,8 @@ a {
 
     .info {
       div {
-        padding: 15px 20px;
-        background: rgba(255,255,255,0.7);
+        padding: 0.938em 1.250em;
+        background: rgba(255,255,255,0.8);
         width: 23%;
         margin-top: 2.7%;
         margin-left: 4.7%;
@@ -64,8 +64,8 @@ a {
         .prize {
           //font-size: 21px;
           font-size: 1.313em;
-          margin-top: 35px;
-          margin-bottom: 30px;
+          margin-top: 2em;
+          margin-bottom: 1.7em;
           font-weight: 100;
 
           span {
@@ -100,6 +100,7 @@ a {
     .ad {
       display: table;
       overflow: hidden;
+      background-size: cover;
 
       .info {
         display: table-cell;
@@ -166,7 +167,8 @@ a {
   }
 }
 
-#tours_container {
+#tours_container,
+#lang_container {
   width: 100%;
   height: 65.6%;
   overflow: hidden;
@@ -175,26 +177,29 @@ a {
   z-index: 1;
   background-color: #fff;
   opacity: 0;
+}
 
+#tours_container {
   .elements {
     width: 287%;
 
-    .tour {
+    a {
+      display: inline-block;
       float: left;
       height: 100%;
       width: 14.0%;
       margin-right: 5px;
       overflow: hidden;
-      //position: relative;
-      display: table;
-      //text-align: center;
       background: url(../img/test.jpg) no-repeat 0 0;
-      //background-size: 14.2% 100%;
-      background-size: auto  100%;
-      //background-size: 100% auto;
+      background-size: cover;
+    }
+
+    .tour {
+      width: 100%;
+      height: 100%;
+      display: table;
 
       img {
-        //width: 100%;
         height: 100%;
         display: none;
       }
@@ -202,19 +207,29 @@ a {
       .info {
         display: table-cell;
         vertical-align: middle;
-        /*position: absolute;
-        right: 24%;
-        left: 24%;
-        top: 24%;
-        bottom: 24%; */
-        //padding: 5px;
-        //background: rgba(255,255,255,0.7);
 
         div {
-          padding: 5px;
-          background: rgba(255,255,255,0.7);
+          padding: 2.500em 2.188em;
+          background: rgba(255,255,255,0.8);
           margin-right: 24%;
           margin-left: 24%;
+
+          h3 {
+            font-size: 2.125em;
+            color: #003974;
+          }
+
+          p {
+            font-weight: 100;
+            color: #000;
+            font-size: 1.688em;
+            margin: 1em auto;
+          }
+
+          span {
+            font-size: 1.688em;
+            color: #000;
+          }
         }
       }
     }
@@ -231,6 +246,33 @@ a {
   height: 100%;
 }
 
+#lang_container {
+  opacity: 0;
+  background-color: #999999;
+
+  &.min {
+    height: 0;
+  }
+
+  a {
+    display: table;
+    width: 25%;
+    height: 100%;
+    z-index: 5;
+    float: left;
+    text-align: center;
+
+    span {
+      display: table-cell;
+      vertical-align: middle;
+      font-family: "Roboto", "HelveticaNeueLTPro", Helvetica;
+      font-size: 2.500em;
+      color: #fff;
+      font-weight: 200;
+    }
+  }
+}
+
 footer {
   width: 100%;
   height: 6%;
@@ -238,6 +280,7 @@ footer {
   bottom: 0;
   left: 0;
   z-index: 4;
+  line-height: 2.2;
   background-color: #000;
   color: #fff;
 
@@ -248,7 +291,7 @@ footer {
       position: absolute;
       right: 5%;
       bottom: 200%;
-      font-size: 38px;
+      font-size: 2.375em;
       color: #003974;
       display: block;
       background-color: #fff;
@@ -257,6 +300,13 @@ footer {
       line-height: 100px;
       border-radius: 50px;
       text-align: center;
+    }
+
+    &#language_chooser{
+      font-family: "Roboto", "HelveticaNeueLTPro", Helvetica;
+      font-size: 1.250em;
+      margin-left: 2%;
+
     }
   }
 }

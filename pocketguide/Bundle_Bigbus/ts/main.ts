@@ -9,7 +9,7 @@
 
 module Main {
     export class Main {
-        private _openToursStatus = 0;
+        private _openSubMenuStatus = 0;
         private _toursContainer : JQuery;
         private _toursSwipeContent: JQuery;
         private _toursSwipeContentWidth: number;
@@ -19,22 +19,25 @@ module Main {
             triggerOnTouchEnd: true,
             swipeStatus: (a,b,c,d)=> {this._swipeStatus(a,b,c,d)},
             allowPageScroll: "vertical",
-            threshold: 75
+            threshold: 75,
+            excludedElements: "button, input, select, textarea, .noSwipe",
         };
+        private _langContainer: JQuery;
+        private _activeSubmenu = null;
 
         constructor() {
             this._toursContainer = $('#tours_container');
             this._toursSwipeContent = this._toursContainer.find('.elements');
             this._toursSwipeContentWidth = this._toursSwipeContent.width();
             this._adContainer    = $('#ad_container');
+            this._langContainer = $('#lang_container');
 
-            $( "#start_btn" ).click(()=> {
-                if(this._openToursStatus === 0) {
-                    this._openSubMenu(this._toursContainer);
-                }
-                else if(this._openToursStatus === 2) {
-                    this._closeSubMenu(this._toursContainer);
-                }
+            $( "#start_btn" ).on('click', ()=> {
+                this._openSubMenu(this._toursContainer);
+            });
+
+            $( "#language_chooser" ).on('click', ()=> {
+                this._openSubMenu(this._langContainer);
             });
 
             $('.ad_elements').bxSlider({
@@ -50,6 +53,23 @@ module Main {
         }
 
         private _openSubMenu($element:JQuery) {
+            var id = $element.attr('id');
+
+            if(this._openSubMenuStatus === 1) {
+                return;
+            }
+
+            if(this._activeSubmenu && id === this._activeSubmenu) {
+                this._closeSubMenu($element);
+
+                return;
+            }
+            else if(this._activeSubmenu && id !== this._activeSubmenu) {
+                this._closeSubMenu($('#' + this._activeSubmenu));
+            }
+
+            this._activeSubmenu = id;
+
             $element.animate({
                 height: '65.6%',
                 opacity: 1
@@ -57,14 +77,14 @@ module Main {
                 duration: 1000,
                 height: "easeOutBounce",
                 step: ( now, fx )=> {
-                    if(now > 50 && this._openToursStatus !== 1) {
-                        this._openToursStatus = 1;
+                    if(now > 50 && this._openSubMenuStatus !== 1) {
+                        this._openSubMenuStatus = 1;
                         this._adContainer.addClass('min');
 
                     }
                 },
                 complete: ()=> {
-                    this._openToursStatus = 2;
+                    this._openSubMenuStatus = 2;
                 }
             });
 
@@ -72,6 +92,8 @@ module Main {
         }
 
         private _closeSubMenu($element:JQuery): void {
+            this._activeSubmenu = null;
+
             $element.animate({
                 height: '0',
                 opacity: 0
@@ -79,13 +101,13 @@ module Main {
                 duration: 1000,
                 height: "easeOutBounce",
                 step: ( now, fx )=> {
-                    if(now < 20 && this._openToursStatus !== 1) {
-                        this._openToursStatus = 1;
+                    if(now < 20 && this._openSubMenuStatus !== 1) {
+                        this._openSubMenuStatus = 1;
                         this._adContainer.removeClass('min');
                     }
                 },
                 complete: ()=> {
-                    this._openToursStatus = 0;
+                    this._openSubMenuStatus = 0;
                 }
             });
         }
@@ -109,9 +131,6 @@ module Main {
             else if(phase == "end") {
                 this._swipeLeftValue = parseInt( this._toursSwipeContent.css('left') );
             }
-            console.log(phase)
-
-
         }
     }
 }
