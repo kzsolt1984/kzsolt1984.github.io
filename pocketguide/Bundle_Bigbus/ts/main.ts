@@ -20,7 +20,7 @@ module Main {
             swipeStatus: (a,b,c,d)=> {this._swipeStatus(a,b,c,d)},
             allowPageScroll: "vertical",
             threshold: 75,
-            excludedElements: "button, input, select, textarea, .noSwipe",
+            excludedElements: "button, input, select, textarea, .noSwipe"
         };
         private _langContainer: JQuery;
         private _activeSubmenu = null;
@@ -60,6 +60,10 @@ module Main {
             });
 
             this._toursContainer.swipe(this._swipeOptions);
+
+            $(window).on('orientationchange', ()=> {
+               // swipe es adatok frissitese
+            });
         }
 
         private _openSubMenu($element:JQuery) {

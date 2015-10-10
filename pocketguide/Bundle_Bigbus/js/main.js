@@ -47,6 +47,9 @@ var Main;
                 pause: 8000
             });
             this._toursContainer.swipe(this._swipeOptions);
+            $(window).on('orientationchange', function () {
+                // swipe es adatok frissitese
+            });
         }
         Main.prototype._openSubMenu = function ($element) {
             var _this = this;
