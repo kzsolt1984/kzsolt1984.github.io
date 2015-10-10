@@ -28,9 +28,15 @@ var Main;
             this._langContainer = $('#lang_container');
             $("#start_btn").on('click', function () {
                 _this._openSubMenu(_this._toursContainer);
+                return false;
             });
             $("#language_chooser").on('click', function () {
                 _this._openSubMenu(_this._langContainer);
+                return false;
+            });
+            this._langContainer.find('a').on('click', function () {
+                _this._openSubMenu(_this._toursContainer);
+                return false;
             });
             $('.ad_elements').bxSlider({
                 auto: true,

@@ -34,10 +34,20 @@ module Main {
 
             $( "#start_btn" ).on('click', ()=> {
                 this._openSubMenu(this._toursContainer);
+
+                return false;
             });
 
             $( "#language_chooser" ).on('click', ()=> {
                 this._openSubMenu(this._langContainer);
+
+                return false;
+            });
+
+            this._langContainer.find('a').on('click', ()=> {
+                this._openSubMenu(this._toursContainer);
+
+                return false;
             });
 
             $('.ad_elements').bxSlider({
