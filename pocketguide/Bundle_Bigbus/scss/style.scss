@@ -42,7 +42,6 @@ a {
     height: 100%;
     width: 50%;
     background-size: cover;
-    //background-size: 100% auto;
     background-repeat:  no-repeat;
 
     .info {
@@ -72,6 +71,10 @@ a {
             font-weight: normal;
             color: #003974;
           }
+
+          i {
+            width: 100%;
+          }
         }
 
         .text {
@@ -89,7 +92,7 @@ a {
     }
 
     &.ad_2 {
-      background-color: yellow;
+      background-image: url(../img/big_img_2.jpg);
     }
 
   }
@@ -161,7 +164,15 @@ a {
       }
 
       &.ad_2 {
-        background-color: yellow;
+        background-image: url(../img/small_img_2.jpg);
+
+        .info div {
+          width: 75%;
+
+          h2 {
+            width: 30%;
+          }
+        }
       }
     }
   }
@@ -319,4 +330,12 @@ footer {
   .bx-viewport {
     height: 100%!important;
   }
+}
+
+@media only screen and (min-width:701px) and (max-width: 1100px)  {
+  @import "size/size_1000";
+}
+
+@media only screen and (max-width: 700px)  {
+  @import "size/size_700";
 }

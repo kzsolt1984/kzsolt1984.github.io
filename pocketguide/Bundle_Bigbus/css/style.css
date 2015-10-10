@@ -170,6 +170,9 @@ a {
   font-weight: normal;
   color: #003974;
 }
+#ad_container .ad .info div .prize i {
+  width: 100%;
+}
 #ad_container .ad .info div .text {
   font-size: 1.625em;
   line-height: 1.1;
@@ -179,7 +182,7 @@ a {
   background-image: url(../img/big_img_1.jpg);
 }
 #ad_container .ad.ad_2 {
-  background-color: yellow;
+  background-image: url(../img/big_img_2.jpg);
 }
 #ad_container.min {
   height: 26%;
@@ -236,7 +239,13 @@ a {
   background-image: url(../img/small_img_1.jpg);
 }
 #ad_container.min .ad.ad_2 {
-  background-color: yellow;
+  background-image: url(../img/small_img_2.jpg);
+}
+#ad_container.min .ad.ad_2 .info div {
+  width: 75%;
+}
+#ad_container.min .ad.ad_2 .info div h2 {
+  width: 30%;
 }
 
 #tours_container,
@@ -371,6 +380,104 @@ footer a#language_chooser {
 }
 .bx-wrapper .bx-viewport {
   height: 100% !important;
+}
+
+@media only screen and (min-width: 701px) and (max-width: 1100px) {
+  #ad_container .ad .info div {
+    padding: 0.7em 1.0em;
+  }
+  #ad_container .ad .info div h2 {
+    font-size: 1.863em;
+  }
+  #ad_container .ad .info div .prize {
+    font-size: 1.113em;
+    margin-top: 1.8em;
+    margin-bottom: 1.5em;
+  }
+  #ad_container .ad .info div .text {
+    font-size: 1.425em;
+  }
+
+  #tours_container .elements .tour .info div {
+    padding: 1.2em;
+  }
+  #tours_container .elements .tour .info div h3 {
+    font-size: 1.425em;
+  }
+  #tours_container .elements .tour .info div p {
+    font-size: 0.988em;
+    margin: 0.6em auto;
+  }
+  #tours_container .elements .tour .info div span {
+    font-size: 0.988em;
+  }
+
+  #lang_container a span {
+    font-size: 2.100em;
+  }
+
+  footer {
+    line-height: 2.2;
+  }
+  footer a#start_btn {
+    font-size: 2.15em;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    border-radius: 50px;
+  }
+  footer a#language_chooser {
+    font-size: 1.050em;
+  }
+}
+@media only screen and (max-width: 700px) {
+  #ad_container .ad .info div {
+    padding: 0.5em 0.8em;
+  }
+  #ad_container .ad .info div h2 {
+    font-size: 1.463em;
+  }
+  #ad_container .ad .info div .prize {
+    font-size: 0.713em;
+    margin-top: 1.6em;
+    margin-bottom: 1.3em;
+  }
+  #ad_container .ad .info div .text {
+    font-size: 1.025em;
+  }
+
+  #tours_container .elements .tour .info div {
+    padding: 1em;
+  }
+  #tours_container .elements .tour .info div h3 {
+    font-size: 1.225em;
+  }
+  #tours_container .elements .tour .info div p {
+    font-size: 0.788em;
+    margin: 0.4em auto;
+  }
+  #tours_container .elements .tour .info div span {
+    font-size: 0.788em;
+  }
+
+  #lang_container a span {
+    font-size: 1.900em;
+  }
+
+  footer {
+    line-height: 1.4;
+  }
+  footer a#start_btn {
+    font-size: 1.875em;
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    border-radius: 40px;
+  }
+  footer a#language_chooser {
+    font-size: 0.650em;
+    margin-left: 2%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
