@@ -144,12 +144,12 @@ a {
   box-sizing: border-box;
 }
 #ad_container .ad .info div h2 {
-  font-size: 33px;
+  font-size: 2.063em;
   color: #003974;
   line-height: 1.3;
 }
 #ad_container .ad .info div .prize {
-  font-size: 21px;
+  font-size: 1.313em;
   margin-top: 35px;
   margin-bottom: 30px;
   font-weight: 100;
@@ -159,7 +159,7 @@ a {
   color: #003974;
 }
 #ad_container .ad .info div .text {
-  font-size: 26px;
+  font-size: 1.625em;
   line-height: 1.1;
   font-weight: 100;
 }
