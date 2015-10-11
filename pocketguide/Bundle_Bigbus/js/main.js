@@ -38,8 +38,6 @@ var Main;
                 _this._openSubMenu(_this._toursContainer);
                 return false;
             });
-            $('.ad_elements').children().width($(window).width());
-            $('.ad_elements').width($(window).width() * 2);
             $('.ad_elements').bxSlider({
                 auto: true,
                 autoControls: false,
@@ -48,7 +46,6 @@ var Main;
                 touchEnabled: false,
                 pause: 8000
             });
-            alert($(window).width() + ' : ' + $('.ad_elements').find('.ad').width() + ' : ' + $('.ad_elements').width());
             $(window).on('orientationchange resize', function () {
                 //this._toursContainer.swipe('destroy');
                 // swipe es adatok frissitese
@@ -72,7 +69,7 @@ var Main;
             var $element = this._toursSwipeContent.children(), elementLength = $element.length, marginValue = parseInt($element.css('margin-right')), contentWidth = 0;
             this._toursSwipeContent.css('left', 0);
             $element.removeAttr('style');
-            if (square) {
+            if (!square) {
                 $element.width($('#tour_height_sample').height());
             }
             else {
@@ -83,6 +80,7 @@ var Main;
             contentWidth = ($element.width() + marginValue) * elementLength;
             this._toursSwipeContent.width(contentWidth);
             this._toursSwipeContentWidth = contentWidth;
+            alert($(window).width() + ' : ' + $element.width() + ' : ' + contentWidth);
             //this._toursContainer.swipe(this._swipeOptions);
         };
         Main.prototype._openSubMenu = function ($element) {

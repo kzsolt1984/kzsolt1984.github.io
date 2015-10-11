@@ -50,9 +50,6 @@ module Main {
                 return false;
             });
 
-            $('.ad_elements').children().width($(window).width());
-            $('.ad_elements').width($(window).width() * 2);
-
             $('.ad_elements').bxSlider({
                 auto: true,
                 autoControls: false,
@@ -61,8 +58,6 @@ module Main {
                 touchEnabled: false,
                 pause: 8000
             });
-
-            alert($(window).width() +' : '+ $('.ad_elements').find('.ad').width() + ' : ' + $('.ad_elements').width())
 
             $(window).on('orientationchange resize', ()=> {
                 //this._toursContainer.swipe('destroy');
@@ -97,7 +92,7 @@ module Main {
             this._toursSwipeContent.css('left', 0);
             $element.removeAttr('style');
 
-            if(square) {
+            if(!square) {
                 $element.width($('#tour_height_sample').height());
             }
             else {
@@ -112,7 +107,7 @@ module Main {
             this._toursSwipeContent.width(contentWidth);
 
             this._toursSwipeContentWidth = contentWidth;
-
+            alert($(window).width() +' : '+ $element.width() + ' : ' + contentWidth)
             //this._toursContainer.swipe(this._swipeOptions);
         }
 
