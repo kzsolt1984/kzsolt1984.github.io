@@ -4,7 +4,7 @@
       padding: 0.5em 0.8em;
 
       h2 {
-        font-size: 1.463em;
+        font-size: 1.263em;
       }
 
       .prize {
@@ -18,12 +18,28 @@
       }
     }
   }
+
+  &.min {
+    .ad {
+      .info div {
+        h2 {
+          font-size: 1.2em;
+        }
+
+        .prize {
+          width: 17%;
+        }
+      }
+    }
+  }
 }
 
 #tours_container {
   .elements .tour {
     .info div {
       padding: 1em;
+      margin-right: 20%;
+      margin-left: 20%;
 
       h3 {
         font-size: 1.225em;
@@ -62,7 +78,7 @@ footer {
     }
 
     &#language_chooser{
-      font-size: 0.650em;
+      font-size: 0.80em;
       margin-left: 2%;
 
     }

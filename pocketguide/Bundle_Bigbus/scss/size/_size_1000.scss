@@ -18,6 +18,16 @@
       }
     }
   }
+
+  &.min {
+    .ad {
+      .info div {
+        .prize {
+          width: 16%;
+        }
+      }
+    }
+  }
 }
 
 

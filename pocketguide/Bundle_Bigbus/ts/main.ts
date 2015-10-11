@@ -59,29 +59,56 @@ module Main {
                 pause: 8000
             });
 
-            this._toursContainer.swipe(this._swipeOptions);
-
-            $(window).on('orientationchange', ()=> {
+            $(window).on('orientationchange resize', ()=> {
+                //this._toursContainer.swipe('destroy');
                // swipe es adatok frissitese
-                this._calculateTourSwipeContentWidth();
+                this._calcSwipeContentDimension();
             });
 
-            this._calculateTourSwipeContentWidth();
+            this._calcSwipeContentDimension();
+
+            this._toursContainer.swipe(this._swipeOptions);
         }
 
-        private _calculateTourSwipeContentWidth() {
+        private _calcSwipeContentDimension(): void {
+            var $window = $(window);
+
+            if($window.height() > $window.width()) {
+                //portrait
+                this._calculateTourSwipeElementWidth(false);
+            }
+            else {
+                //landscape
+                this._calculateTourSwipeElementWidth(true);
+            }
+        }
+
+        private _calculateTourSwipeElementWidth(square) {
             var $element = this._toursSwipeContent.children(),
                 elementLength = $element.length,
                 marginValue = parseInt($element.css('margin-right')),
                 contentWidth = 0;
 
-            $element.width($element.width());
+            this._toursSwipeContent.css('left', 0);
+            $element.removeAttr('style');
+
+            if(square) {
+                $element.width($('#tour_height_sample').height());
+            }
+            else {
+                this._toursSwipeContent.width($(window).width() * 2.87);
+
+                console.log('p', this._toursSwipeContent.css('width'), $element.css('width'))
+                $element.width($element.css('width'));
+            }
 
             contentWidth = ($element.width() + marginValue) * elementLength;
 
             this._toursSwipeContent.width(contentWidth);
 
+            this._toursSwipeContentWidth = contentWidth;
 
+            //this._toursContainer.swipe(this._swipeOptions);
         }
 
         private _openSubMenu($element:JQuery) {
@@ -154,7 +181,7 @@ module Main {
                     newLeft = 0;
                 }
                 else if(newLeft < ((this._toursSwipeContentWidth - $(window).width()) * (-1))) {
-                    newLeft = ((this._toursSwipeContentWidth - $(window).width() - 30) * (-1));
+                    newLeft = ((this._toursSwipeContentWidth - $(window).width() - 5) * (-1));
                 }
 
                 this._toursSwipeContent.css('left', newLeft);
