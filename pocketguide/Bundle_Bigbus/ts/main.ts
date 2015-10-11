@@ -92,7 +92,7 @@ module Main {
             this._toursSwipeContent.css('left', 0);
             $element.removeAttr('style');
 
-            if(!square) {
+            if(square) {
                 $element.width($('#tour_height_sample').height());
             }
             else {

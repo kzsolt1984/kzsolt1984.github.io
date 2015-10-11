@@ -69,7 +69,7 @@ var Main;
             var $element = this._toursSwipeContent.children(), elementLength = $element.length, marginValue = parseInt($element.css('margin-right')), contentWidth = 0;
             this._toursSwipeContent.css('left', 0);
             $element.removeAttr('style');
-            if (!square) {
+            if (square) {
                 $element.width($('#tour_height_sample').height());
             }
             else {

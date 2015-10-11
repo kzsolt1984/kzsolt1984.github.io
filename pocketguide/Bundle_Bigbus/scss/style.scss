@@ -378,12 +378,40 @@ footer {
 }
 
 
-#test {
-  height: 50%;
+#test, #test1, #test3 {
+  height: 50px;
   width: 100%;
   background-color: blue;
   z-index: 100000000;
   position: absolute;
-  top: 10px;
+  top: 0px;
   left: 0;
+}
+
+#test1 {
+  top: 100px;
+  width: 300px;
+}
+
+#test3 {
+  width: 100%;
+  height: 20%;
+  top: auto;
+  bottom: 0;
+
+  div {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background-color: #fff;
+
+    a{
+      display: block;
+      float: left;
+      background-color: green;
+      margin-right: 5px;
+      width: 20%;
+      height: 100%;
+    }
+  }
 }
