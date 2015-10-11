@@ -43,7 +43,7 @@ module Main {
             });
 
             $('.ad_elements').bxSlider({
-                //auto: true,
+                auto: true,
                 autoControls: false,
                 controls: false,
                 pager: false,

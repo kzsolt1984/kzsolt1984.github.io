@@ -142,7 +142,7 @@ a {
   overflow: hidden;
 }
 #ad_container .elements {
-  width: 200%;
+  width: 400% !important;
 }
 #ad_container .ad {
   float: left;
