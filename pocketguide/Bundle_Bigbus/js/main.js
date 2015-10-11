@@ -39,6 +39,8 @@ var Main;
                 minSlides: 1,
                 maxSlides: 1
             });
+            alert('111');
+            $('.ad_elements').css('transform', 'translate3d(-25%, 0px, 0px)');
             $('.tour_elements').bxSlider({
                 auto: false,
                 autoControls: false,
