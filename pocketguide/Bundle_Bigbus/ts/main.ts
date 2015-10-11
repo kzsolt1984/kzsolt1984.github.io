@@ -50,14 +50,17 @@ module Main {
                 return false;
             });
 
-            /*$('.ad_elements').bxSlider({
+            $('.ad_elements').children().width($(window).width());
+            $('.ad_elements').width($(window).width() * 2);
+
+            $('.ad_elements').bxSlider({
                 auto: true,
                 autoControls: false,
                 controls: false,
                 pager: false,
                 touchEnabled: false,
                 pause: 8000
-            });*/
+            });
 
             alert($(window).height() +' : '+ $(window).width() +' : '+ $('.ad_elements').children().width())
 
