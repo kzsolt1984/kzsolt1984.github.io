@@ -639,5 +639,56 @@ footer a#language_chooser {
     margin-left: 2%;
   }
 }
+@media only screen and (min-width: 1600px) {
+  #ad_container .ad .info div {
+    max-width: 1250px;
+  }
+  #ad_container .ad .info div h2 {
+    font-size: 2.463em;
+  }
+  #ad_container .ad .info div .prize {
+    font-size: 1.813em;
+    margin-top: 1.8em;
+    margin-bottom: 1.5em;
+  }
+  #ad_container .ad .info div .text {
+    font-size: 2.025em;
+  }
+  #ad_container.min .ad .info div .prize {
+    width: 16%;
+  }
+
+  #tours_container .elements .tour .info div {
+    padding: 1.2em;
+  }
+  #tours_container .elements .tour .info div h3 {
+    font-size: 2.525em;
+  }
+  #tours_container .elements .tour .info div p {
+    font-size: 1.988em;
+    margin: 0.9em auto;
+  }
+  #tours_container .elements .tour .info div span {
+    font-size: 1.988em;
+  }
+
+  #lang_container a span {
+    font-size: 2.600em;
+  }
+
+  footer {
+    line-height: 2.2;
+  }
+  footer a#start_btn {
+    font-size: 2.65em;
+    height: 140px;
+    width: 140px;
+    line-height: 140px;
+    border-radius: 70px;
+  }
+  footer a#language_chooser {
+    font-size: 1.450em;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
