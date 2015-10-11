@@ -63,7 +63,25 @@ module Main {
 
             $(window).on('orientationchange', ()=> {
                // swipe es adatok frissitese
+                this._calculateTourSwipeContentWidth();
             });
+
+            this._calculateTourSwipeContentWidth();
+        }
+
+        private _calculateTourSwipeContentWidth() {
+            var $element = this._toursSwipeContent.children(),
+                elementLength = $element.length,
+                marginValue = parseInt($element.css('margin-right')),
+                contentWidth = 0;
+
+            $element.width($element.width());
+
+            contentWidth = ($element.width() + marginValue) * elementLength;
+
+            this._toursSwipeContent.width(contentWidth);
+
+
         }
 
         private _openSubMenu($element:JQuery) {

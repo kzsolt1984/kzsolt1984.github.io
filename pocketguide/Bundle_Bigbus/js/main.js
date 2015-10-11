@@ -49,8 +49,16 @@ var Main;
             this._toursContainer.swipe(this._swipeOptions);
             $(window).on('orientationchange', function () {
                 // swipe es adatok frissitese
+                _this._calculateTourSwipeContentWidth();
             });
+            this._calculateTourSwipeContentWidth();
         }
+        Main.prototype._calculateTourSwipeContentWidth = function () {
+            var $element = this._toursSwipeContent.children(), elementLength = $element.length, marginValue = parseInt($element.css('margin-right')), contentWidth = 0;
+            $element.width($element.width());
+            contentWidth = ($element.width() + marginValue) * elementLength;
+            this._toursSwipeContent.width(contentWidth);
+        };
         Main.prototype._openSubMenu = function ($element) {
             var _this = this;
             var id = $element.attr('id');
