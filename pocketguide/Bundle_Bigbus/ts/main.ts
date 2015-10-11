@@ -59,24 +59,26 @@ module Main {
                 pause: 8000
             });
 
-            $('.tour_elements').bxSlider({
+            /*$('.tour_elements').bxSlider({
                 auto: false,
                 autoControls: false,
                 controls: false,
                 pager: false,
                 touchEnabled: true,
-                infiniteLoop: false
-            });
+                infiniteLoop: false,
+                shrinkItems: true,
+                maxSlides: 7
+            });*/
 
             $(window).on('orientationchange resize', ()=> {
                 //this._toursContainer.swipe('destroy');
                // swipe es adatok frissitese
-                //this._calcSwipeContentDimension();
+                this._calcSwipeContentDimension();
             });
 
             //this._calcSwipeContentDimension();
 
-            //this._toursContainer.swipe(this._swipeOptions);
+            this._toursContainer.swipe(this._swipeOptions);
         }
 
         private _calcSwipeContentDimension(): void {
@@ -98,8 +100,8 @@ module Main {
                 marginValue = parseInt($element.css('margin-right')),
                 contentWidth;
 
-            this._toursSwipeContent.css('left', 0);
-            $element.removeAttr('style');
+            this._toursSwipeContent.css('transform', 'translate3d(0px, 0px, 0px)');
+            //$element.removeAttr('style');
             //this._toursSwipeContent.width($(window).width() * 2.9);
             /*if(square) {
                 $element.width($('#tour_height_sample').height());
@@ -112,8 +114,8 @@ module Main {
 //1280 530  41,4->100%
             //contentWidth = ($element.width() + marginValue) * elementLength;
             contentWidth = '290%';
-alert(contentWidth);
-            this._toursSwipeContent.width(contentWidth);
+
+            //this._toursSwipeContent.width(contentWidth);
 
             this._toursSwipeContentWidth = ($element.width() + marginValue) * elementLength;
 
@@ -194,11 +196,12 @@ alert(contentWidth);
                     newLeft = ((this._toursSwipeContentWidth - $(window).width() - 5) * (-1));
                 }
 
-                this._toursSwipeContent.css('left', newLeft);
-
+                this._toursSwipeContent.css('transform', 'translate3d('+ newLeft +'px, 0px, 0px)');
+                this._toursSwipeContent.css('transition-duration', '0.5s');
+                this._toursSwipeContent.data('left', newLeft);
             }
             else if(phase == "end") {
-                this._swipeLeftValue = parseInt( this._toursSwipeContent.css('left') );
+                this._swipeLeftValue = parseInt( this._toursSwipeContent.data('left') );
             }
         }
     }
