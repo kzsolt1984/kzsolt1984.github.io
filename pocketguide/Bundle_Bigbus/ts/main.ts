@@ -5,7 +5,6 @@
  */
 /// <reference path="../lib/jquery.d.ts"/>
 /// <reference path="../lib/bxsilder.d.ts"/>
-/// <reference path="../lib/touchSwipe.d.ts"/>
 
 module Main {
     export class Main {
@@ -14,14 +13,7 @@ module Main {
         private _toursSwipeContent: JQuery;
         private _toursSwipeContentWidth: number;
         private _adContainer : JQuery;
-        private _swipeLeftValue: number = 0;
-        private _swipeOptions = {
-            triggerOnTouchEnd: true,
-            swipeStatus: (a,b,c,d)=> {this._swipeStatus(a,b,c,d)},
-            allowPageScroll: "vertical",
-            threshold: 75,
-            excludedElements: "button, input, select, textarea, .noSwipe"
-        };
+
         private _langContainer: JQuery;
         private _activeSubmenu = null;
 
@@ -51,7 +43,7 @@ module Main {
             });
 
             $('.ad_elements').bxSlider({
-                auto: true,
+                //auto: true,
                 autoControls: false,
                 controls: false,
                 pager: false,
@@ -69,60 +61,9 @@ module Main {
                 touchEnabled: true,
                 infiniteLoop: false,
                 minSlides: 2,
-                maxSlides: 3
+                maxSlides: 3,
+                speed: 100
             });
-
-            $(window).on('orientationchange resize', ()=> {
-                //this._toursContainer.swipe('destroy');
-               // swipe es adatok frissitese
-                //this._calcSwipeContentDimension();
-            });
-
-            //this._calcSwipeContentDimension();
-
-            //this._toursContainer.swipe(this._swipeOptions);
-        }
-
-        private _calcSwipeContentDimension(): void {
-            var $window = $(window);
-
-            if($window.height() > $window.width()) {
-                //portrait
-                this._calculateTourSwipeElementWidth(false);
-            }
-            else {
-                //landscape
-                this._calculateTourSwipeElementWidth(true);
-            }
-        }
-
-        private _calculateTourSwipeElementWidth(square) {
-            var $element = this._toursSwipeContent.children(),
-                elementLength = $element.length,
-                marginValue = parseInt($element.css('margin-right')),
-                contentWidth;
-
-            this._toursSwipeContent.css('transform', 'translate3d(0px, 0px, 0px)');
-            //$element.removeAttr('style');
-            //this._toursSwipeContent.width($(window).width() * 2.9);
-            /*if(square) {
-                $element.width($('#tour_height_sample').height());
-            }
-            else {
-                this._toursSwipeContent.width($(window).width() * 2.9);
-
-                //$element.width(parseInt($element.css('width')));
-            }*/
-//1280 530  41,4->100%
-            //contentWidth = ($element.width() + marginValue) * elementLength;
-            contentWidth = '290%';
-
-            //this._toursSwipeContent.width(contentWidth);
-
-            this._toursSwipeContentWidth = ($element.width() + marginValue) * elementLength;
-
-            //alert(window.navigator.userAgent);
-            //this._toursContainer.swipe(this._swipeOptions);
         }
 
         private _openSubMenu($element:JQuery) {
@@ -183,28 +124,6 @@ module Main {
                     this._openSubMenuStatus = 0;
                 }
             });
-        }
-
-        private _swipeStatus(event, phase, direction, distance) {
-            //If we are moving before swipe, and we are going L or R in X mode, or U or D in Y mode then drag.
-            if (phase == "move" && (direction == "left" || direction == "right")) {
-                var distanceDir = (direction === "left") ? distance * (-1): distance,
-                    newLeft = distanceDir + this._swipeLeftValue;
-
-                if(newLeft > 0) {
-                    newLeft = 0;
-                }
-                else if(newLeft < ((this._toursSwipeContentWidth - $(window).width()) * (-1))) {
-                    newLeft = ((this._toursSwipeContentWidth - $(window).width() - 5) * (-1));
-                }
-
-                this._toursSwipeContent.css('transform', 'translate3d('+ newLeft +'px, 0px, 0px)');
-                this._toursSwipeContent.css('transition-duration', '0.5s');
-                this._toursSwipeContent.data('left', newLeft);
-            }
-            else if(phase == "end") {
-                this._swipeLeftValue = parseInt( this._toursSwipeContent.data('left') );
-            }
         }
     }
 }

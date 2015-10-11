@@ -5,21 +5,12 @@
  */
 /// <reference path="../lib/jquery.d.ts"/>
 /// <reference path="../lib/bxsilder.d.ts"/>
-/// <reference path="../lib/touchSwipe.d.ts"/>
 var Main;
 (function (Main_1) {
     var Main = (function () {
         function Main() {
             var _this = this;
             this._openSubMenuStatus = 0;
-            this._swipeLeftValue = 0;
-            this._swipeOptions = {
-                triggerOnTouchEnd: true,
-                swipeStatus: function (a, b, c, d) { _this._swipeStatus(a, b, c, d); },
-                allowPageScroll: "vertical",
-                threshold: 75,
-                excludedElements: "button, input, select, textarea, .noSwipe"
-            };
             this._activeSubmenu = null;
             this._toursContainer = $('#tours_container');
             this._toursSwipeContent = this._toursContainer.find('.elements');
@@ -39,7 +30,7 @@ var Main;
                 return false;
             });
             $('.ad_elements').bxSlider({
-                auto: true,
+                //auto: true,
                 autoControls: false,
                 controls: false,
                 pager: false,
@@ -56,48 +47,10 @@ var Main;
                 touchEnabled: true,
                 infiniteLoop: false,
                 minSlides: 2,
-                maxSlides: 3
+                maxSlides: 3,
+                speed: 100
             });
-            $(window).on('orientationchange resize', function () {
-                //this._toursContainer.swipe('destroy');
-                // swipe es adatok frissitese
-                //this._calcSwipeContentDimension();
-            });
-            //this._calcSwipeContentDimension();
-            //this._toursContainer.swipe(this._swipeOptions);
         }
-        Main.prototype._calcSwipeContentDimension = function () {
-            var $window = $(window);
-            if ($window.height() > $window.width()) {
-                //portrait
-                this._calculateTourSwipeElementWidth(false);
-            }
-            else {
-                //landscape
-                this._calculateTourSwipeElementWidth(true);
-            }
-        };
-        Main.prototype._calculateTourSwipeElementWidth = function (square) {
-            var $element = this._toursSwipeContent.children(), elementLength = $element.length, marginValue = parseInt($element.css('margin-right')), contentWidth;
-            this._toursSwipeContent.css('transform', 'translate3d(0px, 0px, 0px)');
-            //$element.removeAttr('style');
-            //this._toursSwipeContent.width($(window).width() * 2.9);
-            /*if(square) {
-                $element.width($('#tour_height_sample').height());
-            }
-            else {
-                this._toursSwipeContent.width($(window).width() * 2.9);
-
-                //$element.width(parseInt($element.css('width')));
-            }*/
-            //1280 530  41,4->100%
-            //contentWidth = ($element.width() + marginValue) * elementLength;
-            contentWidth = '290%';
-            //this._toursSwipeContent.width(contentWidth);
-            this._toursSwipeContentWidth = ($element.width() + marginValue) * elementLength;
-            //alert(window.navigator.userAgent);
-            //this._toursContainer.swipe(this._swipeOptions);
-        };
         Main.prototype._openSubMenu = function ($element) {
             var _this = this;
             var id = $element.attr('id');
@@ -149,24 +102,6 @@ var Main;
                     _this._openSubMenuStatus = 0;
                 }
             });
-        };
-        Main.prototype._swipeStatus = function (event, phase, direction, distance) {
-            //If we are moving before swipe, and we are going L or R in X mode, or U or D in Y mode then drag.
-            if (phase == "move" && (direction == "left" || direction == "right")) {
-                var distanceDir = (direction === "left") ? distance * (-1) : distance, newLeft = distanceDir + this._swipeLeftValue;
-                if (newLeft > 0) {
-                    newLeft = 0;
-                }
-                else if (newLeft < ((this._toursSwipeContentWidth - $(window).width()) * (-1))) {
-                    newLeft = ((this._toursSwipeContentWidth - $(window).width() - 5) * (-1));
-                }
-                this._toursSwipeContent.css('transform', 'translate3d(' + newLeft + 'px, 0px, 0px)');
-                this._toursSwipeContent.css('transition-duration', '0.5s');
-                this._toursSwipeContent.data('left', newLeft);
-            }
-            else if (phase == "end") {
-                this._swipeLeftValue = parseInt(this._toursSwipeContent.data('left'));
-            }
         };
         return Main;
     })();
