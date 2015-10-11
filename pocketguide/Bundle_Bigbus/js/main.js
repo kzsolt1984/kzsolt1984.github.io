@@ -81,6 +81,7 @@ var Main;
             this._toursSwipeContent.width(contentWidth);
             this._toursSwipeContentWidth = contentWidth;
             alert($(window).width() + ' : ' + $element.width() + ' : ' + contentWidth);
+            alert(window.navigator.userAgent);
             //this._toursContainer.swipe(this._swipeOptions);
         };
         Main.prototype._openSubMenu = function ($element) {
