@@ -66,10 +66,10 @@ var Main;
             }
         };
         Main.prototype._calculateTourSwipeElementWidth = function (square) {
-            var $element = this._toursSwipeContent.children(), elementLength = $element.length, marginValue = parseInt($element.css('margin-right')), contentWidth = 0;
+            var $element = this._toursSwipeContent.children(), elementLength = $element.length, marginValue = parseInt($element.css('margin-right')), contentWidth;
             this._toursSwipeContent.css('left', 0);
             $element.removeAttr('style');
-            this._toursSwipeContent.width($(window).width() * 2.9);
+            //this._toursSwipeContent.width($(window).width() * 2.9);
             /*if(square) {
                 $element.width($('#tour_height_sample').height());
             }
@@ -79,9 +79,11 @@ var Main;
                 //$element.width(parseInt($element.css('width')));
             }*/
             //1280 530  41,4->100%
-            contentWidth = ($element.width() + marginValue) * elementLength;
-            this._toursSwipeContent.width('290%');
-            this._toursSwipeContentWidth = contentWidth;
+            //contentWidth = ($element.width() + marginValue) * elementLength;
+            contentWidth = '290%';
+            alert(contentWidth);
+            this._toursSwipeContent.width(contentWidth);
+            this._toursSwipeContentWidth = ($element.width() + marginValue) * elementLength;
             //alert(window.navigator.userAgent);
             //this._toursContainer.swipe(this._swipeOptions);
         };
