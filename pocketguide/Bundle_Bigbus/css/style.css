@@ -147,7 +147,7 @@ a {
 #ad_container .ad {
   float: left;
   height: 100%;
-  width: 50%;
+  width: 25% !important;
   background-size: cover;
   background-repeat: no-repeat;
 }
