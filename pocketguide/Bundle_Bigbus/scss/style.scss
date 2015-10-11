@@ -215,7 +215,8 @@ a {
       float: left;
       height: 100%;
       width: 14.0%;
-      margin-right: 5px;
+      //margin-right: 5px;
+      margin-right: 0.2%;
       overflow: hidden;
       background-repeat: no-repeat;
       background-size: cover;
@@ -379,16 +380,4 @@ footer {
 
 @media only screen and (orientation: portrait) and (max-width: 500px)  {
   @import "size/size_500";
-}
-
-#test, #test1 {
-  position: absolute;
-  background-color: blue;
-  height: 50px;
-  width: 50px;
-  z-index: 1000000000;
-}
-
-#test1 {
-  top: 200px;
 }

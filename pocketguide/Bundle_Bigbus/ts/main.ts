@@ -31,8 +31,7 @@ module Main {
             this._toursSwipeContentWidth = this._toursSwipeContent.width();
             this._adContainer    = $('#ad_container');
             this._langContainer = $('#lang_container');
-$('#test').width($(window).width());
-$('#test1').width(screen.width);
+
             /*$( "#start_btn" ).on('click', ()=> {
                 this._openSubMenu(this._toursContainer);
 
@@ -66,7 +65,7 @@ $('#test1').width(screen.width);
                 //this._calcSwipeContentDimension();
             });
 
-            this._calcSwipeContentDimension();
+            //this._calcSwipeContentDimension();
 
             this._toursContainer.swipe(this._swipeOptions);
         }

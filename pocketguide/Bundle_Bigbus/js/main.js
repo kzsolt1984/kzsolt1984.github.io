@@ -26,8 +26,6 @@ var Main;
             this._toursSwipeContentWidth = this._toursSwipeContent.width();
             this._adContainer = $('#ad_container');
             this._langContainer = $('#lang_container');
-            $('#test').width($(window).width());
-            $('#test1').width(screen.width);
             /*$( "#start_btn" ).on('click', ()=> {
                 this._openSubMenu(this._toursContainer);
 
@@ -59,7 +57,7 @@ var Main;
                 // swipe es adatok frissitese
                 //this._calcSwipeContentDimension();
             });
-            this._calcSwipeContentDimension();
+            //this._calcSwipeContentDimension();
             this._toursContainer.swipe(this._swipeOptions);
         }
         Main.prototype._calcSwipeContentDimension = function () {
