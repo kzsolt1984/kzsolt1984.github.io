@@ -76,14 +76,13 @@ var Main;
             this._toursSwipeContent.css('left', 0);
             $element.removeAttr('style');
             if (square) {
-                $element.width($('#tour_height_sample').height());
+                $element.width($('#tour_height_sample').height() * 2);
             }
             else {
-                this._toursSwipeContent.width($(window).width() * 2.87);
-                console.log('p', this._toursSwipeContent.css('width'), $element.css('width'));
-                $element.width($element.css('width'));
+                this._toursSwipeContent.width($(window).width() * 2.87 * 2);
+                $element.width(parseInt($element.css('width')) * 2);
             }
-            contentWidth = ($element.width() + marginValue) * elementLength;
+            contentWidth = ($element.width() + marginValue) * elementLength * 2;
             this._toursSwipeContent.width(contentWidth);
             this._toursSwipeContentWidth = contentWidth;
             //alert(window.navigator.userAgent);
