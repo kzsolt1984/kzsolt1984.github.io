@@ -381,10 +381,14 @@ footer {
   @import "size/size_500";
 }
 
-#test {
+#test, #test1 {
   position: absolute;
   background-color: blue;
   height: 50px;
   width: 50px;
   z-index: 1000000000;
+}
+
+#test1 {
+  top: 200px;
 }
