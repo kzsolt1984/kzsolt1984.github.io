@@ -65,7 +65,7 @@ module Main {
                 //this._calcSwipeContentDimension();
             });
 
-            //this._calcSwipeContentDimension();
+            this._calcSwipeContentDimension();
 
             this._toursContainer.swipe(this._swipeOptions);
         }

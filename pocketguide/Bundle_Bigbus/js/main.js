@@ -57,7 +57,7 @@ var Main;
                 // swipe es adatok frissitese
                 //this._calcSwipeContentDimension();
             });
-            //this._calcSwipeContentDimension();
+            this._calcSwipeContentDimension();
             this._toursContainer.swipe(this._swipeOptions);
         }
         Main.prototype._calcSwipeContentDimension = function () {
