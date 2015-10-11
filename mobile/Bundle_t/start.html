@@ -12,14 +12,24 @@
     <title>RUN D.M.C</title>
 
     <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <style>
+        #page1, #page2, #page3 , #page4, #page5 {
+            display: block;
+            background: blue;
+            height: 10px;
+            width: 50px;
+        }
+    </style>
 </head>
 <body>
 
 
 <div>
-    <a href="#page1">Page1</a><br><br><br>
-    <a href="#page2">Page2</a><br><br><br>
-    <a href="#page3">Page3</a><br><br><br>
+    <a href="#page1" id="page1">Page1</a><br>
+    <a href="#page2" id="page2">Page2</a><br>
+    <a href="#page3" id="page3">Page3</a><br>
+    <a href="#page3" id="page4">Page4</a><br>
+    <a href="#page3" id="page5">Page5</a><br>
 
     <a href="#" id="back">Back</a>
 </div>
@@ -47,6 +57,14 @@
     });
 
     log("Load hash: "+ window.location.hash);
+
+    $('#page1').width(screen.width);
+    $('#page2').width($(window).width());
+    $('#page3').width($('body').width());
+    $('#page4').css('width', '100%');
+    $('#page5').css('width', '300px');
+
+
 
 </script>
 </body>
