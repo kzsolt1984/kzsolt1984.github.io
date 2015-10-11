@@ -62,7 +62,7 @@ module Main {
                 pause: 8000
             });
 
-            alert($(window).height() +' : '+ $(window).width() +' : '+ $('.ad_elements').children().width())
+            alert($(window).width() +' : '+ $('.ad_elements').find('.ad').width() + ' : ' + $('.ad_elements').width())
 
             $(window).on('orientationchange resize', ()=> {
                 //this._toursContainer.swipe('destroy');

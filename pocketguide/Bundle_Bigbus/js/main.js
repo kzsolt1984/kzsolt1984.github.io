@@ -48,7 +48,7 @@ var Main;
                 touchEnabled: false,
                 pause: 8000
             });
-            alert($(window).height() + ' : ' + $(window).width() + ' : ' + $('.ad_elements').children().width());
+            alert($(window).width() + ' : ' + $('.ad_elements').find('.ad').width() + ' : ' + $('.ad_elements').width());
             $(window).on('orientationchange resize', function () {
                 //this._toursContainer.swipe('destroy');
                 // swipe es adatok frissitese
