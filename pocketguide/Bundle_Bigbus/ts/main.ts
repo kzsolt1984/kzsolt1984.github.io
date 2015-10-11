@@ -56,7 +56,9 @@ module Main {
                 controls: false,
                 pager: false,
                 touchEnabled: false,
-                pause: 8000
+                pause: 8000,
+                minSlides: 1,
+                maxSlides: 1
             });
 
             $('.tour_elements').bxSlider({
