@@ -278,7 +278,7 @@ a {
 }
 
 #tours_container .elements {
-  width: 287%;
+  width: 287% !important;
 }
 #tours_container .elements a {
   display: inline-block;
