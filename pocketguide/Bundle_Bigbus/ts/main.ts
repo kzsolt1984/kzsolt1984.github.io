@@ -93,20 +93,20 @@ module Main {
             $element.removeAttr('style');
 
             if(square) {
-                $element.width($('#tour_height_sample').height() * 2);
+                $element.width($('#tour_height_sample').height());
             }
             else {
-                this._toursSwipeContent.width($(window).width() * 2.87 * 2);
+                this._toursSwipeContent.width($(window).width() * 2.87);
 
-                $element.width(parseInt($element.css('width')) * 2);
+                $element.width($element.css('width'));
             }
 
-            contentWidth = ($element.width() + marginValue) * elementLength * 2;
+            contentWidth = ($element.width() + marginValue) * elementLength;
 
             this._toursSwipeContent.width(contentWidth);
 
             this._toursSwipeContentWidth = contentWidth;
-            alert(contentWidth)
+
             //alert(window.navigator.userAgent);
             //this._toursContainer.swipe(this._swipeOptions);
         }
