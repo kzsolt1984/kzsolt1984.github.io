@@ -1,0 +1,643 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clear {
+  clear: both;
+  float: none;
+  height: 0 !important;
+  width: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 0 !important;
+  font-size: 0 !important;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTPro';
+  src: url("../font/HelveticaNeueLTPro-Lt.otf") format("opentype");
+  font-style: normal;
+  font-weight: 200;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTPro';
+  src: url("../font/HelveticaNeueLTPro-Md.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTPro';
+  src: url("../font/HelveticaNeueLTPro-Bd.otf") format("opentype");
+  font-style: normal;
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTProCn';
+  src: url("../font/HelveticaNeueLTPro-Cn.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTProRoman';
+  src: url("../font/HelveticaNeueLTPro-Roman.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("../font/Roboto-Medium.ttf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Roboto';
+  src: url("../font/Roboto-Light.ttf") format("opentype");
+  font-style: normal;
+  font-weight: 200;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 0;
+  font-family: "HelveticaNeueLTPro", Helvetica, Arial, sans-serif;
+  color: #333;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+#ad_container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+}
+#ad_container .elements {
+  width: 400% !important;
+}
+#ad_container .ad {
+  float: left;
+  height: 100%;
+  width: 25% !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#ad_container .ad .info div {
+  padding: 0.938em 1.250em;
+  background: rgba(255, 255, 255, 0.8);
+  width: 23%;
+  margin-top: 2.7%;
+  margin-left: 4.7%;
+  box-sizing: border-box;
+}
+#ad_container .ad .info div h2 {
+  font-size: 2.063em;
+  color: #003974;
+  line-height: 1.3;
+}
+#ad_container .ad .info div .prize {
+  font-size: 1.313em;
+  margin-top: 2em;
+  margin-bottom: 1.7em;
+  font-weight: 100;
+}
+#ad_container .ad .info div .prize span {
+  font-weight: normal;
+  color: #003974;
+}
+#ad_container .ad .info div .prize i {
+  width: 100%;
+}
+#ad_container .ad .info div .text {
+  font-size: 1.625em;
+  line-height: 1.1;
+  font-weight: 100;
+}
+#ad_container .ad.ad_1 {
+  background-image: url(../img/big_img_1.jpg);
+}
+#ad_container .ad.ad_2 {
+  background-image: url(../img/big_img_2.jpg);
+}
+#ad_container.min {
+  height: 26%;
+}
+#ad_container.min .ad {
+  display: table;
+  overflow: hidden;
+  background-size: cover;
+}
+#ad_container.min .ad .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+#ad_container.min .ad .info div {
+  width: 82%;
+  margin-left: 2.3%;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  display: table;
+}
+#ad_container.min .ad .info div h2 {
+  line-height: normal;
+  width: 34%;
+  height: 100%;
+  padding: 15px 15px 15px 0;
+  border-right: 1px solid #000;
+  box-sizing: initial;
+  display: table-cell;
+  vertical-align: middle;
+}
+#ad_container.min .ad .info div .prize {
+  margin: 0 0 0 20px;
+  width: 15%;
+  padding-left: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  font-weight: 100;
+}
+#ad_container.min .ad .info div .prize i:first-child {
+  margin-bottom: 10px;
+  display: inline-block;
+}
+#ad_container.min .ad .info div .prize span {
+  margin-bottom: 0;
+}
+#ad_container.min .ad .info div .text {
+  line-height: normal;
+  font-weight: 100;
+  display: table-cell;
+  vertical-align: middle;
+}
+#ad_container.min .ad.ad_1 {
+  background-image: url(../img/small_img_1.jpg);
+}
+#ad_container.min .ad.ad_2 {
+  background-image: url(../img/small_img_2.jpg);
+}
+#ad_container.min .ad.ad_2 .info div {
+  width: 75%;
+}
+#ad_container.min .ad.ad_2 .info div h2 {
+  width: 30%;
+}
+
+#tour_height_sample,
+#tours_container,
+#lang_container {
+  height: 65.6%;
+}
+
+#tour_height_sample {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  z-index: -1;
+}
+
+#tours_container,
+#lang_container {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  bottom: 6%;
+  z-index: 1;
+  background-color: #fff;
+  opacity: 0;
+}
+
+#tours_container .elements {
+  width: 287% !important;
+}
+#tours_container .elements a {
+  display: inline-block;
+  float: left;
+  height: 100%;
+  width: 14% !important;
+  margin-right: 0.2%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#tours_container .elements a.tour_1 {
+  background-image: url(../img/tour_1.jpg);
+}
+#tours_container .elements a.tour_2 {
+  background-image: url(../img/tour_2.jpg);
+}
+#tours_container .elements a.tour_3 {
+  background-image: url(../img/tour_3.jpg);
+}
+#tours_container .elements a.tour_4 {
+  background-image: url(../img/tour_4.jpg);
+}
+#tours_container .elements a.tour_5 {
+  background-image: url(../img/tour_5.jpg);
+}
+#tours_container .elements a.tour_6 {
+  background-image: url(../img/tour_6.jpg);
+}
+#tours_container .elements a.tour_7 {
+  background-image: url(../img/tour_7.jpg);
+}
+#tours_container .elements .tour {
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+#tours_container .elements .tour img {
+  height: 100%;
+  display: none;
+}
+#tours_container .elements .tour .info {
+  display: table-cell;
+  vertical-align: middle;
+}
+#tours_container .elements .tour .info div {
+  padding: 2.500em 2.188em;
+  background: rgba(255, 255, 255, 0.8);
+  margin-right: 24%;
+  margin-left: 24%;
+}
+#tours_container .elements .tour .info div h3 {
+  font-size: 2.125em;
+  color: #003974;
+}
+#tours_container .elements .tour .info div p {
+  font-weight: 100;
+  color: #000;
+  font-size: 1.688em;
+  margin: 1em auto;
+}
+#tours_container .elements .tour .info div span {
+  font-size: 1.688em;
+  color: #000;
+}
+#tours_container.min {
+  height: 0;
+}
+
+.elements {
+  position: absolute;
+  left: 0;
+  height: 100%;
+}
+
+#lang_container {
+  opacity: 0;
+  background-color: #999999;
+}
+#lang_container.min {
+  height: 0;
+}
+#lang_container a {
+  display: table;
+  width: 25%;
+  height: 100%;
+  z-index: 5;
+  float: left;
+  text-align: center;
+}
+#lang_container a span {
+  display: table-cell;
+  vertical-align: middle;
+  font-family: "Roboto", "HelveticaNeueLTPro", Helvetica;
+  font-size: 2.500em;
+  color: #fff;
+  font-weight: 200;
+}
+
+footer {
+  width: 100%;
+  height: 6%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  line-height: 2.2;
+  background-color: #000;
+  color: #fff;
+}
+footer div {
+  display: table;
+  height: 100%;
+  width: 50%;
+  margin-left: 2%;
+}
+footer a {
+  color: #fff;
+}
+footer a#start_btn {
+  position: absolute;
+  right: 2%;
+  bottom: 140%;
+  font-size: 2.375em;
+  color: #003974;
+  display: block;
+  background-color: #fff;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  border-radius: 50px;
+  text-align: center;
+}
+footer a#language_chooser {
+  font-family: "Roboto", "HelveticaNeueLTPro", Helvetica;
+  font-size: 1.250em;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* Slider plugin */
+.bx-wrapper {
+  height: 100%;
+}
+.bx-wrapper .bx-viewport {
+  height: 100% !important;
+}
+
+@media only screen and (min-width: 801px) and (max-width: 1100px) {
+  #ad_container .ad .info div {
+    padding: 0.7em 1.0em;
+  }
+  #ad_container .ad .info div h2 {
+    font-size: 1.863em;
+  }
+  #ad_container .ad .info div .prize {
+    font-size: 1.113em;
+    margin-top: 1.8em;
+    margin-bottom: 1.5em;
+  }
+  #ad_container .ad .info div .text {
+    font-size: 1.425em;
+  }
+  #ad_container.min .ad .info div .prize {
+    width: 16%;
+  }
+
+  #tours_container .elements .tour .info div {
+    padding: 1.2em;
+  }
+  #tours_container .elements .tour .info div h3 {
+    font-size: 1.425em;
+  }
+  #tours_container .elements .tour .info div p {
+    font-size: 0.988em;
+    margin: 0.6em auto;
+  }
+  #tours_container .elements .tour .info div span {
+    font-size: 0.988em;
+  }
+
+  #lang_container a span {
+    font-size: 2.100em;
+  }
+
+  footer {
+    line-height: 2.2;
+  }
+  footer a#start_btn {
+    font-size: 2.15em;
+    height: 100px;
+    width: 100px;
+    line-height: 100px;
+    border-radius: 50px;
+  }
+  footer a#language_chooser {
+    font-size: 1.050em;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+  #ad_container .ad .info div {
+    padding: 0.5em 0.8em;
+  }
+  #ad_container .ad .info div h2 {
+    font-size: 1.263em;
+  }
+  #ad_container .ad .info div .prize {
+    font-size: 0.713em;
+    margin-top: 1.6em;
+    margin-bottom: 1.3em;
+  }
+  #ad_container .ad .info div .text {
+    font-size: 1.025em;
+  }
+  #ad_container.min .ad .info div h2 {
+    font-size: 1.2em;
+  }
+  #ad_container.min .ad .info div .prize {
+    width: 17%;
+  }
+
+  #tours_container .elements .tour .info div {
+    padding: 1em;
+    margin-right: 20%;
+    margin-left: 20%;
+  }
+  #tours_container .elements .tour .info div h3 {
+    font-size: 1.225em;
+  }
+  #tours_container .elements .tour .info div p {
+    font-size: 0.788em;
+    margin: 0.4em auto;
+  }
+  #tours_container .elements .tour .info div span {
+    font-size: 0.788em;
+  }
+
+  #lang_container a span {
+    font-size: 1.900em;
+  }
+
+  footer {
+    line-height: 1.4;
+  }
+  footer a#start_btn {
+    font-size: 1.875em;
+    height: 80px;
+    width: 80px;
+    line-height: 80px;
+    border-radius: 40px;
+  }
+  footer a#language_chooser {
+    font-size: 0.80em;
+    margin-left: 2%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #ad_container .ad .info div {
+    padding: 0.3em 0.6em;
+  }
+  #ad_container .ad .info div h2 {
+    font-size: 0.963em;
+  }
+  #ad_container .ad .info div .prize {
+    font-size: 0.413em;
+    margin-top: 1.3em;
+    margin-bottom: 1.0em;
+  }
+  #ad_container .ad .info div .text {
+    font-size: 0.725em;
+  }
+
+  #tours_container .elements .tour .info div {
+    padding: 0.7em;
+  }
+  #tours_container .elements .tour .info div h3 {
+    font-size: 0.725em;
+  }
+  #tours_container .elements .tour .info div p {
+    font-size: 0.488em;
+    margin: 0.2em auto;
+  }
+  #tours_container .elements .tour .info div span {
+    font-size: 0.488em;
+  }
+
+  #lang_container a span {
+    font-size: 1.300em;
+  }
+
+  footer {
+    line-height: 1.2;
+  }
+  footer a#start_btn {
+    font-size: 1.575em;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+  }
+  footer a#language_chooser {
+    font-size: 0.550em;
+    margin-left: 2%;
+  }
+}
+@media only screen and (orientation: portrait) and (max-width: 500px) {
+  #ad_container .ad .info div {
+    width: 40%;
+    padding: 0.3em 0.6em;
+  }
+  #ad_container .ad .info div h2 {
+    font-size: 0.963em;
+  }
+  #ad_container .ad .info div .prize {
+    font-size: 0.413em;
+    margin-top: 1.3em;
+    margin-bottom: 1.0em;
+  }
+  #ad_container .ad .info div .text {
+    font-size: 0.725em;
+  }
+  #ad_container.min .info div .text {
+    font-size: 0.5em;
+  }
+
+  #tours_container .elements .tour .info div {
+    padding: 0.7em;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+  #tours_container .elements .tour .info div h3 {
+    font-size: 0.725em;
+  }
+  #tours_container .elements .tour .info div p {
+    font-size: 0.488em;
+    margin: 0.2em auto;
+  }
+  #tours_container .elements .tour .info div span {
+    font-size: 0.488em;
+  }
+
+  #lang_container a span {
+    font-size: 1.000em;
+  }
+
+  footer {
+    line-height: 1.2;
+  }
+  footer a#start_btn {
+    font-size: 1.575em;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+  }
+  footer a#language_chooser {
+    font-size: 0.550em;
+    margin-left: 2%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
