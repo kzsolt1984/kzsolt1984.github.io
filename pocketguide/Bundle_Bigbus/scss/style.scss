@@ -380,3 +380,11 @@ footer {
 @media only screen and (orientation: portrait) and (max-width: 500px)  {
   @import "size/size_500";
 }
+
+#test {
+  position: absolute;
+  background-color: blue;
+  height: 50px;
+  width: 50px;
+  z-index: 1000000000;
+}
