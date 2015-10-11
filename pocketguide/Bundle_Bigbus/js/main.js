@@ -26,24 +26,18 @@ var Main;
             this._toursSwipeContentWidth = this._toursSwipeContent.width();
             this._adContainer = $('#ad_container');
             this._langContainer = $('#lang_container');
-            /*$( "#start_btn" ).on('click', ()=> {
-                this._openSubMenu(this._toursContainer);
-
+            $("#start_btn").on('click', function () {
+                _this._openSubMenu(_this._toursContainer);
                 return false;
             });
-
-            $( "#language_chooser" ).on('click', ()=> {
-                this._openSubMenu(this._langContainer);
-
+            $("#language_chooser").on('click', function () {
+                _this._openSubMenu(_this._langContainer);
                 return false;
             });
-
-            this._langContainer.find('a').on('click', ()=> {
-                this._openSubMenu(this._toursContainer);
-
+            this._langContainer.find('a').on('click', function () {
+                _this._openSubMenu(_this._toursContainer);
                 return false;
             });
-
             $('.ad_elements').bxSlider({
                 auto: true,
                 autoControls: false,
@@ -51,13 +45,12 @@ var Main;
                 pager: false,
                 touchEnabled: false,
                 pause: 8000
-            });*/
+            });
             $(window).on('orientationchange resize', function () {
                 //this._toursContainer.swipe('destroy');
                 // swipe es adatok frissitese
-                //this._calcSwipeContentDimension();
+                _this._calcSwipeContentDimension();
             });
-            alert($(window).width() + ' : ' + window.screen.width);
             this._calcSwipeContentDimension();
             this._toursContainer.swipe(this._swipeOptions);
         }

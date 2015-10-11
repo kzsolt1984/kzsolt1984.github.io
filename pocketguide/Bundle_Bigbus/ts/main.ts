@@ -32,7 +32,7 @@ module Main {
             this._adContainer    = $('#ad_container');
             this._langContainer = $('#lang_container');
 
-            /*$( "#start_btn" ).on('click', ()=> {
+            $( "#start_btn" ).on('click', ()=> {
                 this._openSubMenu(this._toursContainer);
 
                 return false;
@@ -57,14 +57,14 @@ module Main {
                 pager: false,
                 touchEnabled: false,
                 pause: 8000
-            });*/
+            });
 
             $(window).on('orientationchange resize', ()=> {
                 //this._toursContainer.swipe('destroy');
                // swipe es adatok frissitese
-                //this._calcSwipeContentDimension();
+                this._calcSwipeContentDimension();
             });
-alert($(window).width() + ' : ' + window.screen.width)
+
             this._calcSwipeContentDimension();
 
             this._toursContainer.swipe(this._swipeOptions);
