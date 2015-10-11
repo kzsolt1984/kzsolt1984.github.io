@@ -96,12 +96,12 @@ module Main {
                 $element.width($('#tour_height_sample').height());
             }
             else {
-                this._toursSwipeContent.width($(window).width() * 2.87);
+                this._toursSwipeContent.width($(window).width() * 2.87 *2);
 
-                $element.width($element.css('width'));
+                $element.width(parseInt($element.css('width')) * 2);
             }
 
-            contentWidth = ($element.width() + marginValue) * elementLength;
+            contentWidth = ($element.width() + marginValue) * elementLength *2;
 
             this._toursSwipeContent.width(contentWidth);
 
