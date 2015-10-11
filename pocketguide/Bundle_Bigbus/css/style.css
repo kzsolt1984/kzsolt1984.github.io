@@ -403,7 +403,7 @@ footer a#language_chooser {
   height: 100% !important;
 }
 
-@media only screen and (min-width: 701px) and (max-width: 1100px) {
+@media only screen and (min-width: 801px) and (max-width: 1100px) {
   #ad_container .ad .info div {
     padding: 0.7em 1.0em;
   }
@@ -451,7 +451,7 @@ footer a#language_chooser {
     font-size: 1.050em;
   }
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (min-width: 601px) and (max-width: 800px) {
   #ad_container .ad .info div {
     padding: 0.5em 0.8em;
   }
@@ -497,6 +497,110 @@ footer a#language_chooser {
   }
   footer a#language_chooser {
     font-size: 0.650em;
+    margin-left: 2%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  #ad_container .ad .info div {
+    padding: 0.3em 0.6em;
+  }
+  #ad_container .ad .info div h2 {
+    font-size: 0.963em;
+  }
+  #ad_container .ad .info div .prize {
+    font-size: 0.413em;
+    margin-top: 1.3em;
+    margin-bottom: 1.0em;
+  }
+  #ad_container .ad .info div .text {
+    font-size: 0.725em;
+  }
+
+  #tours_container .elements .tour .info div {
+    padding: 0.7em;
+  }
+  #tours_container .elements .tour .info div h3 {
+    font-size: 0.725em;
+  }
+  #tours_container .elements .tour .info div p {
+    font-size: 0.488em;
+    margin: 0.2em auto;
+  }
+  #tours_container .elements .tour .info div span {
+    font-size: 0.488em;
+  }
+
+  #lang_container a span {
+    font-size: 1.300em;
+  }
+
+  footer {
+    line-height: 1.2;
+  }
+  footer a#start_btn {
+    font-size: 1.575em;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+  }
+  footer a#language_chooser {
+    font-size: 0.550em;
+    margin-left: 2%;
+  }
+}
+@media only screen and (orientation: portrait) and (max-width: 500px) {
+  #ad_container .ad .info div {
+    width: 40%;
+    padding: 0.3em 0.6em;
+  }
+  #ad_container .ad .info div h2 {
+    font-size: 0.963em;
+  }
+  #ad_container .ad .info div .prize {
+    font-size: 0.413em;
+    margin-top: 1.3em;
+    margin-bottom: 1.0em;
+  }
+  #ad_container .ad .info div .text {
+    font-size: 0.725em;
+  }
+  #ad_container.min .info div .text {
+    font-size: 0.5em;
+  }
+
+  #tours_container .elements .tour .info div {
+    padding: 0.7em;
+    margin-right: 15%;
+    margin-left: 15%;
+  }
+  #tours_container .elements .tour .info div h3 {
+    font-size: 0.725em;
+  }
+  #tours_container .elements .tour .info div p {
+    font-size: 0.488em;
+    margin: 0.2em auto;
+  }
+  #tours_container .elements .tour .info div span {
+    font-size: 0.488em;
+  }
+
+  #lang_container a span {
+    font-size: 1.000em;
+  }
+
+  footer {
+    line-height: 1.2;
+  }
+  footer a#start_btn {
+    font-size: 1.575em;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    border-radius: 30px;
+  }
+  footer a#language_chooser {
+    font-size: 0.550em;
     margin-left: 2%;
   }
 }

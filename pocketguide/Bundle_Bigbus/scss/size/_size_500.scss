@@ -1,0 +1,81 @@
+#ad_container {
+  .ad {
+    .info div {
+      width: 40%;
+      padding: 0.3em 0.6em;
+
+      h2 {
+        font-size: 0.963em;
+      }
+
+      .prize {
+        font-size: 0.413em;
+        margin-top: 1.3em;
+        margin-bottom: 1.0em;
+      }
+
+      .text {
+        font-size: 0.725em;
+      }
+    }
+  }
+
+  &.min {
+    .info div {
+      .text {
+        font-size: 0.5em;
+      }
+    }
+  }
+}
+
+#tours_container {
+  .elements .tour {
+    .info div {
+      padding: 0.7em;
+      margin-right: 15%;
+      margin-left: 15%;
+
+      h3 {
+        font-size: 0.725em;
+      }
+
+      p {
+        font-size: 0.488em;
+        margin: 0.2em auto;
+      }
+
+      span {
+        font-size: 0.488em;
+      }
+    }
+  }
+}
+
+#lang_container {
+  a {
+    span {
+      font-size: 1.000em;
+    }
+  }
+}
+
+footer {
+  line-height: 1.2;
+
+  a {
+    &#start_btn {
+      font-size: 1.575em;
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+      border-radius: 30px;
+    }
+
+    &#language_chooser{
+      font-size: 0.550em;
+      margin-left: 2%;
+
+    }
+  }
+}

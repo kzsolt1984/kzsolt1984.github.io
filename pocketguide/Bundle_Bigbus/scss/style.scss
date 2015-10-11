@@ -342,10 +342,18 @@ footer {
   }
 }
 
-@media only screen and (min-width:701px) and (max-width: 1100px)  {
+@media only screen and (min-width:801px) and (max-width: 1100px)  {
   @import "size/size_1000";
 }
 
-@media only screen and (max-width: 700px)  {
-  @import "size/size_700";
+@media only screen and (min-width:601px) and (max-width: 800px)  {
+  @import "size/size_800";
+}
+
+@media only screen and (max-width: 600px)  {
+  @import "size/size_600";
+}
+
+@media only screen and (orientation: portrait) and (max-width: 500px)  {
+  @import "size/size_500";
 }
