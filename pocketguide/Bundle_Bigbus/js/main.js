@@ -38,14 +38,15 @@ var Main;
                 _this._openSubMenu(_this._toursContainer);
                 return false;
             });
-            $('.ad_elements').bxSlider({
+            /*$('.ad_elements').bxSlider({
                 auto: true,
                 autoControls: false,
                 controls: false,
                 pager: false,
                 touchEnabled: false,
                 pause: 8000
-            });
+            });*/
+            alert($(window).height() + ' : ' + $(window).width() + ' : ' + $('.ad_elements').children().width());
             $(window).on('orientationchange resize', function () {
                 //this._toursContainer.swipe('destroy');
                 // swipe es adatok frissitese
