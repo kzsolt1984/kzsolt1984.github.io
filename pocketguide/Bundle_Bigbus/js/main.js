@@ -52,6 +52,7 @@ var Main;
                 touchEnabled: false,
                 pause: 8000
             });*/
+            alert(window.devicePixelRatio);
             $(window).on('orientationchange resize', function () {
                 //this._toursContainer.swipe('destroy');
                 // swipe es adatok frissitese
