@@ -16,6 +16,7 @@ var Main;
             this._toursSwipeContent = this._toursContainer.find('.elements');
             this._toursSwipeContentWidth = this._toursSwipeContent.width();
             this._adContainer = $('#ad_container');
+            this._adSwipeContent = this._adContainer.find('.elements');
             this._langContainer = $('#lang_container');
             $("#start_btn").on('click', function () {
                 _this._openSubMenu(_this._toursContainer);
@@ -29,7 +30,7 @@ var Main;
                 _this._openSubMenu(_this._toursContainer);
                 return false;
             });
-            $('.ad_elements').bxSlider({
+            this._adSwipeContent.bxSlider({
                 auto: true,
                 autoControls: false,
                 controls: false,
@@ -39,8 +40,7 @@ var Main;
                 minSlides: 1,
                 maxSlides: 1
             });
-            alert('111');
-            $('.ad_elements').css('transform', 'translate3d(-25%, 0px, 0px)');
+            this._adSwipeContent.css('transform', 'translate3d(-25%, 0px, 0px)');
             $('.tour_elements').bxSlider({
                 auto: false,
                 autoControls: false,
