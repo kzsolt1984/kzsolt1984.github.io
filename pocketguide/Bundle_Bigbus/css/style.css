@@ -635,5 +635,14 @@ footer a#language_chooser {
     margin-left: 2%;
   }
 }
+#test {
+  height: 50%;
+  width: 100%;
+  background-color: blue;
+  z-index: 100000000;
+  position: absolute;
+  top: 10px;
+  left: 0;
+}
 
 /*# sourceMappingURL=style.css.map */
