@@ -46,23 +46,23 @@ var Main;
                 touchEnabled: false,
                 pause: 8000
             });
-            /*$('.tour_elements').bxSlider({
+            $('.tour_elements').bxSlider({
                 auto: false,
                 autoControls: false,
                 controls: false,
                 pager: false,
                 touchEnabled: true,
                 infiniteLoop: false,
-                shrinkItems: true,
-                maxSlides: 7
-            });*/
+                minSlides: 2,
+                maxSlides: 3
+            });
             $(window).on('orientationchange resize', function () {
                 //this._toursContainer.swipe('destroy');
                 // swipe es adatok frissitese
-                _this._calcSwipeContentDimension();
+                //this._calcSwipeContentDimension();
             });
             //this._calcSwipeContentDimension();
-            this._toursContainer.swipe(this._swipeOptions);
+            //this._toursContainer.swipe(this._swipeOptions);
         }
         Main.prototype._calcSwipeContentDimension = function () {
             var $window = $(window);
