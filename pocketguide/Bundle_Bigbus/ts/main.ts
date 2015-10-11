@@ -64,7 +64,7 @@ module Main {
                // swipe es adatok frissitese
                 //this._calcSwipeContentDimension();
             });
-
+alert($(window).width() + ' : ' + window.screen.width)
             this._calcSwipeContentDimension();
 
             this._toursContainer.swipe(this._swipeOptions);
