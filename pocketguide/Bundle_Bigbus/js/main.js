@@ -52,7 +52,6 @@ var Main;
                 touchEnabled: false,
                 pause: 8000
             });*/
-            alert(window.devicePixelRatio);
             $(window).on('orientationchange resize', function () {
                 //this._toursContainer.swipe('destroy');
                 // swipe es adatok frissitese
@@ -80,10 +79,10 @@ var Main;
                 $element.width($('#tour_height_sample').height());
             }
             else {
-                this._toursSwipeContent.width($(window).width() * 2.87 * 2);
-                $element.width(parseInt($element.css('width')) * 2);
+                this._toursSwipeContent.width($(window).width() * 2.87);
+                $element.width(parseInt($element.css('width')));
             }
-            contentWidth = ($element.width() + marginValue) * elementLength * 2;
+            contentWidth = ($element.width() + marginValue) * elementLength;
             this._toursSwipeContent.width(contentWidth);
             this._toursSwipeContentWidth = contentWidth;
             //alert(window.navigator.userAgent);
