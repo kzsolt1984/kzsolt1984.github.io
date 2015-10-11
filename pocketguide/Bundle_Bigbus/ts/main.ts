@@ -200,7 +200,7 @@ module Main {
 
     doc.addEventListener('DOMContentLoaded', function () {
 
-        new Main.Main();
+        //new Main.Main();
     });
 
 }(document, window, navigator));

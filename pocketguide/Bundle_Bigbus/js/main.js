@@ -159,6 +159,6 @@ var Main;
 (function (doc, window, navigator) {
     'use strict';
     doc.addEventListener('DOMContentLoaded', function () {
-        new Main.Main();
+        //new Main.Main();
     });
 }(document, window, navigator));
