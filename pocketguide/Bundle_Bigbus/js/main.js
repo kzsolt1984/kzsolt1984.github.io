@@ -85,6 +85,7 @@ var Main;
             contentWidth = ($element.width() + marginValue) * elementLength * 2;
             this._toursSwipeContent.width(contentWidth);
             this._toursSwipeContentWidth = contentWidth;
+            alert(contentWidth);
             //alert(window.navigator.userAgent);
             //this._toursContainer.swipe(this._swipeOptions);
         };
