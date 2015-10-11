@@ -114,12 +114,16 @@ table {
 
 html {
   height: 100%;
+  width: 100%;
+  overflow: hidden;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
 }
 
 body {
   min-height: 100%;
+  width: 100%;
+  overflow: hidden;
   position: relative;
   margin: 0;
   font-family: "HelveticaNeueLTPro", Helvetica, Arial, sans-serif;
@@ -634,65 +638,6 @@ footer a#language_chooser {
     font-size: 0.550em;
     margin-left: 2%;
   }
-}
-#test3 {
-  display: none;
-  height: 65.6%;
-  width: 100%;
-  overflow: hidden;
-  position: absolute;
-  bottom: 6%;
-  z-index: 111111;
-}
-#test3 .e {
-  width: 287%;
-  position: absolute;
-  left: 0;
-  height: 100%;
-}
-#test3 .e a {
-  display: inline-block;
-  float: left;
-  height: 100%;
-  width: 14.0%;
-  margin-right: 5px;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(../img/tour_1.jpg);
-}
-#test3 .e a .tour {
-  width: 100%;
-  height: 100%;
-  display: table;
-}
-#test3 .e a .tour img {
-  height: 100%;
-  display: none;
-}
-#test3 .e a .tour .info {
-  display: table-cell;
-  vertical-align: middle;
-}
-#test3 .e a .tour .info div {
-  padding: 2.500em 2.188em;
-  background: rgba(255, 255, 255, 0.8);
-  margin-right: 24%;
-  margin-left: 24%;
-}
-#test3 .e a .tour .info div h3 {
-  font-size: 2.125em;
-  color: #003974;
-}
-#test3 .e a .tour .info div p {
-  font-weight: 100;
-  color: #000;
-  font-size: 1.688em;
-  margin: 1em auto;
-}
-#test3 .e a .tour .info div span {
-  font-size: 1.688em;
-  color: #000;
 }
 
 /*# sourceMappingURL=style.css.map */
