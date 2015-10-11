@@ -284,7 +284,7 @@ a {
   display: inline-block;
   float: left;
   height: 100%;
-  width: 14.0%;
+  width: 14% !important;
   margin-right: 0.2%;
   overflow: hidden;
   background-repeat: no-repeat;

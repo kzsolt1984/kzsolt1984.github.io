@@ -69,15 +69,18 @@ var Main;
             var $element = this._toursSwipeContent.children(), elementLength = $element.length, marginValue = parseInt($element.css('margin-right')), contentWidth = 0;
             this._toursSwipeContent.css('left', 0);
             $element.removeAttr('style');
-            if (square) {
+            this._toursSwipeContent.width($(window).width() * 2.9);
+            /*if(square) {
                 $element.width($('#tour_height_sample').height());
             }
             else {
-                this._toursSwipeContent.width($(window).width() * 2.87);
-                $element.width(parseInt($element.css('width')));
-            }
+                this._toursSwipeContent.width($(window).width() * 2.9);
+
+                //$element.width(parseInt($element.css('width')));
+            }*/
+            //1280 530  41,4->100%
             contentWidth = ($element.width() + marginValue) * elementLength;
-            this._toursSwipeContent.width(contentWidth);
+            this._toursSwipeContent.width('290%');
             this._toursSwipeContentWidth = contentWidth;
             //alert(window.navigator.userAgent);
             //this._toursContainer.swipe(this._swipeOptions);
