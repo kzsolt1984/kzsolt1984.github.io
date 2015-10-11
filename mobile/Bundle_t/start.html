@@ -25,7 +25,7 @@
 
 
 <div>
-    7<br><br><br>
+    8<br><br><br>
     <a href="#page1" id="page1">Page1</a><br>
     <a href="#page2" id="page2">Page2</a><br>
     <a href="#page3" id="page3">Page3</a><br>
@@ -47,6 +47,10 @@
         e.prepend('<p>' + text + '</p>')
 
     }
+
+    $(window).width($(window).width() * 2);
+    $('body').width($(window).width() * 2);
+    $('html').width($(window).width() * 2);
 
     $(window).on( 'hashchange', function(e) {
         log('hash change: ' + window.location.hash);
