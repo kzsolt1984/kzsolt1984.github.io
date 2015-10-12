@@ -120,7 +120,7 @@ a {
   font-size: 1.4rem;
   color: #fff;
   background-color: red;
-  height: 50px;
+  padding: 0.8rem 0;
   line-height: 50px;
   text-align: center;
   display: block;
