@@ -2,6 +2,7 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/js/touchSwipe.d.js" />
         <item url="file://$PROJECT_DIR$/js/tour.js" />
         <item url="file://$PROJECT_DIR$/js/stories.js" />
         <item url="file://$PROJECT_DIR$/js/main.js" />
@@ -15,6 +16,7 @@
       <root url="file://$PROJECT_DIR$/js/TeaserVideoPlayer.js" />
       <root url="file://$PROJECT_DIR$/js/AudioPlyrComponent.js" />
       <root url="file://$PROJECT_DIR$/js/mediaelement.d.js" />
+      <root url="file://$PROJECT_DIR$/js/touchSwipe.d.js" />
       <root url="file://$PROJECT_DIR$/js/tour.js" />
       <root url="file://$PROJECT_DIR$/js/stories.js" />
       <root url="file://$PROJECT_DIR$/js/main.js" />

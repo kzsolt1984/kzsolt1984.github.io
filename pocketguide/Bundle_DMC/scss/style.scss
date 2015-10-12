@@ -205,6 +205,7 @@ section {
       padding: .5rem;
       border-radius: 4px 4px 4px 4px;
       margin-bottom: 0.6rem;
+      position: relative;
 
       img {
         width: 36%;
@@ -224,13 +225,42 @@ section {
           filter: none;
           -webkit-filter: grayscale(0%);
         }
+
+        .controller {
+          .play_btn {
+            display: none;
+          }
+
+          .pause_btn {
+            display: block;
+          }
+        }
       }
 
       .controller {
         float: left;
         margin-left: 1rem;
         width: 58%;
-        position: relative;
+        position: absolute;
+        //height: 100%;
+        right: 0.5rem;
+        top: 0.5rem;
+        bottom: 0.5rem;
+        //display: table;
+
+        .audio_content {
+          display: table;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+
+          .cell {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+          }
+        }
 
         .title {
           overflow: hidden;
@@ -243,23 +273,36 @@ section {
 
         .video-left,
         .video-right {
-          position: relative;
           float: left;
-          display: block;
-          width: 1.26rem;
-          height: 1.26rem;
-          top: 1.7rem;
-          left: 0;
-          background: transparent url(../img/video_left.png) 0 0;
-          background-size: 1.25rem 1.25rem;
+          display: inline-block;
+          margin-left: 5%;
+
+          img {
+            width: 70%;
+          }
         }
 
         .video-right {
-          left: auto;
-          right: 0;
-          background: transparent url(../img/video_right.png) 0 0;
-          background-size: 1.25rem 1.25rem;
+          margin-left: 0;
+          margin-right: 5%;
           float: right;
+        }
+
+        .play_btn_content {
+          display: inline-block;
+          margin-top: 3%;
+
+          img {
+            width: 60%;
+          }
+
+          .play_btn {
+            display: block;
+          }
+
+          .pause_btn {
+            display: none;
+          }
         }
       }
     }

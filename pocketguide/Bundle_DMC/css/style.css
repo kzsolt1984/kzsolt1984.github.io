@@ -250,6 +250,7 @@ section.sub-page .box {
   padding: .5rem;
   border-radius: 4px 4px 4px 4px;
   margin-bottom: 0.6rem;
+  position: relative;
 }
 section.sub-page .box img {
   width: 36%;
@@ -270,11 +271,32 @@ section.sub-page .box.active img.music_img {
   filter: none;
   -webkit-filter: grayscale(0%);
 }
+section.sub-page .box.active .controller .play_btn {
+  display: none;
+}
+section.sub-page .box.active .controller .pause_btn {
+  display: block;
+}
 section.sub-page .box .controller {
   float: left;
   margin-left: 1rem;
   width: 58%;
-  position: relative;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
+}
+section.sub-page .box .controller .audio_content {
+  display: table;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+section.sub-page .box .controller .audio_content .cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
 }
 section.sub-page .box .controller .title {
   overflow: hidden;
@@ -286,22 +308,31 @@ section.sub-page .box .controller .title {
 }
 section.sub-page .box .controller .video-left,
 section.sub-page .box .controller .video-right {
-  position: relative;
   float: left;
-  display: block;
-  width: 1.26rem;
-  height: 1.26rem;
-  top: 1.7rem;
-  left: 0;
-  background: transparent url(../img/video_left.png) 0 0;
-  background-size: 1.25rem 1.25rem;
+  display: inline-block;
+  margin-left: 5%;
+}
+section.sub-page .box .controller .video-left img,
+section.sub-page .box .controller .video-right img {
+  width: 70%;
 }
 section.sub-page .box .controller .video-right {
-  left: auto;
-  right: 0;
-  background: transparent url(../img/video_right.png) 0 0;
-  background-size: 1.25rem 1.25rem;
+  margin-left: 0;
+  margin-right: 5%;
   float: right;
+}
+section.sub-page .box .controller .play_btn_content {
+  display: inline-block;
+  margin-top: 3%;
+}
+section.sub-page .box .controller .play_btn_content img {
+  width: 60%;
+}
+section.sub-page .box .controller .play_btn_content .play_btn {
+  display: block;
+}
+section.sub-page .box .controller .play_btn_content .pause_btn {
+  display: none;
 }
 
 #jqt > * {
@@ -322,11 +353,22 @@ section.sub-page .box .controller .video-right {
 }
 
 div.audio-player {
-  position: relative;
+  position: absolute;
+  bottom: 10%;
   width: 100%;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+}
+div.audio-player .audio_player_cover {
+  position: absolute;
+  left: -0.5%;
+  right: 0;
+  top: -1rem;
+  bottom: 0;
+  height: 2rem;
+  background-color: green;
+  z-index: 99999999999;
 }
 
 .mejs-offscreen {
@@ -354,6 +396,7 @@ div.audio-player {
   margin-left: -0.5rem;
   background: transparent url(../img/video_play.png) 0 0;
   background-size: 1rem 1rem;
+  display: none;
 }
 
 .mejs-controls .mejs-pause button {
@@ -384,7 +427,6 @@ div.audio-player {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  margin-top: 35%;
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-loaded {
@@ -410,11 +452,11 @@ div.audio-player {
 .mejs-controls .mejs-time-rail .mejs-time-handle {
   position: absolute;
   display: block;
-  width: 0.9rem;
-  height: 0.9rem;
-  top: -0.38rem;
+  width: 2rem;
+  height: 2rem;
+  top: -0.88rem;
   background: url("../img/video_volume.png") no-repeat;
-  background-size: 0.9rem 0.9rem;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

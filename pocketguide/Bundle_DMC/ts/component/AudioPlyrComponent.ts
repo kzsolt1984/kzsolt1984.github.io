@@ -2,6 +2,7 @@
  * Created by Zsolt on 2015.10.02..
  */
     /// <reference path="../../lib/mediaelement.d.ts"/>
+    /// <reference path="../../lib/touchSwipe.d.ts"/>
 module component {
     export class AudioPlyrComponent {
         private _$box : JQuery;
@@ -49,13 +50,23 @@ module component {
 
                     }, false);
 
-                    domObject.addEventListener('touchmove', (e)=> {
+                    console.log(domObject)
 
-                        alert('111')
 
-                    }, false);
                 }
             });
+
+            this._$box.find('.audio_player_cover').on('click', (e)=> {
+                alert('klikk')
+            });
+
+            this._$box.find('.audio_player_cover').on('touchstart', (e)=> {
+                alert('touch')
+
+
+            });
+
+            this._$box.find('.audio_player_cover').swipe()
 
         }
 

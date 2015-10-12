@@ -45,6 +45,7 @@ var component;
  * Created by Zsolt on 2015.10.02..
  */
 /// <reference path="../../lib/mediaelement.d.ts"/>
+/// <reference path="../../lib/touchSwipe.d.ts"/>
 var component;
 (function (component) {
     var AudioPlyrComponent = (function () {
@@ -81,11 +82,16 @@ var component;
                     mediaElement.addEventListener('pause', function (e) {
                         _this._$box.removeClass('active');
                     }, false);
-                    domObject.addEventListener('touchmove', function (e) {
-                        alert('111');
-                    }, false);
+                    console.log(domObject);
                 }
             });
+            this._$box.find('.audio_player_cover').on('click', function (e) {
+                alert('klikk');
+            });
+            this._$box.find('.audio_player_cover').on('touchstart', function (e) {
+                alert('touch');
+            });
+            this._$box.find('.audio_player_cover').swipe();
         };
         /**
          * Set current time
