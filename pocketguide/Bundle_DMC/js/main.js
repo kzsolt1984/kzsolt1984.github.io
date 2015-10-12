@@ -51,16 +51,35 @@ var component;
     var AudioPlyrComponent = (function () {
         function AudioPlyrComponent(options) {
             var _this = this;
+            this._swipeOptions = {
+                triggerOnTouchEnd: true,
+                swipeStatus: function (a, b, c, d) { _this._swipeStatus(a, b, c, d); },
+                allowPageScroll: "vertical",
+                threshold: 75,
+                excludedElements: "button, input, select, textarea, .noSwipe"
+            };
             this._$box = $(options.box);
             this._createPlayer(this._$box.find('.myPlayer'));
             this._$box.find('.video-left').on('click', function () {
-                _this.setCurrentTime(false);
+                _this._setCurrentTime(false);
             });
             this._$box.find('.video-right').on('click', function () {
-                _this.setCurrentTime(true);
+                _this._setCurrentTime(true);
+            });
+            this._$box.find('.play_btn_content').on('click', function (e) {
+                var $e = $(e.currentTarget);
+                if ($e.find('.play_btn').css('display') !== 'none') {
+                    _this._play();
+                }
+                else {
+                    _this._stop();
+                }
             });
             $(window).on('hashchange', function () {
-                _this.stopPlay();
+                _this._stop();
+            });
+            $(function () {
+                _this._$box.find('.audio_player_cover').swipe(_this._swipeOptions);
             });
         }
         /**
@@ -82,22 +101,24 @@ var component;
                     mediaElement.addEventListener('pause', function (e) {
                         _this._$box.removeClass('active');
                     }, false);
-                    console.log(domObject);
                 }
             });
-            this._$box.find('.audio_player_cover').on('click', function (e) {
-                alert('klikk');
+            /*this._$box.find('.audio_player_cover').on('click', (e)=> {
+                alert('klikk')
             });
-            this._$box.find('.audio_player_cover').on('touchstart', function (e) {
-                alert('touch');
-            });
-            this._$box.find('.audio_player_cover').swipe();
+
+            this._$box.find('.audio_player_cover').on('touchstart', (e)=> {
+                alert('touch')
+
+
+            });*/
+            //this._$box.find('.audio_player_cover').swipe(this._swipeOptions)
         };
         /**
          * Set current time
          * @param increase   boolean   increase current time?
          */
-        AudioPlyrComponent.prototype.setCurrentTime = function (increase) {
+        AudioPlyrComponent.prototype._setCurrentTime = function (increase) {
             if (!this._mediaElement) {
                 return;
             }
@@ -108,11 +129,21 @@ var component;
                 this._mediaElement.currentTime -= 15;
             }
         };
-        AudioPlyrComponent.prototype.stopPlay = function () {
+        AudioPlyrComponent.prototype._stop = function () {
             if (!this._mediaElement) {
                 return;
             }
             this._mediaElement.stop();
+        };
+        AudioPlyrComponent.prototype._play = function () {
+            if (!this._mediaElement) {
+                return;
+            }
+            this._mediaElement.play();
+        };
+        AudioPlyrComponent.prototype._swipeStatus = function (a, b, c, d) {
+            $('#test').text("You swiped " + d);
+            //console.log(a,b,c,d)
         };
         return AudioPlyrComponent;
     })();

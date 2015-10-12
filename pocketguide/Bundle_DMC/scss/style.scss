@@ -228,11 +228,11 @@ section {
 
         .controller {
           .play_btn {
-            display: none;
+            display: none!important;
           }
 
           .pause_btn {
-            display: block;
+            display: block!important;
           }
         }
       }
@@ -279,6 +279,7 @@ section {
 
           img {
             width: 70%;
+            float: none;
           }
         }
 
@@ -294,6 +295,7 @@ section {
 
           img {
             width: 60%;
+            float: none;
           }
 
           .play_btn {

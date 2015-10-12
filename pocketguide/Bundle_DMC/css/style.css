@@ -272,10 +272,10 @@ section.sub-page .box.active img.music_img {
   -webkit-filter: grayscale(0%);
 }
 section.sub-page .box.active .controller .play_btn {
-  display: none;
+  display: none !important;
 }
 section.sub-page .box.active .controller .pause_btn {
-  display: block;
+  display: block !important;
 }
 section.sub-page .box .controller {
   float: left;
@@ -315,6 +315,7 @@ section.sub-page .box .controller .video-right {
 section.sub-page .box .controller .video-left img,
 section.sub-page .box .controller .video-right img {
   width: 70%;
+  float: none;
 }
 section.sub-page .box .controller .video-right {
   margin-left: 0;
@@ -327,6 +328,7 @@ section.sub-page .box .controller .play_btn_content {
 }
 section.sub-page .box .controller .play_btn_content img {
   width: 60%;
+  float: none;
 }
 section.sub-page .box .controller .play_btn_content .play_btn {
   display: block;

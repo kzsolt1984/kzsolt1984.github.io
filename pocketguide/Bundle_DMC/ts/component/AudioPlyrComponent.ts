@@ -7,6 +7,13 @@ module component {
     export class AudioPlyrComponent {
         private _$box : JQuery;
         private _mediaElement;
+        private _swipeOptions = {
+            triggerOnTouchEnd: true,
+            swipeStatus: (a,b,c,d)=> {this._swipeStatus(a,b,c,d)},
+            allowPageScroll: "vertical",
+            threshold: 75,
+            excludedElements: "button, input, select, textarea, .noSwipe"
+        };
 
         constructor(options) {
             this._$box = $(options.box);
@@ -14,15 +21,32 @@ module component {
             this._createPlayer(this._$box.find('.myPlayer'));
 
             this._$box.find('.video-left').on('click', ()=>{
-                this.setCurrentTime(false);
+                this._setCurrentTime(false);
             });
             this._$box.find('.video-right').on('click', ()=>{
-                this.setCurrentTime(true);
+                this._setCurrentTime(true);
+            });
+
+            this._$box.find('.play_btn_content').on('click', (e)=>{
+                var $e = $(e.currentTarget);
+
+                if($e.find('.play_btn').css('display') !== 'none') {
+                    this._play();
+                }
+                else {
+                    this._stop()
+                }
             });
 
             $(window).on('hashchange', ()=> {
-                this.stopPlay();
+                this._stop();
             });
+
+            $(()=> {
+                this._$box.find('.audio_player_cover').swipe(this._swipeOptions)
+            });
+
+
         }
 
         /**
@@ -49,14 +73,10 @@ module component {
                         this._$box.removeClass('active');
 
                     }, false);
-
-                    console.log(domObject)
-
-
                 }
             });
 
-            this._$box.find('.audio_player_cover').on('click', (e)=> {
+            /*this._$box.find('.audio_player_cover').on('click', (e)=> {
                 alert('klikk')
             });
 
@@ -64,9 +84,10 @@ module component {
                 alert('touch')
 
 
-            });
+            });*/
 
-            this._$box.find('.audio_player_cover').swipe()
+            //this._$box.find('.audio_player_cover').swipe(this._swipeOptions)
+
 
         }
 
@@ -74,7 +95,7 @@ module component {
          * Set current time
          * @param increase   boolean   increase current time?
          */
-        private setCurrentTime(increase: boolean): void {
+        private _setCurrentTime(increase: boolean): void {
             if(!this._mediaElement) {
                 return;
             }
@@ -87,12 +108,25 @@ module component {
             }
         }
 
-        private stopPlay(): void {
+        private _stop(): void {
             if(!this._mediaElement) {
                 return;
             }
 
             this._mediaElement.stop();
+        }
+
+        private _play(): void {
+            if(!this._mediaElement) {
+                return;
+            }
+
+            this._mediaElement.play();
+        }
+
+        private _swipeStatus(a,b,c,d) {
+            $('#test').text("You swiped " + d );
+            //console.log(a,b,c,d)
         }
     }
 }

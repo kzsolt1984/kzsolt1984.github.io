@@ -3,21 +3,12 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/js/touchSwipe.d.js" />
-        <item url="file://$PROJECT_DIR$/js/tour.js" />
         <item url="file://$PROJECT_DIR$/js/stories.js" />
         <item url="file://$PROJECT_DIR$/js/main.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
-      <root url="file://$PROJECT_DIR$/js/AudioPlayerComponent.js" />
-      <root url="file://$PROJECT_DIR$/js/jquery.d.js" />
-      <root url="file://$PROJECT_DIR$/js/jquery.cycle.d.js" />
-      <root url="file://$PROJECT_DIR$/js/stories.js.js" />
-      <root url="file://$PROJECT_DIR$/js/TeaserVideoPlayer.js" />
-      <root url="file://$PROJECT_DIR$/js/AudioPlyrComponent.js" />
-      <root url="file://$PROJECT_DIR$/js/mediaelement.d.js" />
       <root url="file://$PROJECT_DIR$/js/touchSwipe.d.js" />
-      <root url="file://$PROJECT_DIR$/js/tour.js" />
       <root url="file://$PROJECT_DIR$/js/stories.js" />
       <root url="file://$PROJECT_DIR$/js/main.js" />
     </CLASSES>
