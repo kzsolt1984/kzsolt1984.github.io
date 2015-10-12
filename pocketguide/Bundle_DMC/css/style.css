@@ -200,7 +200,7 @@ section .sub_menu .card .card-text-container {
 }
 section .sub_menu .card .card-text-container .card-text {
   position: absolute;
-  bottom: .75em;
+  bottom: 17%;
   left: 1em;
   right: 1em;
   font-size: 0.95rem;
@@ -223,7 +223,7 @@ section#index #play_box span {
   left: -6vw;
   width: 400%;
   text-align: left;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
 }
 section#index h3 {
