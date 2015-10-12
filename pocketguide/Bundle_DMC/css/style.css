@@ -89,10 +89,12 @@ html {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  background: #000;
 }
 
 body {
   min-height: 100%;
+  height: 100%;
   position: relative;
   margin: 0;
   font-family: Arial, sans-serif;
@@ -102,6 +104,31 @@ body {
 
 a {
   text-decoration: none;
+}
+
+#tour {
+  position: relative;
+}
+#tour section {
+  min-height: 100%;
+  position: relative;
+}
+#tour section .content-inner {
+  padding-bottom: 70px;
+}
+#tour section .btn {
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: red;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: block;
+  font-family: "HelveticaNeueLTProRoman", Helvetica, Arial;
+  position: absolute;
+  bottom: 0;
+  right: 0.8rem;
+  left: 0.8rem;
 }
 
 section {
@@ -139,7 +166,7 @@ section .content-inner {
   padding: .4rem .8rem .8rem;
 }
 section .content-inner p {
-  font-size: .8rem;
+  font-size: 0.95rem;
   line-height: 1.7;
   font-family: "HelveticaNeueLTProLT", Helvetica, Arial;
 }
@@ -151,21 +178,11 @@ section .content-inner h3 {
   text-align: center;
   font-family: "HelveticaNeueLTPro", Helvetica, Arial;
 }
-section .content-inner .btn {
-  font-size: 1.2rem;
-  color: #fff;
-  background-color: red;
-  padding: 0.5rem 0;
-  text-align: center;
-  display: block;
-  margin-top: 1rem;
-  font-family: "HelveticaNeueLTProRoman", Helvetica, Arial;
-}
 section .sub_menu .card {
   display: block;
   overflow: hidden;
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 1px;
   text-decoration: none;
 }
 section .sub_menu .card img {
@@ -178,16 +195,16 @@ section .sub_menu .card .card-text-container {
   left: 0;
   right: -.25em;
   height: 5.5em;
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), transparent);
-  background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  /*background: -webkit-linear-gradient(bottom, rgba(0,0,0,.8), transparent);
+  background: -webkit-linear-gradient(to top, rgba(0,0,0,.8), transparent);
+  background: linear-gradient(to top, rgba(0,0,0,.8), transparent);*/
 }
 section .sub_menu .card .card-text-container .card-text {
   position: absolute;
   bottom: .75em;
   left: 1em;
   right: 1em;
-  font-size: .75rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
@@ -199,6 +216,16 @@ section#index #play_box {
   top: 11%;
   min-height: 13%;
   min-width: 10%;
+  text-align: left;
+}
+section#index #play_box span {
+  position: absolute;
+  bottom: -90%;
+  left: -6vw;
+  width: 400%;
+  text-align: left;
+  font-size: 0.8rem;
+  text-transform: uppercase;
 }
 section#index h3 {
   font-size: 1.7rem;
@@ -217,6 +244,7 @@ section#index #iphone_video iframe {
 }
 section.sub-page h3 {
   text-align: left;
+  font-size: 1.6rem;
 }
 section.sub-page .box {
   background-color: #7d7d7d;
