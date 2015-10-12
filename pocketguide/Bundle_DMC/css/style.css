@@ -114,14 +114,13 @@ a {
   position: relative;
 }
 #tour section .content-inner {
-  padding-bottom: 70px;
+  padding-bottom: 4.5rem;
 }
 #tour section .btn {
   font-size: 1.4rem;
   color: #fff;
   background-color: red;
   padding: 0.8rem 0;
-  line-height: 50px;
   text-align: center;
   display: block;
   font-family: "HelveticaNeueLTProRoman", Helvetica, Arial;
