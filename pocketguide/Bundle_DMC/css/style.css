@@ -314,7 +314,7 @@ section.sub-page .box .controller .video-right {
 }
 section.sub-page .box .controller .video-left img,
 section.sub-page .box .controller .video-right img {
-  width: 70%;
+  width: 2rem;
   float: none;
 }
 section.sub-page .box .controller .video-right {
@@ -327,7 +327,7 @@ section.sub-page .box .controller .play_btn_content {
   margin-top: 3%;
 }
 section.sub-page .box .controller .play_btn_content img {
-  width: 60%;
+  width: 1.4rem;
   float: none;
 }
 section.sub-page .box .controller .play_btn_content .play_btn {
@@ -454,8 +454,8 @@ div.audio-player .audio_player_cover {
 .mejs-controls .mejs-time-rail .mejs-time-handle {
   position: absolute;
   display: block;
-  width: 2rem;
-  height: 2rem;
+  width: 1.8rem;
+  height: 1.8rem;
   top: -0.88rem;
   background: url("../img/video_volume.png") no-repeat;
   background-size: cover;
