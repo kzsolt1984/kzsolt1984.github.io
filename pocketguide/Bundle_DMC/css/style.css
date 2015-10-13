@@ -220,7 +220,7 @@ section#index #play_box {
 section#index #play_box span {
   position: absolute;
   bottom: -90%;
-  left: -6vw;
+  left: -40%;
   width: 400%;
   text-align: left;
   font-size: 0.7rem;

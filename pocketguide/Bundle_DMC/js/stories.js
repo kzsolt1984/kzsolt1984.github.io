@@ -150,6 +150,7 @@ var Stories;
             });
         }
         Stories.prototype.stop = function (id) {
+            alert(111);
             for (var i = 0; i < this._players.length; i++) {
                 if (id != i) {
                     this._players[i].stop();
