@@ -61,6 +61,8 @@ var component;
             this._swipeWidht = 0;
             this._startValue = 0;
             this._$box = $(options.box);
+            this._id = options.id;
+            this._mainC = options.self;
             this._swipeWidht = this._$box.find('.audio-player').width();
             this._createPlayer(this._$box.find('.myPlayer'));
             this._$box.find('.video-left').on('click', function () {
@@ -102,13 +104,9 @@ var component;
                 if (percent > 1) {
                     percent = 1;
                 }
-                //percentValue = this._swipeWidht * percent - 14;
                 percentValue = 100 * percent - ((_this._$box.find('.mejs-time-handle').width() / 2) / _this._swipeWidht * 100);
                 _this._$box.find('.mejs-time-handle').css('left', percentValue + '%');
-                console.log('juhhhhúúúúúúúú', percentValue);
-                $('#test').text(percentValue + ' : ' + _this._mediaElement.currentTime);
             });
-            console.log('sss', this._swipeWidht);
             this._$box.find('.mejs-time-handle').css('left', ((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * (-100)) + '%');
             this._swipeWidht = this._$box.find('.mejs-time-slider').width();
             this._$box.find('.mejs-time-slider').swipe(this._swipeOptions);
@@ -139,6 +137,7 @@ var component;
                 return;
             }
             this._mediaElement.play();
+            this._mainC.stop(this._id);
         };
         AudioPlyrComponent.prototype._swipeStatus = function (event, op, direction, distance) {
             if (!this._swipeWidht || !this._mediaElement) {
@@ -170,6 +169,9 @@ var component;
             if (op === 'end') {
                 this._mediaElement.currentTime = this._mediaElement.currentTime;
             }
+        };
+        AudioPlyrComponent.prototype.stop = function () {
+            this._stop();
         };
         return AudioPlyrComponent;
     })();

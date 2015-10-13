@@ -2,14 +2,27 @@
 
 module Stories {
     export class Stories {
+        private _players = [];
+
         constructor() {
-            $.each($('.box'), function(key, value) {
-                new component.AudioPlyrComponent(
+
+            $.each($('.box'), (key, value)=> {
+                this._players.push( new component.AudioPlyrComponent(
                     {
-                        box : value
+                        box : value,
+                        id: key,
+                        self: this
                     }
-                );
+                ));
             });
+        }
+
+        public stop(id) {
+            for(var i=0; i<this._players.length; i++) {
+                if(id != i) {
+                    this._players[i].stop();
+                }
+            }
         }
     }
 }

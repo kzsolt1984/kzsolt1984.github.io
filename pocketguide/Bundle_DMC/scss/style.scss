@@ -290,10 +290,10 @@ section {
 
         .play_btn_content {
           display: inline-block;
-          margin-top: 3%;
+          margin-top: 1%;
 
           img {
-            width: 1.0rem;
+            width: 1.3rem;
             float: none;
           }
 
@@ -312,7 +312,7 @@ section {
 
 @import "component/audioPlayer";
 
-@media all and (max-width: 699px) and (min-width: 370px) {
+@media all /*and (max-width: 699px)*/ and (min-width: 370px) {
   section.sub-page .box .controller {
     .video-left, .video-right {
       img {
@@ -325,7 +325,7 @@ section {
     margin-top: 0;
 
     img {
-      width: 1.4rem;
+      width: 1.5rem;
     }
   }
 }

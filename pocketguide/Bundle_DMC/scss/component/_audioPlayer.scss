@@ -68,7 +68,7 @@ div.audio-player {
   background-size: cover;
 }
 
-@media all and (max-width: 699px) and (min-width: 370px) {
+@media all /*and (max-width: 699px)*/ and (min-width: 370px) {
   .mejs-controls .mejs-time-rail .mejs-time-handle {
     width: 1.8rem;
     height: 1.8rem;

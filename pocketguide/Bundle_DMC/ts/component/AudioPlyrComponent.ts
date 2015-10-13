@@ -16,9 +16,14 @@ module component {
         };
         private _swipeWidht = 0;
         private _startValue = 0;
+        private _id;
+        private _mainC;
 
         constructor(options) {
             this._$box = $(options.box);
+            this._id = options.id;
+            this._mainC = options.self;
+
             this._swipeWidht = this._$box.find('.audio-player').width();
 
             this._createPlayer(this._$box.find('.myPlayer'));
@@ -77,16 +82,11 @@ module component {
                     percent = 1;
                 }
 
-                //percentValue = this._swipeWidht * percent - 14;
                 percentValue = 100 * percent - ((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * 100);
 
                 this._$box.find('.mejs-time-handle').css('left', percentValue + '%');
-
-                console.log('juhhhhúúúúúúúú', percentValue)
-
-                $('#test').text(percentValue + ' : ' + this._mediaElement.currentTime)
             });
-            console.log('sss', this._swipeWidht)
+
             this._$box.find('.mejs-time-handle').css('left', ((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * (-100)) + '%');
 
             this._swipeWidht = this._$box.find('.mejs-time-slider').width();
@@ -123,6 +123,7 @@ module component {
             }
 
             this._mediaElement.play();
+            this._mainC.stop(this._id);
         }
 
         private _swipeStatus(event,op,direction,distance) {
@@ -160,6 +161,10 @@ module component {
             if(op === 'end') {
                 this._mediaElement.currentTime = this._mediaElement.currentTime;
             }
+        }
+
+        public stop(): void {
+            this._stop();
         }
     }
 }

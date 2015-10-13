@@ -323,10 +323,10 @@ section.sub-page .box .controller .video-right {
 }
 section.sub-page .box .controller .play_btn_content {
   display: inline-block;
-  margin-top: 3%;
+  margin-top: 1%;
 }
 section.sub-page .box .controller .play_btn_content img {
-  width: 1.0rem;
+  width: 1.3rem;
   float: none;
 }
 section.sub-page .box .controller .play_btn_content .play_btn {
@@ -399,14 +399,14 @@ div.audio-player audio {
   background-size: cover;
 }
 
-@media all and (max-width: 699px) and (min-width: 370px) {
+@media all and (min-width: 370px) {
   .mejs-controls .mejs-time-rail .mejs-time-handle {
     width: 1.8rem;
     height: 1.8rem;
     top: -0.88rem;
   }
 }
-@media all and (max-width: 699px) and (min-width: 370px) {
+@media all and (min-width: 370px) {
   section.sub-page .box .controller .video-left img, section.sub-page .box .controller .video-right img {
     width: 2em;
   }
@@ -415,7 +415,7 @@ div.audio-player audio {
     margin-top: 0;
   }
   section.sub-page .box .controller .play_btn_content img {
-    width: 1.4rem;
+    width: 1.5rem;
   }
 }
 
