@@ -165,7 +165,7 @@ section .content-inner {
   padding: .4rem .8rem .8rem;
 }
 section .content-inner p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   line-height: 1.7;
   font-family: "HelveticaNeueLTProLT", Helvetica, Arial;
 }
@@ -194,9 +194,6 @@ section .sub_menu .card .card-text-container {
   left: 0;
   right: -.25em;
   height: 5.5em;
-  /*background: -webkit-linear-gradient(bottom, rgba(0,0,0,.8), transparent);
-  background: -webkit-linear-gradient(to top, rgba(0,0,0,.8), transparent);
-  background: linear-gradient(to top, rgba(0,0,0,.8), transparent);*/
 }
 section .sub_menu .card .card-text {
   position: absolute;
@@ -243,12 +240,12 @@ section#index #iphone_video iframe {
 }
 section.sub-page h3 {
   text-align: left;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
 }
 section.sub-page .box {
   background-color: #7d7d7d;
   padding: .8rem;
-  border-radius: 1rem;
+  border-radius: 0.6rem;
   margin-bottom: 0.6rem;
   position: relative;
 }

@@ -89,10 +89,12 @@ html {
   height: 100%;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
+  background: #000;
 }
 
 body {
   min-height: 100%;
+  height: 100%;
   position: relative;
   margin: 0;
   font-family: Arial, sans-serif;
@@ -102,6 +104,30 @@ body {
 
 a {
   text-decoration: none;
+}
+
+#tour {
+  position: relative;
+}
+#tour section {
+  min-height: 100%;
+  position: relative;
+}
+#tour section .content-inner {
+  padding-bottom: 4.5rem;
+}
+#tour section .btn {
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: red;
+  padding: 0.8rem 0;
+  text-align: center;
+  display: block;
+  font-family: "HelveticaNeueLTProRoman", Helvetica, Arial;
+  position: absolute;
+  bottom: 0;
+  right: 0.8rem;
+  left: 0.8rem;
 }
 
 section {
@@ -139,7 +165,7 @@ section .content-inner {
   padding: .4rem .8rem .8rem;
 }
 section .content-inner p {
-  font-size: .8rem;
+  font-size: 0.9rem;
   line-height: 1.7;
   font-family: "HelveticaNeueLTProLT", Helvetica, Arial;
 }
@@ -151,21 +177,11 @@ section .content-inner h3 {
   text-align: center;
   font-family: "HelveticaNeueLTPro", Helvetica, Arial;
 }
-section .content-inner .btn {
-  font-size: 1.2rem;
-  color: #fff;
-  background-color: red;
-  padding: 0.5rem 0;
-  text-align: center;
-  display: block;
-  margin-top: 1rem;
-  font-family: "HelveticaNeueLTProRoman", Helvetica, Arial;
-}
 section .sub_menu .card {
   display: block;
   overflow: hidden;
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 1px;
   text-decoration: none;
 }
 section .sub_menu .card img {
@@ -178,16 +194,13 @@ section .sub_menu .card .card-text-container {
   left: 0;
   right: -.25em;
   height: 5.5em;
-  background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.8), transparent);
-  background: -webkit-linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
 }
-section .sub_menu .card .card-text-container .card-text {
+section .sub_menu .card .card-text {
   position: absolute;
-  bottom: .75em;
+  bottom: 8.5%;
   left: 1em;
   right: 1em;
-  font-size: .75rem;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
@@ -199,6 +212,16 @@ section#index #play_box {
   top: 11%;
   min-height: 13%;
   min-width: 10%;
+  text-align: left;
+}
+section#index #play_box span {
+  position: absolute;
+  bottom: -90%;
+  left: -50%;
+  width: 400%;
+  text-align: left;
+  font-size: 0.7rem;
+  text-transform: uppercase;
 }
 section#index h3 {
   font-size: 1.7rem;
@@ -217,12 +240,14 @@ section#index #iphone_video iframe {
 }
 section.sub-page h3 {
   text-align: left;
+  font-size: 1.4rem;
 }
 section.sub-page .box {
   background-color: #7d7d7d;
-  padding: .5rem;
-  border-radius: 4px 4px 4px 4px;
+  padding: .8rem;
+  border-radius: 0.6rem;
   margin-bottom: 0.6rem;
+  position: relative;
 }
 section.sub-page .box img {
   width: 36%;
@@ -243,42 +268,69 @@ section.sub-page .box.active img.music_img {
   filter: none;
   -webkit-filter: grayscale(0%);
 }
+section.sub-page .box.active .controller .play_btn {
+  display: none !important;
+}
+section.sub-page .box.active .controller .pause_btn {
+  display: block !important;
+}
 section.sub-page .box .controller {
-  float: left;
-  margin-left: 1rem;
-  width: 58%;
-  position: relative;
+  width: 55%;
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  bottom: 0.8rem;
+}
+section.sub-page .box .controller .audio_content {
+  display: table;
+  width: 100%;
+  height: 105%;
+  position: absolute;
+  top: 0;
+}
+section.sub-page .box .controller .audio_content .cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 2%;
 }
 section.sub-page .box .controller .title {
   overflow: hidden;
   display: block;
   font-family: "HelveticaNeueLTPro", Helvetica, Arial;
   color: #fff;
-  font-size: 5.2vw;
+  font-size: 6.2vw;
   font-weight: 400;
 }
 section.sub-page .box .controller .video-left,
 section.sub-page .box .controller .video-right {
-  position: relative;
   float: left;
-  display: block;
-  width: 1.26rem;
-  height: 1.26rem;
-  top: 1.7rem;
-  left: 0;
-  background: transparent url(../img/video_left.png) 0 0;
-  background-size: 1.25rem 1.25rem;
+  display: inline-block;
+  margin-left: 10%;
+}
+section.sub-page .box .controller .video-left img,
+section.sub-page .box .controller .video-right img {
+  width: 1.5rem;
+  float: none;
 }
 section.sub-page .box .controller .video-right {
-  left: auto;
-  right: 0;
-  background: transparent url(../img/video_right.png) 0 0;
-  background-size: 1.25rem 1.25rem;
+  margin-left: 0;
+  margin-right: 10%;
   float: right;
 }
-
-#jqt > * {
-  background: none !important;
+section.sub-page .box .controller .play_btn_content {
+  display: inline-block;
+  margin-top: 1%;
+}
+section.sub-page .box .controller .play_btn_content img {
+  width: 1.3rem;
+  float: none;
+}
+section.sub-page .box .controller .play_btn_content .play_btn {
+  display: block;
+}
+section.sub-page .box .controller .play_btn_content .pause_btn {
+  display: none;
 }
 
 .audio-player,
@@ -295,43 +347,16 @@ section.sub-page .box .controller .video-right {
 }
 
 div.audio-player {
-  position: relative;
-  width: 100%;
+  position: absolute;
+  bottom: 15%;
+  left: 3%;
+  right: 3%;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-
-.mejs-offscreen {
+div.audio-player audio {
   display: none;
-  font-size: 0;
-}
-
-.mejs-container {
-  height: auto !important;
-}
-
-.mejs-controls .mejs-button button {
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  text-indent: -9999px;
-}
-
-.mejs-controls .mejs-play button,
-.mejs-controls .mejs-pause button {
-  width: 1rem;
-  height: 1rem;
-  top: 0.6rem;
-  left: 50%;
-  margin-left: -0.5rem;
-  background: transparent url(../img/video_play.png) 0 0;
-  background-size: 1rem 1rem;
-}
-
-.mejs-controls .mejs-pause button {
-  background: transparent url(../img/video_stop.png) 0 0;
-  background-size: 1rem 1rem;
 }
 
 /* time scrubber bar */
@@ -341,13 +366,6 @@ div.audio-player {
   height: 0.2rem;
   left: 0;
   cursor: pointer;
-  -webkit-border-radius: 0px 0px 2px 2px;
-  -moz-border-radius: 0px 0px 2px 2px;
-  border-radius: 0px 0px 2px 2px;
-}
-
-.mejs-controls .mejs-time-rail .mejs-time-float {
-  display: none;
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-total {
@@ -357,37 +375,124 @@ div.audio-player {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  margin-top: 35%;
-}
-
-.mejs-controls .mejs-time-rail .mejs-time-loaded {
-  top: 0;
-  left: 0;
-  width: 0;
-  background: #2c2c2c;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.mejs-controls .mejs-time-rail .mejs-time-current {
-  top: 0;
-  left: 0;
-  width: 0;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background: #2c2c2c;
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-handle {
   position: absolute;
   display: block;
-  width: 0.9rem;
-  height: 0.9rem;
-  top: -0.38rem;
-  background: url("../img/video_volume.png") no-repeat;
-  background-size: 0.9rem 0.9rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  top: -0.7rem;
+  background: url("../img/video_handle.png") no-repeat;
+  background-size: cover;
+}
+
+@media all and (max-width: 599px) and (min-width: 370px) {
+  .mejs-controls .mejs-time-rail .mejs-time-handle {
+    width: 1.8rem;
+    height: 1.8rem;
+    top: -0.88rem;
+  }
+}
+@media all and (max-width: 799px) and (min-width: 600px) {
+  .mejs-controls .mejs-time-rail .mejs-time-handle {
+    width: 2.4rem;
+    height: 2.4rem;
+    top: -1.2rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .mejs-controls .mejs-time-rail .mejs-time-handle {
+    width: 2.8rem;
+    height: 2.8rem;
+    top: -1.4rem;
+  }
+}
+@media all and (max-width: 599px) and (min-width: 370px) {
+  section.sub-page .box .controller .video-left img, section.sub-page .box .controller .video-right img {
+    width: 2em;
+  }
+
+  section.sub-page .box .controller .play_btn_content {
+    margin-top: 0;
+  }
+  section.sub-page .box .controller .play_btn_content img {
+    width: 1.5rem;
+  }
+
+  section#index #play_box span {
+    font-size: 0.9rem;
+  }
+}
+@media all and (max-width: 799px) and (min-width: 600px) {
+  section.sub-page .box .controller .video-left img, section.sub-page .box .controller .video-right img {
+    width: 3em;
+  }
+
+  section.sub-page .box .controller .play_btn_content {
+    margin-top: 0;
+  }
+  section.sub-page .box .controller .play_btn_content img {
+    width: 2.3rem;
+  }
+
+  section#index #play_box span {
+    font-size: 1.2rem;
+  }
+
+  section .content-inner p {
+    font-size: 1.5rem;
+  }
+
+  section .sub_menu .card .card-text {
+    bottom: 8.5%;
+    font-size: 1.5rem;
+  }
+
+  section.sub-page h3 {
+    font-size: 2.1rem;
+  }
+
+  section#index h3 {
+    font-size: 2.8rem;
+  }
+}
+@media all and (min-width: 800px) {
+  section.sub-page .box .controller .video-left img, section.sub-page .box .controller .video-right img {
+    width: 4em;
+  }
+
+  section.sub-page .box .controller .play_btn_content {
+    margin-top: 0;
+  }
+  section.sub-page .box .controller .play_btn_content img {
+    width: 3.0rem;
+  }
+
+  section#index #play_box span {
+    font-size: 2.2rem;
+  }
+
+  section#index #play_box span {
+    font-size: 1.6rem;
+  }
+
+  section .content-inner p {
+    font-size: 1.9rem;
+  }
+
+  section .sub_menu .card .card-text {
+    bottom: 8.5%;
+    font-size: 1.9rem;
+  }
+
+  section.sub-page h3 {
+    font-size: 2.5rem;
+  }
+
+  section#index h3 {
+    font-size: 3.2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
