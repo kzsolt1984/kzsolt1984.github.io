@@ -248,7 +248,7 @@ section.sub-page h3 {
 section.sub-page .box {
   background-color: #7d7d7d;
   padding: .8rem;
-  border-radius: 6px 6px 6px 6px;
+  border-radius: 1rem;
   margin-bottom: 0.6rem;
   position: relative;
 }
@@ -295,7 +295,7 @@ section.sub-page .box .controller .audio_content .cell {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
-  padding-top: 10%;
+  padding-top: 2%;
 }
 section.sub-page .box .controller .title {
   overflow: hidden;
