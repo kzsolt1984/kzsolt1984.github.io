@@ -56,6 +56,13 @@ module component {
         private _createPlayer($aId: JQuery): void {
             this._mediaElement = $aId.get(0);
 
+            var startPos = (this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * (-100);
+
+            this._$box.find('.mejs-time-handle').css('left', startPos + '%');
+
+            this._swipeWidht = this._$box.find('.mejs-time-slider').width();
+            this._$box.find('.mejs-time-slider').swipe(this._swipeOptions);
+
             this._mediaElement.addEventListener('play', (e)=> {
 
                 this._$box.addClass('active');
@@ -76,15 +83,12 @@ module component {
                     percent = 1;
                 }
 0
-                percentValue = (100 * percent) + ((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * (-100));
-$('#test').text(percentValue + ' : ' + percent)
+                percentValue = (100 * percent) + startPos;
+                $('#test').text(percentValue + ' || ' + startPos)
                 this._$box.find('.mejs-time-handle').css('left', percentValue + '%');
             });
 
-            this._$box.find('.mejs-time-handle').css('left', ((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * (-100)) + '%');
-
-            this._swipeWidht = this._$box.find('.mejs-time-slider').width();
-            this._$box.find('.mejs-time-slider').swipe(this._swipeOptions);}
+        }
 
         /**
          * Set current time
