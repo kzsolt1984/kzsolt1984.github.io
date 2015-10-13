@@ -55,7 +55,7 @@ var component;
                 triggerOnTouchEnd: true,
                 swipeStatus: function (a, b, c, d) { _this._swipeStatus(a, b, c, d); },
                 allowPageScroll: "vertical",
-                threshold: 75,
+                threshold: 0,
                 excludedElements: "button, input, select, textarea, .noSwipe"
             };
             this._swipeWidht = 0;
@@ -158,10 +158,12 @@ var component;
             //console.log('sw', this._swipeWidht, this._mediaElement.currentTime, this._mediaElement.duration)
             //console.log('sw', this._mediaElement.duration, percent, percentValue)
             if (true) {
-                console.log(event, op, direction, distance);
+                //console.log(event,op,direction,distance);
+                console.log(this._mediaElement.currentTime, percentValue);
                 if (op === 'move' && direction === 'left') {
                     var n = this._mediaElement.currentTime - percentValue;
-                    this._mediaElement.currentTime = (n > 0) ? this._mediaElement.currentTime : n;
+                    console.log('n', n);
+                    this._mediaElement.currentTime = (n > 0) ? n : 0;
                 }
                 else if (op === 'move') {
                     //right
@@ -169,7 +171,7 @@ var component;
                     this._mediaElement.currentTime = (n > this._mediaElement.duration) ? this._mediaElement.currentTime : n;
                 }
             }
-            $('#text').html('<p>' + this._mediaElement.currentTime + '</p>');
+            $('#test').append('<p>' + this._mediaElement.currentTime + '</p>');
         };
         return AudioPlyrComponent;
     })();

@@ -11,7 +11,7 @@ module component {
             triggerOnTouchEnd: true,
             swipeStatus: (a,b,c,d)=> {this._swipeStatus(a,b,c,d)},
             allowPageScroll: "vertical",
-            threshold: 75,
+            threshold: 0,
             excludedElements: "button, input, select, textarea, .noSwipe"
         };
         private _swipeWidht = 0;
@@ -142,12 +142,12 @@ module component {
             //console.log('sw', this._mediaElement.duration, percent, percentValue)
 
             if(/*$(event.target).hasClass('mejs-time-handle')*/ true) {
-                console.log(event,op,direction,distance);
-
+                //console.log(event,op,direction,distance);
+                console.log(this._mediaElement.currentTime, percentValue);
                 if(op === 'move' && direction === 'left') {
                     var n:number = this._mediaElement.currentTime - percentValue;
-
-                    this._mediaElement.currentTime = (n > 0) ? this._mediaElement.currentTime : n;
+                    console.log('n', n)
+                    this._mediaElement.currentTime = (n > 0) ? n : 0;
                 }
                 else if(op === 'move') {
                     //right
@@ -155,9 +155,11 @@ module component {
 
                     this._mediaElement.currentTime = (n > this._mediaElement.duration) ? this._mediaElement.currentTime : n;
                 }
+
+
             }
 
-            $('#text').html('<p>'+ this._mediaElement.currentTime +'</p>')
+            $('#test').append('<p>'+ this._mediaElement.currentTime +'</p>')
 
         }
     }
