@@ -45,26 +45,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stories.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="stories.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/stories.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.030630631" vertical-offset="306" max-vertical-offset="2091">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state vertical-scroll-proportion="-15.692307" vertical-offset="306" max-vertical-offset="2125">
+              <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
               <folding>
-                <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#3;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#4;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#2;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#3;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#4;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AudioPlyrComponent.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AudioPlyrComponent.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ts/component/AudioPlyrComponent.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2073" max-vertical-offset="2856">
-              <caret line="140" column="14" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.73666096" vertical-offset="2275" max-vertical-offset="2890">
+              <caret line="159" column="65" selection-start-line="159" selection-start-column="65" selection-end-line="159" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -106,8 +107,8 @@
         <option value="$PROJECT_DIR$/start.html" />
         <option value="$PROJECT_DIR$/scss/style.scss" />
         <option value="$PROJECT_DIR$/scss/component/_audioPlayer.scss" />
-        <option value="$PROJECT_DIR$/ts/component/AudioPlyrComponent.ts" />
         <option value="$PROJECT_DIR$/stories.html" />
+        <option value="$PROJECT_DIR$/ts/component/AudioPlyrComponent.ts" />
       </list>
     </option>
   </component>
@@ -428,10 +429,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="207" max-vertical-offset="833">
           <caret line="35" column="140" selection-start-line="35" selection-start-column="140" selection-end-line="35" selection-end-column="140" />
           <folding>
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#3;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#4;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#2;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#3;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#4;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -489,10 +491,11 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="340" max-vertical-offset="510">
           <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
           <folding>
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#3;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#4;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#2;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#3;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#4;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -760,24 +763,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ts/component/AudioPlyrComponent.ts">
+    <entry file="file://$PROJECT_DIR$/stories.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2073" max-vertical-offset="2856">
-          <caret line="140" column="14" selection-start-line="140" selection-start-column="14" selection-end-line="140" selection-end-column="14" />
-          <folding />
+        <state vertical-scroll-proportion="-15.692307" vertical-offset="306" max-vertical-offset="2125">
+          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#2;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#3;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#4;n#div#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stories.html">
+    <entry file="file://$PROJECT_DIR$/ts/component/AudioPlyrComponent.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.030630631" vertical-offset="306" max-vertical-offset="2091">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#2;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#3;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#audio#0;n#div#1;n#div#0;n#div#4;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.73666096" vertical-offset="2275" max-vertical-offset="2890">
+          <caret line="159" column="65" selection-start-line="159" selection-start-column="65" selection-end-line="159" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>

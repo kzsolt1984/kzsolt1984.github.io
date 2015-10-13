@@ -102,7 +102,8 @@ var component;
                     //console.log($(domObject).find('.mejs-controls'));
                     //console.log(this._$box.find('.mejs-controls'))
                     _this._swipeWidht = _this._$box.find('.mejs-time-slider').width();
-                    _this._$box.find('.mejs-time-slider').swipe(_this._swipeOptions);
+                    //this._$box.find('.mejs-time-slider').swipe(this._swipeOptions);
+                    _this._$box.find('.audio_player_cover').swipe(_this._swipeOptions);
                 }
             });
             /*this._$box.find('.audio_player_cover').on('click', (e)=> {
@@ -156,7 +157,7 @@ var component;
             percentValue = this._mediaElement.duration * percent;
             //console.log('sw', this._swipeWidht, this._mediaElement.currentTime, this._mediaElement.duration)
             //console.log('sw', this._mediaElement.duration, percent, percentValue)
-            if ($(event.target).hasClass('mejs-time-handle')) {
+            if (true) {
                 console.log(event, op, direction, distance);
                 if (op === 'move' && direction === 'left') {
                     var n = this._mediaElement.currentTime - percentValue;
@@ -168,7 +169,7 @@ var component;
                     this._mediaElement.currentTime = (n > this._mediaElement.duration) ? this._mediaElement.currentTime : n;
                 }
             }
-            return;
+            $('#text').html('<p>' + this._mediaElement.currentTime + '</p>');
         };
         return AudioPlyrComponent;
     })();

@@ -72,7 +72,8 @@ module component {
                     //console.log($(domObject).find('.mejs-controls'));
                     //console.log(this._$box.find('.mejs-controls'))
                     this._swipeWidht = this._$box.find('.mejs-time-slider').width();
-                    this._$box.find('.mejs-time-slider').swipe(this._swipeOptions);
+                    //this._$box.find('.mejs-time-slider').swipe(this._swipeOptions);
+                    this._$box.find('.audio_player_cover').swipe(this._swipeOptions)
                 }
             });
 
@@ -140,7 +141,7 @@ module component {
             //console.log('sw', this._swipeWidht, this._mediaElement.currentTime, this._mediaElement.duration)
             //console.log('sw', this._mediaElement.duration, percent, percentValue)
 
-            if($(event.target).hasClass('mejs-time-handle')) {
+            if(/*$(event.target).hasClass('mejs-time-handle')*/ true) {
                 console.log(event,op,direction,distance);
 
                 if(op === 'move' && direction === 'left') {
@@ -156,7 +157,8 @@ module component {
                 }
             }
 
-            return;
+            $('#text').html('<p>'+ this._mediaElement.currentTime +'</p>')
+
         }
     }
 }
