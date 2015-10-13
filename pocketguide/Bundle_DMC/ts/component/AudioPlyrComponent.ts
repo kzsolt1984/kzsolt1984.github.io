@@ -46,10 +46,6 @@ module component {
                     this._stop()
                 }
             });
-
-            $(window).on('hashchange', ()=> {
-                this._stop();
-            });
         }
 
         /**
@@ -73,8 +69,6 @@ module component {
             }, false);
 
             this._mediaElement.addEventListener("timeupdate", (e)=> {
-                console.log('update', this._mediaElement.currentTime)
-
                 var percent = this._mediaElement.currentTime / this._mediaElement.duration,
                     percentValue;
 
@@ -83,11 +77,14 @@ module component {
                 }
 
                 percentValue = 100 * percent - ((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * 100);
-
+$('#test').text(percentValue)
                 this._$box.find('.mejs-time-handle').css('left', percentValue + '%');
             });
 
             this._$box.find('.mejs-time-handle').css('left', ((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * (-100)) + '%');
+if(this._id == 0) {
+    alert((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * (-100))
+}
 
             this._swipeWidht = this._$box.find('.mejs-time-slider').width();
             this._$box.find('.mejs-time-slider').swipe(this._swipeOptions);}
