@@ -15,6 +15,7 @@ module component {
             excludedElements: "button, input, select, textarea, .noSwipe"
         };
         private _swipeWidht = 0;
+        private _startValue = 0;
 
         constructor(options) {
             this._$box = $(options.box);
@@ -50,7 +51,7 @@ module component {
          * @private
          */
         private _createPlayer($aId: JQuery): void {
-            $aId.mediaelementplayer({
+            /*$aId.mediaelementplayer({
                 alwaysShowControls: true,
                 features: ['playpause','progress'],
                 audioVolume: 'horizontal',
@@ -75,23 +76,41 @@ module component {
                     //this._$box.find('.mejs-time-slider').swipe(this._swipeOptions);
                     this._$box.find('.audio_player_cover').swipe(this._swipeOptions)
                 }
-            });
-
-            /*this._$box.find('.audio_player_cover').on('click', (e)=> {
-                alert('klikk')
-            });
-
-            this._$box.find('.audio_player_cover').on('touchstart', (e)=> {
-                alert('touch')
-
-
             });*/
 
-            //this._$box.find('.audio_player_cover').swipe(this._swipeOptions)
+            this._mediaElement = $aId.get(0);
 
-            //this._$box.find('.audio_player_cover').swipe(this._swipeOptions);
-            //this._$box.find('.mejs-controls').swipe(this._swipeOptions);
-        }
+            this._mediaElement.addEventListener('play', (e)=> {
+
+                this._$box.addClass('active');
+
+            }, false);
+
+            this._mediaElement.addEventListener('pause', (e)=> {
+
+                this._$box.removeClass('active');
+
+            }, false);
+
+            this._mediaElement.addEventListener("timeupdate", (e)=> {
+                console.log('update', this._mediaElement.currentTime)
+
+                var percent = this._mediaElement.currentTime / this._mediaElement.duration,
+                    percentValue;
+                this._swipeWidht
+                if(percent > 1) {
+                    percent = 1;
+                }
+
+                percentValue = this._swipeWidht * percent - 14;
+
+                this._$box.find('.mejs-time-handle').css('left', percentValue);
+
+                console.log('juhhhhúúúúúúúú', percentValue)
+            });
+
+            this._swipeWidht = this._$box.find('.mejs-time-slider').width();
+            this._$box.find('.mejs-time-slider').swipe(this._swipeOptions);}
 
         /**
          * Set current time
@@ -115,7 +134,7 @@ module component {
                 return;
             }
 
-            this._mediaElement.stop();
+            this._mediaElement.pause();
         }
 
         private _play(): void {
@@ -129,38 +148,53 @@ module component {
         private _swipeStatus(event,op,direction,distance) {
             if(!this._swipeWidht || !this._mediaElement) {return;}
 
-
             var percent = distance / this._swipeWidht,
                 percentValue;
+
             if(percent > 1) {
                 percent = 1;
             }
-
+console.log('juhhhhúúúúúúúú')
             percentValue = this._mediaElement.duration * percent;
 
-            //console.log('sw', this._swipeWidht, this._mediaElement.currentTime, this._mediaElement.duration)
-            //console.log('sw', this._mediaElement.duration, percent, percentValue)
+            if(op === 'start') {
+                this._startValue = this._mediaElement.currentTime;
+            }
 
-            if(/*$(event.target).hasClass('mejs-time-handle')*/ true) {
-                //console.log(event,op,direction,distance);
-                console.log(this._mediaElement.currentTime, percentValue);
+            if($(event.target).hasClass('mejs-time-handle')) {
+                if(!distance) {return;}
+
                 if(op === 'move' && direction === 'left') {
-                    var n:number = this._mediaElement.currentTime - percentValue;
-                    console.log('n', n)
+                    var n:number = this._startValue - percentValue;
+                    console.log('left', this._startValue , percentValue, n)
                     this._mediaElement.currentTime = (n > 0) ? n : 0;
                 }
                 else if(op === 'move') {
                     //right
-                    var n:number = this._mediaElement.currentTime + percentValue;
-
+                    var n:number = this._startValue + percentValue;
+                    //console.log('right', n)
                     this._mediaElement.currentTime = (n > this._mediaElement.duration) ? this._mediaElement.currentTime : n;
                 }
-
-
             }
 
-            $('#test').append('<p>'+ this._mediaElement.currentTime +'</p>')
+            if(op === 'end') {
+                console.log('end', this._mediaElement.currentTime)
 
+                this._mediaElement.currentTime = this._mediaElement.currentTime;
+            }
+
+            //$('#test').append('<p>'+ this._mediaElement.currentTime +'</p>')
+
+        }
+
+        private _getPercentValue(distance): number {
+            var percent = distance / this._swipeWidht;
+
+            if(percent > 1) {
+                percent = 1;
+            }
+
+            return this._mediaElement.duration * percent;
         }
     }
 }

@@ -27,8 +27,12 @@ div.audio-player {
     top: -1rem;
     bottom: 0;
     height: 2rem;
-    background-color: green;
+    //background-color: green;
     z-index: 99999999999;
+  }
+
+  audio {
+    display: none;
   }
 }
 

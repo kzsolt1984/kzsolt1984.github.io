@@ -369,8 +369,10 @@ div.audio-player .audio_player_cover {
   top: -1rem;
   bottom: 0;
   height: 2rem;
-  background-color: green;
   z-index: 99999999999;
+}
+div.audio-player audio {
+  display: none;
 }
 
 .mejs-offscreen {
