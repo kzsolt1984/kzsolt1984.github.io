@@ -100,14 +100,12 @@ var component;
                 if (percent > 1) {
                     percent = 1;
                 }
-                percentValue = 100 * percent - ((_this._$box.find('.mejs-time-handle').width() / 2) / _this._swipeWidht * 100);
+                0;
+                percentValue = (100 * percent) + ((_this._$box.find('.mejs-time-handle').width() / 2) / _this._swipeWidht * (-100));
                 $('#test').text(percentValue);
                 _this._$box.find('.mejs-time-handle').css('left', percentValue + '%');
             });
             this._$box.find('.mejs-time-handle').css('left', ((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * (-100)) + '%');
-            if (this._id == 0) {
-                alert((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * (-100));
-            }
             this._swipeWidht = this._$box.find('.mejs-time-slider').width();
             this._$box.find('.mejs-time-slider').swipe(this._swipeOptions);
         };

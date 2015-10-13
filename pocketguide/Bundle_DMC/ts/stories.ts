@@ -17,7 +17,7 @@ module Stories {
             });
         }
 
-        public stop(id) {alert(111);
+        public stop(id) {
             for(var i=0; i<this._players.length; i++) {
                 if(id != i) {
                     this._players[i].stop();
