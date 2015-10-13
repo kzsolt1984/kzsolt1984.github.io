@@ -131,6 +131,7 @@ var component;
                 percentValue = _this._swipeWidht * percent - 14;
                 _this._$box.find('.mejs-time-handle').css('left', percentValue);
                 console.log('juhhhhúúúúúúúú', percentValue);
+                $('#test').text(percentValue + ' : ' + _this._mediaElement.currentTime);
             });
             this._swipeWidht = this._$box.find('.mejs-time-slider').width();
             this._$box.find('.mejs-time-slider').swipe(this._swipeOptions);

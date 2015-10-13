@@ -107,6 +107,8 @@ module component {
                 this._$box.find('.mejs-time-handle').css('left', percentValue);
 
                 console.log('juhhhhúúúúúúúú', percentValue)
+
+                $('#test').text(percentValue + ' : ' + this._mediaElement.currentTime)
             });
 
             this._swipeWidht = this._$box.find('.mejs-time-slider').width();
