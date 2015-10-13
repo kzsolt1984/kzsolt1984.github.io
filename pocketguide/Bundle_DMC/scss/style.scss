@@ -138,16 +138,18 @@ section {
         background: -webkit-linear-gradient(to top, rgba(0,0,0,.8), transparent);
         background: linear-gradient(to top, rgba(0,0,0,.8), transparent);*/
 
-        .card-text {
-          position: absolute;
-          bottom: 17%;
-          left: 1em;
-          right: 1em;
-          font-size: 0.95rem;
-          font-weight: 700;
-          color: #fff;
-          text-decoration: none;
-        }
+
+      }
+
+      .card-text {
+        position: absolute;
+        bottom: 8.5%;
+        left: 1em;
+        right: 1em;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #fff;
+        text-decoration: none;
       }
     }
   }
