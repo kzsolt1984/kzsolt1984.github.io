@@ -77,7 +77,7 @@ module component {
                 }
 0
                 percentValue = (100 * percent) + ((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * (-100));
-$('#test').text(percentValue)
+$('#test').text(percentValue + ' : ' + percent)
                 this._$box.find('.mejs-time-handle').css('left', percentValue + '%');
             });
 

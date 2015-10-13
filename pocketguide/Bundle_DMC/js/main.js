@@ -102,7 +102,7 @@ var component;
                 }
                 0;
                 percentValue = (100 * percent) + ((_this._$box.find('.mejs-time-handle').width() / 2) / _this._swipeWidht * (-100));
-                $('#test').text(percentValue);
+                $('#test').text(percentValue + ' : ' + percent);
                 _this._$box.find('.mejs-time-handle').css('left', percentValue + '%');
             });
             this._$box.find('.mejs-time-handle').css('left', ((this._$box.find('.mejs-time-handle').width() / 2) / this._swipeWidht * (-100)) + '%');

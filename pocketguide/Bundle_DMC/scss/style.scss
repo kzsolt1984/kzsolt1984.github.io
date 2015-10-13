@@ -166,7 +166,7 @@ section {
       span {
         position: absolute;
         bottom: -90%;
-        left: -40%;
+        left: -50%;
         width: 400%;
         text-align: left;
         font-size: 0.7rem;
@@ -275,7 +275,7 @@ section {
         .video-right {
           float: left;
           display: inline-block;
-          margin-left: 5%;
+          margin-left: 10%;
 
           img {
             width: 1.5rem;
@@ -285,7 +285,7 @@ section {
 
         .video-right {
           margin-left: 0;
-          margin-right: 5%;
+          margin-right: 10%;
           float: right;
         }
 
@@ -313,7 +313,7 @@ section {
 
 @import "component/audioPlayer";
 
-@media all /*and (max-width: 699px)*/ and (min-width: 370px) {
+@media all and (max-width: 599px) and (min-width: 370px) {
   section.sub-page .box .controller {
     .video-left, .video-right {
       img {
@@ -328,6 +328,92 @@ section {
     img {
       width: 1.5rem;
     }
+  }
+
+  section#index #play_box span {
+    font-size: 0.9rem;
+  }
+}
+
+@media all and (max-width: 799px) and (min-width: 600px) {
+  section.sub-page .box .controller {
+    .video-left, .video-right {
+      img {
+        width: 3em;
+      }
+    }
+  }
+
+  section.sub-page .box .controller .play_btn_content {
+    margin-top: 0;
+
+    img {
+      width: 2.3rem;
+    }
+  }
+
+  section#index #play_box span {
+    font-size: 1.2rem;
+  }
+
+  section .content-inner p {
+    font-size: 1.5rem;
+  }
+
+  section .sub_menu .card .card-text {
+    bottom: 8.5%;
+    font-size: 1.5rem;
+  }
+
+  section.sub-page h3 {
+    font-size: 2.1rem;
+  }
+
+  section#index h3 {
+    font-size: 2.8rem;
+  }
+}
+
+@media all /*and (max-width: 799px)*/ and (min-width: 800px) {
+  section.sub-page .box .controller {
+    .video-left, .video-right {
+      img {
+        width: 4em;
+      }
+    }
+  }
+
+  section.sub-page .box .controller .play_btn_content {
+    margin-top: 0;
+
+    img {
+      width: 3.0rem;
+    }
+  }
+
+  section#index #play_box span {
+    font-size: 2.2rem;
+  }
+
+  section#index #play_box span {
+    font-size: 1.6rem;
+  }
+
+  section .content-inner p {
+    font-size: 1.9rem;
+  }
+
+  section .sub_menu .card .card-text {
+    bottom: 8.5%;
+    font-size: 1.9rem;
+  }
+
+  section.sub-page h3 {
+    font-size: 2.5rem;
+  }
+
+  section#index h3 {
+    font-size: 3.2rem;
   }
 }
 

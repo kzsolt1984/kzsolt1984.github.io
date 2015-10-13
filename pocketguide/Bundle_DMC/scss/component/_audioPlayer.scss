@@ -68,10 +68,27 @@ div.audio-player {
   background-size: cover;
 }
 
-@media all /*and (max-width: 699px)*/ and (min-width: 370px) {
+@media all and (max-width: 599px) and (min-width: 370px) {
   .mejs-controls .mejs-time-rail .mejs-time-handle {
     width: 1.8rem;
     height: 1.8rem;
     top: -0.88rem;
+  }
+}
+
+
+@media all and (max-width: 799px) and (min-width: 600px) {
+  .mejs-controls .mejs-time-rail .mejs-time-handle {
+    width: 2.4rem;
+    height: 2.4rem;
+    top: -1.2rem;
+  }
+}
+
+@media all /*and (max-width: 799px)*/ and (min-width: 800px) {
+  .mejs-controls .mejs-time-rail .mejs-time-handle {
+    width: 2.8rem;
+    height: 2.8rem;
+    top: -1.4rem;
   }
 }
