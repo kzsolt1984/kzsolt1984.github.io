@@ -17,6 +17,10 @@ module Stories {
             });
         }
 
+        /**
+         * Stop audio
+         * @param id   number   audio number
+         */
         public stop(id) {
             for(var i=0; i<this._players.length; i++) {
                 if(id != i) {

@@ -44,7 +44,6 @@ var component;
 /**
  * Created by Zsolt on 2015.10.02..
  */
-/// <reference path="../../lib/mediaelement.d.ts"/>
 /// <reference path="../../lib/touchSwipe.d.ts"/>
 var component;
 (function (component) {
@@ -104,9 +103,7 @@ var component;
                 if (percent > 1) {
                     percent = 1;
                 }
-                0;
                 percentValue = (100 * percent) + startPos;
-                $('#test').text(percentValue + ' || ' + startPos);
                 _this._$box.find('.mejs-time-handle').css('left', percentValue + '%');
             });
         };
@@ -125,12 +122,20 @@ var component;
                 this._mediaElement.currentTime -= 15;
             }
         };
+        /**
+         * Stop audio
+         * @private
+         */
         AudioPlyrComponent.prototype._stop = function () {
             if (!this._mediaElement) {
                 return;
             }
             this._mediaElement.pause();
         };
+        /**
+         * Start audio
+         * @private
+         */
         AudioPlyrComponent.prototype._play = function () {
             if (!this._mediaElement) {
                 return;
@@ -138,6 +143,14 @@ var component;
             this._mediaElement.play();
             this._mainC.stop(this._id);
         };
+        /**
+         * swipe audio time
+         * @param             event   object   event type
+         * @param             op   string   swipe action
+         * @param direction   string swipe direction
+         * @param distance    number   swipe distance
+         * @private
+         */
         AudioPlyrComponent.prototype._swipeStatus = function (event, op, direction, distance) {
             if (!this._swipeWidht || !this._mediaElement) {
                 return;
@@ -169,6 +182,9 @@ var component;
                 this._mediaElement.currentTime = this._mediaElement.currentTime;
             }
         };
+        /**
+         * Stop audio
+         */
         AudioPlyrComponent.prototype.stop = function () {
             this._stop();
         };

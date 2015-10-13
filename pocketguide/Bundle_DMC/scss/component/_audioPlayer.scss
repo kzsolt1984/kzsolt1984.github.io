@@ -13,24 +13,12 @@
 
 div.audio-player {
   position: absolute;
-  bottom: 10%;
-  //width: 100%;
+  bottom: 15%;
   left: 3%;
   right: 3%;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-
-  .audio_player_cover {
-    position: absolute;
-    left: -0.5%;
-    right: 0;
-    top: -1rem;
-    bottom: 0;
-    height: 2rem;
-    //background-color: green;
-    z-index: 99999999999;
-  }
 
   audio {
     display: none;
@@ -41,9 +29,7 @@ div.audio-player {
 .mejs-controls .mejs-time-rail span {
   position: absolute;
   display: block;
-  //width: 380px;
   height: 0.2rem;
-  //top: 3.9rem;
   left: 0;
   cursor: pointer;
 }
@@ -55,7 +41,6 @@ div.audio-player {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  //margin-top: 35%;
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-handle {
@@ -64,7 +49,7 @@ div.audio-player {
   width: 1.6rem;
   height: 1.6rem;
   top: -0.7rem;
-  background: url("../img/video_volume.png") no-repeat;
+  background: url("../img/video_handle.png") no-repeat;
   background-size: cover;
 }
 

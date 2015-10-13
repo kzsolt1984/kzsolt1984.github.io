@@ -1,7 +1,7 @@
 /**
  * Created by Zsolt on 2015.10.02..
  */
-    /// <reference path="../../lib/mediaelement.d.ts"/>
+
     /// <reference path="../../lib/touchSwipe.d.ts"/>
 module component {
     export class AudioPlyrComponent {
@@ -27,7 +27,6 @@ module component {
             this._swipeWidht = this._$box.find('.audio-player').width();
 
             this._createPlayer(this._$box.find('.myPlayer'));
-
 
             this._$box.find('.video-left').on('click', ()=>{
                 this._setCurrentTime(false);
@@ -82,9 +81,9 @@ module component {
                 if(percent > 1) {
                     percent = 1;
                 }
-0
+
                 percentValue = (100 * percent) + startPos;
-                $('#test').text(percentValue + ' || ' + startPos)
+
                 this._$box.find('.mejs-time-handle').css('left', percentValue + '%');
             });
 
@@ -107,6 +106,10 @@ module component {
             }
         }
 
+        /**
+         * Stop audio
+         * @private
+         */
         private _stop(): void {
             if(!this._mediaElement) {
                 return;
@@ -115,6 +118,10 @@ module component {
             this._mediaElement.pause();
         }
 
+        /**
+         * Start audio
+         * @private
+         */
         private _play(): void {
             if(!this._mediaElement) {
                 return;
@@ -124,7 +131,15 @@ module component {
             this._mainC.stop(this._id);
         }
 
-        private _swipeStatus(event,op,direction,distance) {
+        /**
+         * swipe audio time
+         * @param             event   object   event type
+         * @param             op   string   swipe action
+         * @param direction   string swipe direction
+         * @param distance    number   swipe distance
+         * @private
+         */
+        private _swipeStatus(event,op,direction,distance): void {
             if(!this._swipeWidht || !this._mediaElement) {return;}
 
             var percent = distance / this._swipeWidht,
@@ -161,6 +176,9 @@ module component {
             }
         }
 
+        /**
+         * Stop audio
+         */
         public stop(): void {
             this._stop();
         }
