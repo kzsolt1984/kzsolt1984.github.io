@@ -14,8 +14,9 @@
 div.audio-player {
   position: absolute;
   bottom: 10%;
-  width: 100%;
-
+  //width: 100%;
+  left: 3%;
+  right: 3%;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -36,38 +37,6 @@ div.audio-player {
   }
 }
 
-.mejs-offscreen {
-  display: none;
-  font-size: 0;
-}
-
-.mejs-container {
-  height: auto!important;
-}
-
-.mejs-controls .mejs-button button {
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  text-indent: -9999px;
-}
-
-.mejs-controls .mejs-play button,
-.mejs-controls .mejs-pause button {
-  width: 1rem;
-  height: 1rem;
-  top: 0.6rem;
-  left: 50%;
-  margin-left: -0.5rem;
-  background: transparent url(../img/video_play.png) 0 0;
-  background-size: 1rem 1rem;
-  display: none;
-}
-
-.mejs-controls .mejs-pause button {
-  background: transparent url(../img/video_stop.png) 0 0;
-  background-size: 1rem 1rem;
-}
 /* time scrubber bar */
 .mejs-controls .mejs-time-rail span {
   position: absolute;
@@ -77,14 +46,8 @@ div.audio-player {
   //top: 3.9rem;
   left: 0;
   cursor: pointer;
-  -webkit-border-radius: 0px 0px 2px 2px;
-  -moz-border-radius: 0px 0px 2px 2px;
-  border-radius: 0px 0px 2px 2px;
 }
 
-.mejs-controls .mejs-time-rail .mejs-time-float {
-  display: none;
-}
 
 .mejs-controls .mejs-time-rail .mejs-time-total {
   background: #2c2c2c;
@@ -94,31 +57,21 @@ div.audio-player {
   border-radius: 3px;
   //margin-top: 35%;
 }
-.mejs-controls .mejs-time-rail .mejs-time-loaded {
-  top: 0;
-  left: 0;
-  width: 0;
-  background: #2c2c2c;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-.mejs-controls .mejs-time-rail .mejs-time-current {
-  top: 0;
-  left: 0;
-  width: 0;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background: #2c2c2c;
-}
 
 .mejs-controls .mejs-time-rail .mejs-time-handle {
   position: absolute;
   display: block;
-  width: 1.8rem;
-  height: 1.8rem;
-  top: -0.88rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  top: -0.7rem;
   background: url("../img/video_volume.png") no-repeat;
   background-size: cover;
+}
+
+@media all and (max-width: 699px) and (min-width: 370px) {
+  .mejs-controls .mejs-time-rail .mejs-time-handle {
+    width: 1.8rem;
+    height: 1.8rem;
+    top: -0.88rem;
+  }
 }

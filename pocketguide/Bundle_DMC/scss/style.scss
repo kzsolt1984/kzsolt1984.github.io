@@ -202,8 +202,8 @@ section {
 
     .box {
       background-color: #7d7d7d;
-      padding: .5rem;
-      border-radius: 4px 4px 4px 4px;
+      padding: .8rem;
+      border-radius: 6px 6px 6px 6px;
       margin-bottom: 0.6rem;
       position: relative;
 
@@ -238,14 +238,12 @@ section {
       }
 
       .controller {
-        float: left;
-        margin-left: 1rem;
-        width: 58%;
+        width: 55%;
         position: absolute;
         //height: 100%;
-        right: 0.5rem;
-        top: 0.5rem;
-        bottom: 0.5rem;
+        right: 0.8rem;
+        top: 0.8rem;
+        bottom: 0.8rem;
         //display: table;
 
         .audio_content {
@@ -259,6 +257,7 @@ section {
             display: table-cell;
             vertical-align: middle;
             text-align: center;
+            padding-top: 10%;
           }
         }
 
@@ -267,7 +266,7 @@ section {
           display: block;
           font-family: "HelveticaNeueLTPro", Helvetica, Arial;
           color: #fff;
-          font-size: 5.2vw;
+          font-size: 6.2vw;
           font-weight: 400;
         }
 
@@ -278,7 +277,7 @@ section {
           margin-left: 5%;
 
           img {
-            width: 2rem;
+            width: 1.5rem;
             float: none;
           }
         }
@@ -294,7 +293,7 @@ section {
           margin-top: 3%;
 
           img {
-            width: 1.4rem;
+            width: 1.0rem;
             float: none;
           }
 
@@ -311,11 +310,25 @@ section {
   }
 }
 
-#jqt>* {
-  background: none!important;
-}
-
 @import "component/audioPlayer";
+
+@media all and (max-width: 699px) and (min-width: 370px) {
+  section.sub-page .box .controller {
+    .video-left, .video-right {
+      img {
+        width: 2em;
+      }
+    }
+  }
+
+  section.sub-page .box .controller .play_btn_content {
+    margin-top: 0;
+
+    img {
+      width: 1.4rem;
+    }
+  }
+}
 
 
 

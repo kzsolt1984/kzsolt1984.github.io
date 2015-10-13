@@ -247,8 +247,8 @@ section.sub-page h3 {
 }
 section.sub-page .box {
   background-color: #7d7d7d;
-  padding: .5rem;
-  border-radius: 4px 4px 4px 4px;
+  padding: .8rem;
+  border-radius: 6px 6px 6px 6px;
   margin-bottom: 0.6rem;
   position: relative;
 }
@@ -278,13 +278,11 @@ section.sub-page .box.active .controller .pause_btn {
   display: block !important;
 }
 section.sub-page .box .controller {
-  float: left;
-  margin-left: 1rem;
-  width: 58%;
+  width: 55%;
   position: absolute;
-  right: 0.5rem;
-  top: 0.5rem;
-  bottom: 0.5rem;
+  right: 0.8rem;
+  top: 0.8rem;
+  bottom: 0.8rem;
 }
 section.sub-page .box .controller .audio_content {
   display: table;
@@ -297,13 +295,14 @@ section.sub-page .box .controller .audio_content .cell {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  padding-top: 10%;
 }
 section.sub-page .box .controller .title {
   overflow: hidden;
   display: block;
   font-family: "HelveticaNeueLTPro", Helvetica, Arial;
   color: #fff;
-  font-size: 5.2vw;
+  font-size: 6.2vw;
   font-weight: 400;
 }
 section.sub-page .box .controller .video-left,
@@ -314,7 +313,7 @@ section.sub-page .box .controller .video-right {
 }
 section.sub-page .box .controller .video-left img,
 section.sub-page .box .controller .video-right img {
-  width: 2rem;
+  width: 1.5rem;
   float: none;
 }
 section.sub-page .box .controller .video-right {
@@ -327,7 +326,7 @@ section.sub-page .box .controller .play_btn_content {
   margin-top: 3%;
 }
 section.sub-page .box .controller .play_btn_content img {
-  width: 1.4rem;
+  width: 1.0rem;
   float: none;
 }
 section.sub-page .box .controller .play_btn_content .play_btn {
@@ -335,10 +334,6 @@ section.sub-page .box .controller .play_btn_content .play_btn {
 }
 section.sub-page .box .controller .play_btn_content .pause_btn {
   display: none;
-}
-
-#jqt > * {
-  background: none !important;
 }
 
 .audio-player,
@@ -357,7 +352,8 @@ section.sub-page .box .controller .play_btn_content .pause_btn {
 div.audio-player {
   position: absolute;
   bottom: 10%;
-  width: 100%;
+  left: 3%;
+  right: 3%;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -375,39 +371,6 @@ div.audio-player audio {
   display: none;
 }
 
-.mejs-offscreen {
-  display: none;
-  font-size: 0;
-}
-
-.mejs-container {
-  height: auto !important;
-}
-
-.mejs-controls .mejs-button button {
-  cursor: pointer;
-  display: block;
-  position: absolute;
-  text-indent: -9999px;
-}
-
-.mejs-controls .mejs-play button,
-.mejs-controls .mejs-pause button {
-  width: 1rem;
-  height: 1rem;
-  top: 0.6rem;
-  left: 50%;
-  margin-left: -0.5rem;
-  background: transparent url(../img/video_play.png) 0 0;
-  background-size: 1rem 1rem;
-  display: none;
-}
-
-.mejs-controls .mejs-pause button {
-  background: transparent url(../img/video_stop.png) 0 0;
-  background-size: 1rem 1rem;
-}
-
 /* time scrubber bar */
 .mejs-controls .mejs-time-rail span {
   position: absolute;
@@ -415,13 +378,6 @@ div.audio-player audio {
   height: 0.2rem;
   left: 0;
   cursor: pointer;
-  -webkit-border-radius: 0px 0px 2px 2px;
-  -moz-border-radius: 0px 0px 2px 2px;
-  border-radius: 0px 0px 2px 2px;
-}
-
-.mejs-controls .mejs-time-rail .mejs-time-float {
-  display: none;
 }
 
 .mejs-controls .mejs-time-rail .mejs-time-total {
@@ -433,34 +389,34 @@ div.audio-player audio {
   border-radius: 3px;
 }
 
-.mejs-controls .mejs-time-rail .mejs-time-loaded {
-  top: 0;
-  left: 0;
-  width: 0;
-  background: #2c2c2c;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
-
-.mejs-controls .mejs-time-rail .mejs-time-current {
-  top: 0;
-  left: 0;
-  width: 0;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-  background: #2c2c2c;
-}
-
 .mejs-controls .mejs-time-rail .mejs-time-handle {
   position: absolute;
   display: block;
-  width: 1.8rem;
-  height: 1.8rem;
-  top: -0.88rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  top: -0.7rem;
   background: url("../img/video_volume.png") no-repeat;
   background-size: cover;
+}
+
+@media all and (max-width: 699px) and (min-width: 370px) {
+  .mejs-controls .mejs-time-rail .mejs-time-handle {
+    width: 1.8rem;
+    height: 1.8rem;
+    top: -0.88rem;
+  }
+}
+@media all and (max-width: 699px) and (min-width: 370px) {
+  section.sub-page .box .controller .video-left img, section.sub-page .box .controller .video-right img {
+    width: 2em;
+  }
+
+  section.sub-page .box .controller .play_btn_content {
+    margin-top: 0;
+  }
+  section.sub-page .box .controller .play_btn_content img {
+    width: 1.4rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
