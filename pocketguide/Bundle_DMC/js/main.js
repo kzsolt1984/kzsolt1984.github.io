@@ -58,6 +58,7 @@ var component;
                 threshold: 75,
                 excludedElements: "button, input, select, textarea, .noSwipe"
             };
+            this._swipeWidht = 0;
             this._$box = $(options.box);
             this._createPlayer(this._$box.find('.myPlayer'));
             this._$box.find('.video-left').on('click', function () {
@@ -77,9 +78,6 @@ var component;
             });
             $(window).on('hashchange', function () {
                 _this._stop();
-            });
-            $(function () {
-                _this._$box.find('.audio_player_cover').swipe(_this._swipeOptions);
             });
         }
         /**
@@ -101,6 +99,10 @@ var component;
                     mediaElement.addEventListener('pause', function (e) {
                         _this._$box.removeClass('active');
                     }, false);
+                    //console.log($(domObject).find('.mejs-controls'));
+                    //console.log(this._$box.find('.mejs-controls'))
+                    _this._swipeWidht = _this._$box.find('.mejs-time-slider').width();
+                    _this._$box.find('.mejs-time-slider').swipe(_this._swipeOptions);
                 }
             });
             /*this._$box.find('.audio_player_cover').on('click', (e)=> {
@@ -113,6 +115,8 @@ var component;
 
             });*/
             //this._$box.find('.audio_player_cover').swipe(this._swipeOptions)
+            //this._$box.find('.audio_player_cover').swipe(this._swipeOptions);
+            //this._$box.find('.mejs-controls').swipe(this._swipeOptions);
         };
         /**
          * Set current time
@@ -141,9 +145,30 @@ var component;
             }
             this._mediaElement.play();
         };
-        AudioPlyrComponent.prototype._swipeStatus = function (a, b, c, d) {
-            $('#test').text("You swiped " + d);
-            //console.log(a,b,c,d)
+        AudioPlyrComponent.prototype._swipeStatus = function (event, op, direction, distance) {
+            if (!this._swipeWidht || !this._mediaElement) {
+                return;
+            }
+            var percent = distance / this._swipeWidht, percentValue;
+            if (percent > 1) {
+                percent = 1;
+            }
+            percentValue = this._mediaElement.duration * percent;
+            //console.log('sw', this._swipeWidht, this._mediaElement.currentTime, this._mediaElement.duration)
+            //console.log('sw', this._mediaElement.duration, percent, percentValue)
+            if ($(event.target).hasClass('mejs-time-handle')) {
+                console.log(event, op, direction, distance);
+                if (op === 'move' && direction === 'left') {
+                    var n = this._mediaElement.currentTime - percentValue;
+                    this._mediaElement.currentTime = (n > 0) ? this._mediaElement.currentTime : n;
+                }
+                else if (op === 'move') {
+                    //right
+                    var n = this._mediaElement.currentTime + percentValue;
+                    this._mediaElement.currentTime = (n > this._mediaElement.duration) ? this._mediaElement.currentTime : n;
+                }
+            }
+            return;
         };
         return AudioPlyrComponent;
     })();
