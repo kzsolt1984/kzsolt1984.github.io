@@ -162,11 +162,11 @@ section header h2 {
   left: 20px;
 }
 section .content-inner {
-  padding: .4rem .8rem .8rem;
+  padding: .4rem 5% .8rem;
 }
 section .content-inner p {
-  font-size: 0.9rem;
-  line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.3;
   font-family: "HelveticaNeueLTProLT", Helvetica, Arial;
 }
 section .content-inner h3 {
@@ -424,7 +424,7 @@ div.audio-player audio {
     font-size: 0.9rem;
   }*/
   section .content-inner p {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   section .sub_menu .card .card-text {
@@ -456,7 +456,7 @@ div.audio-player audio {
     font-size: 1.2rem;
   }*/
   section .content-inner p {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
   }
 
   section .sub_menu .card .card-text {
@@ -488,7 +488,7 @@ div.audio-player audio {
     font-size: 2.2rem;
   } */
   section .content-inner p {
-    font-size: 1.9rem;
+    font-size: 2.3rem;
   }
 
   section .sub_menu .card .card-text {
