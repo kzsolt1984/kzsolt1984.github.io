@@ -137,7 +137,7 @@ section {
         bottom: 8.5%;
         left: 1em;
         right: 1em;
-        font-size: 0.95rem;
+        font-size: 1rem;
         font-weight: 700;
         color: #fff;
         text-decoration: none;
@@ -257,7 +257,7 @@ section {
           display: block;
           font-family: "HelveticaNeueLTPro", Helvetica, Arial;
           color: #fff;
-          font-size: 6.2vw;
+          font-size: 5.6vw;
           font-weight: 400;
         }
 
@@ -333,8 +333,8 @@ section {
   }
 
   section .sub_menu .card .card-text {
-    bottom: 8.5%;
-    font-size: 1.5rem;
+    bottom: 7.9%;
+    font-size: 1.15rem;
   }
 
   section.sub-page h3 {
@@ -376,16 +376,20 @@ section {
   }
 
   section .sub_menu .card .card-text {
-    bottom: 8.5%;
-    font-size: 1.5rem;
+    bottom: 8.0%;
+    font-size: 1.8rem;
   }
 
   section.sub-page h3 {
-    font-size: 2.1rem;
+    font-size: 2.3rem;
   }
 
   section#index h3 {
     font-size: 2.8rem;
+  }
+
+  #tour section .btn {
+    font-size: 1.7rem;
   }
 }
 
@@ -420,15 +424,19 @@ section {
 
   section .sub_menu .card .card-text {
     bottom: 8.5%;
-    font-size: 1.9rem;
+    font-size: 2.4rem;
   }
 
   section.sub-page h3 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 
   section#index h3 {
     font-size: 3.2rem;
+  }
+
+  #tour section .btn {
+    font-size: 2.2rem;
   }
 }
 
