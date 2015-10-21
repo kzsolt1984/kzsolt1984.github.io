@@ -93,7 +93,7 @@ section {
   }
 
   .content-inner {
-    padding: .4rem 5% .8rem;
+    padding: 7% 5% .8rem;
 
     p {
       font-size: 0.95rem;
@@ -107,6 +107,7 @@ section {
       color: red;
       padding: 0.3rem 0 0.6rem;
       text-align: center;
+      margin-bottom: 3%;
       font-family: "HelveticaNeueLTPro", Helvetica, Arial;
     }
   }
@@ -146,6 +147,10 @@ section {
   }
 
   &#index {
+    .content-inner {
+      padding-top: 3%;
+    }
+
     #play_box {
       display: inline-block;
       position: absolute;

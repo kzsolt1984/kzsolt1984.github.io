@@ -28,10 +28,10 @@
       <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scss/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7297297" vertical-offset="5375" max-vertical-offset="7650">
-              <caret line="340" column="18" selection-start-line="340" selection-start-column="18" selection-end-line="340" selection-end-column="18" />
+            <state vertical-scroll-proportion="0.5495495" vertical-offset="2245" max-vertical-offset="7735">
+              <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
               <folding>
-                <element signature="e#3621#3872#2" expanded="true" />
+                <element signature="e#3694#3945#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -467,7 +467,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="3117" max-vertical-offset="3757">
           <caret line="211" column="30" selection-start-line="211" selection-start-column="30" selection-end-line="211" selection-end-column="30" />
           <folding>
-            <element signature="e#3621#3872#2" expanded="true" />
+            <element signature="e#3694#3945#2" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -527,7 +527,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1344" max-vertical-offset="2295">
           <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
           <folding>
-            <element signature="e#3621#3872#2" expanded="true" />
+            <element signature="e#3694#3945#2" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -580,7 +580,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#3621#3872#2" expanded="true" />
+            <element signature="e#3694#3945#2" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -809,10 +809,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scss/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7297297" vertical-offset="5375" max-vertical-offset="7650">
-          <caret line="340" column="18" selection-start-line="340" selection-start-column="18" selection-end-line="340" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.5495495" vertical-offset="2245" max-vertical-offset="7735">
+          <caret line="150" column="20" selection-start-line="150" selection-start-column="20" selection-end-line="150" selection-end-column="20" />
           <folding>
-            <element signature="e#3621#3872#2" expanded="true" />
+            <element signature="e#3694#3945#2" expanded="true" />
           </folding>
         </state>
       </provider>
