@@ -165,7 +165,7 @@ section .content-inner {
   padding: 7% 5% .8rem;
 }
 section .content-inner p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   line-height: 1.3;
   font-family: "HelveticaNeueLTProLT", Helvetica, Arial;
 }
@@ -428,7 +428,7 @@ div.audio-player audio {
     font-size: 0.9rem;
   }*/
   section .content-inner p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   section .sub_menu .card .card-text {
