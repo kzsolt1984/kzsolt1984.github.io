@@ -1,0 +1,520 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clear {
+  clear: both;
+  float: none;
+  height: 0;
+  line-height: 0;
+  font-size: 0;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLTPro';
+  src: url("../font/HelveticaNeueLTPro-BdCn.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTProLT';
+  src: url("../font/HelveticaNeueLTPro-Lt.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'HelveticaNeueLTProRoman';
+  src: url("../font/HelveticaNeueLTPro-Roman.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400;
+}
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  background: #000;
+}
+
+body {
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  background: #000;
+}
+
+a {
+  text-decoration: none;
+}
+
+#tour {
+  position: relative;
+}
+#tour section {
+  min-height: 100%;
+  position: relative;
+}
+#tour section .content-inner {
+  padding-bottom: 4.5rem;
+}
+#tour section .btn {
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: red;
+  padding: 0.8rem 0;
+  text-align: center;
+  display: block;
+  font-family: "HelveticaNeueLTProRoman", Helvetica, Arial;
+  position: absolute;
+  bottom: 0;
+  right: 0.8rem;
+  left: 0.8rem;
+}
+
+section {
+  font-size: .85rem;
+}
+section.is-visible {
+  display: block;
+}
+section header {
+  position: relative;
+  text-align: center;
+}
+section header img {
+  display: block;
+  width: 100%;
+}
+section header img.logo {
+  width: 52%;
+  display: inline-block;
+  position: absolute;
+  bottom: 2rem;
+  left: .8rem;
+}
+section header h2 {
+  border-top: 0.5rem solid red;
+  border-bottom: 0.5rem solid red;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 4.1rem;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+section .content-inner {
+  padding: 7% 5% .8rem;
+}
+section .content-inner p {
+  font-size: 1rem;
+  line-height: 1.3;
+  font-family: "HelveticaNeueLTProLT", Helvetica, Arial;
+}
+section .content-inner h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+  padding: 0.3rem 0 0.6rem;
+  text-align: center;
+  margin-bottom: 3%;
+  font-family: "HelveticaNeueLTPro", Helvetica, Arial;
+}
+section .sub_menu .card {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1px;
+  text-decoration: none;
+}
+section .sub_menu .card img {
+  display: block;
+  width: 100%;
+}
+section .sub_menu .card .card-text-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: -.25em;
+  height: 5.5em;
+}
+section .sub_menu .card .card-text {
+  position: absolute;
+  bottom: 8.5%;
+  left: 1em;
+  right: 1em;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+section#index .content-inner {
+  padding-top: 3%;
+}
+section#index #play_box {
+  display: inline-block;
+  position: absolute;
+  left: 10%;
+  top: 8%;
+  min-height: 15%;
+  min-width: 14%;
+  text-align: left;
+  /*span {
+    position: absolute;
+    bottom: -90%;
+    left: -50%;
+    width: 400%;
+    text-align: left;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+  }*/
+}
+section#index h3 {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+  background-color: #fff;
+  padding: 0.3rem 0 0.2rem;
+  text-align: center;
+  position: relative;
+  top: -1.2rem;
+  font-family: Arial, "HelveticaNeueLTPro", Helvetica;
+}
+section#index #iphone_video iframe {
+  width: 100%;
+}
+section.sub-page h3 {
+  text-align: left;
+  font-size: 1.4rem;
+}
+section.sub-page .box {
+  background-color: #7d7d7d;
+  padding: .8rem;
+  border-radius: 0.6rem;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+section.sub-page .box img {
+  width: 36%;
+  float: left;
+}
+section.sub-page .box img.music_img {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
+  /* Firefox 3.5+ */
+  filter: gray;
+  /* IE6-9 */
+  -webkit-filter: grayscale(100%);
+  /* Chrome 19+ & Safari 6+ */
+}
+section.sub-page .box.active {
+  background-color: #c2c2c2;
+}
+section.sub-page .box.active img.music_img {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+}
+section.sub-page .box.active .controller .play_btn {
+  display: none !important;
+}
+section.sub-page .box.active .controller .pause_btn {
+  display: block !important;
+}
+section.sub-page .box .controller {
+  width: 55%;
+  position: absolute;
+  right: 0.8rem;
+  top: 0.8rem;
+  bottom: 0.8rem;
+}
+section.sub-page .box .controller .audio_content {
+  display: table;
+  width: 100%;
+  height: 105%;
+  position: absolute;
+  top: 0;
+}
+section.sub-page .box .controller .audio_content .cell {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 2%;
+}
+section.sub-page .box .controller .title {
+  overflow: hidden;
+  display: block;
+  font-family: "HelveticaNeueLTPro", Helvetica, Arial;
+  color: #fff;
+  font-size: 5.6vw;
+  font-weight: 400;
+}
+section.sub-page .box .controller .video-left,
+section.sub-page .box .controller .video-right {
+  float: left;
+  display: inline-block;
+  margin-left: 10%;
+}
+section.sub-page .box .controller .video-left img,
+section.sub-page .box .controller .video-right img {
+  width: 1.5rem;
+  float: none;
+}
+section.sub-page .box .controller .video-right {
+  margin-left: 0;
+  margin-right: 10%;
+  float: right;
+}
+section.sub-page .box .controller .play_btn_content {
+  display: inline-block;
+  margin-top: 1%;
+}
+section.sub-page .box .controller .play_btn_content img {
+  width: 1.3rem;
+  float: none;
+}
+section.sub-page .box .controller .play_btn_content .play_btn {
+  display: block;
+}
+section.sub-page .box .controller .play_btn_content .pause_btn {
+  display: none;
+}
+
+.audio-player,
+.audio-player div,
+.audio-player h1,
+.audio-player a,
+.audio-player img,
+.audio-player span,
+.audio-player button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+div.audio-player {
+  position: absolute;
+  bottom: 15%;
+  left: 3%;
+  right: 3%;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+div.audio-player audio {
+  display: none;
+}
+
+/* time scrubber bar */
+.mejs-controls .mejs-time-rail span {
+  position: absolute;
+  display: block;
+  height: 0.2rem;
+  left: 0;
+  cursor: pointer;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-total {
+  background: #2c2c2c;
+  width: 100% !important;
+  /* fixes display bug using jQuery 1.8+ */
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-handle {
+  position: absolute;
+  display: block;
+  width: 1.6rem;
+  height: 1.6rem;
+  top: -0.7rem;
+  background: url("../img/video_handle.png") no-repeat;
+  background-size: cover;
+}
+
+@media all and (max-width: 599px) and (min-width: 370px) {
+  .mejs-controls .mejs-time-rail .mejs-time-handle {
+    width: 1.8rem;
+    height: 1.8rem;
+    top: -0.88rem;
+  }
+}
+@media all and (max-width: 799px) and (min-width: 600px) {
+  .mejs-controls .mejs-time-rail .mejs-time-handle {
+    width: 2.4rem;
+    height: 2.4rem;
+    top: -1.2rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .mejs-controls .mejs-time-rail .mejs-time-handle {
+    width: 2.8rem;
+    height: 2.8rem;
+    top: -1.4rem;
+  }
+}
+@media all and (max-width: 599px) and (min-width: 350px) {
+  section.sub-page .box .controller .video-left img, section.sub-page .box .controller .video-right img {
+    width: 2em;
+  }
+
+  section.sub-page .box .controller .play_btn_content {
+    margin-top: 0;
+  }
+  section.sub-page .box .controller .play_btn_content img {
+    width: 1.5rem;
+  }
+
+  /*section#index #play_box span {
+    font-size: 0.9rem;
+  }*/
+  section .content-inner p {
+    font-size: 1.2rem;
+  }
+
+  section .sub_menu .card .card-text {
+    bottom: 7.9%;
+    font-size: 1.15rem;
+  }
+
+  section.sub-page h3 {
+    font-size: 1.7rem;
+  }
+
+  section#index h3 {
+    font-size: 2.8rem;
+  }
+}
+@media all and (max-width: 799px) and (min-width: 600px) {
+  section.sub-page .box .controller .video-left img, section.sub-page .box .controller .video-right img {
+    width: 3em;
+  }
+
+  section.sub-page .box .controller .play_btn_content {
+    margin-top: 0;
+  }
+  section.sub-page .box .controller .play_btn_content img {
+    width: 2.3rem;
+  }
+
+  /*section#index #play_box span {
+    font-size: 1.2rem;
+  }*/
+  section .content-inner p {
+    font-size: 1.7rem;
+  }
+
+  section .sub_menu .card .card-text {
+    bottom: 8.0%;
+    font-size: 1.8rem;
+  }
+
+  section.sub-page h3 {
+    font-size: 2.3rem;
+  }
+
+  section#index h3 {
+    font-size: 2.8rem;
+  }
+
+  #tour section .btn {
+    font-size: 1.7rem;
+  }
+}
+@media all and (min-width: 800px) {
+  section.sub-page .box .controller .video-left img, section.sub-page .box .controller .video-right img {
+    width: 4em;
+  }
+
+  section.sub-page .box .controller .play_btn_content {
+    margin-top: 0;
+  }
+  section.sub-page .box .controller .play_btn_content img {
+    width: 3.0rem;
+  }
+
+  /*section#index #play_box span {
+    font-size: 2.2rem;
+  } */
+  section .content-inner p {
+    font-size: 2.3rem;
+  }
+
+  section .sub_menu .card .card-text {
+    bottom: 8.5%;
+    font-size: 2.4rem;
+  }
+
+  section.sub-page h3 {
+    font-size: 3rem;
+  }
+
+  section#index h3 {
+    font-size: 3.2rem;
+  }
+
+  #tour section .btn {
+    font-size: 2.2rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
