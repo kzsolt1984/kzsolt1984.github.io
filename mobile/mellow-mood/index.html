@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="robots" content="noindex, nofollow">
+    </head>
+    <body>
+        <h2>Hotelek letöltése zippelve:</h2>
+        <p>
+            <a href="mellow-mood.zip" rel="nofollow">Letöltés</a>
+        </p>
+
+        <h3>Online teszteléshez linkek:</h3>
+        <div id="content"></div>
+
+        <script>
+            var hotels = [
+                        "BudapestMMAtlas",
+                        "BudapestMMAtrium",
+                        "BudapestMMBaross",
+                        "BudapestMMBuda",
+                        "BudapestMMBuddhabar",
+                        "BudapestMMCosmo",
+                        "BudapestMMEstilo",
+                        "BudapestMMExpo",
+                        "BudapestMMLaprima",
+                        "BudapestMMMarcopolo",
+                        "BudapestMMMirage",
+                        "BudapestMMPromenade",
+                        "BudapestMMStar"
+                    ],
+                content = document.querySelector('#content');
+
+            for(var i=0; i<(hotels.length); i++) {
+                console.log(i)
+                var para = document.createElement("p"),
+                    node = document.createTextNode("http://kzsolt1984.github.io/mobile/mellow-mood/Bundle_"+ hotels[i] +"_en.zip");
+                para.appendChild(node);
+
+                content.appendChild(para);
+            }
+        </script>
+    </body>
+</html>
