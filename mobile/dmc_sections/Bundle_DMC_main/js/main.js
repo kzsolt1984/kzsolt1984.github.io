@@ -211,6 +211,14 @@ var Main;
                 'videoId': 'NewYorkDMC',
                 'youtubeId': 'TpG_q6Ltgpw'
             });
+            var $musicStore = $('#musicStore'), storeLink;
+            if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i))) {
+                storeLink = 'https://itunes.apple.com/us/artist/run-dmc/id15973';
+            }
+            else {
+                storeLink = 'https://play.google.com/store/music/artist/Run_DMC?id=Aaupracdosxt5buvmx5v3gqbcda&hl=en';
+            }
+            $musicStore.attr('href', storeLink);
         }
         return Main;
     })();
